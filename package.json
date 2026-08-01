@@ -10,8 +10,20 @@
     "measure": "node scripts/measure.mjs",
     "package": "node scripts/package.mjs",
     "render": "node scripts/render-assets.mjs",
-    "test": "npm run validate"
+    "test": "npm run validate && npm run self-check",
+    "self-check": "node scripts/self-check.mjs"
   },
-  "keywords": ["claude", "claude-code", "agent-skill", "skill", "plain-language", "esl", "readability"],
-  "repository": { "type": "git", "url": "https://github.com/parhamdavari/sapiens.git" }
+  "keywords": [
+    "claude",
+    "claude-code",
+    "agent-skill",
+    "skill",
+    "plain-language",
+    "esl",
+    "readability"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/parhamdavari/sapiens.git"
+  }
 }
