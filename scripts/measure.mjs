@@ -20,6 +20,9 @@
 import { readFileSync, readdirSync, existsSync } from "node:fs";
 import { join, basename } from "node:path";
 import { FIGURATIVE } from "./figurative-list.mjs";
+import { toProse, splitSentences, words as wordsOf } from "./lib/text.mjs";
+
+export { toProse };
 
 const RESULTS = "benchmarks/results";
 
@@ -36,37 +39,10 @@ function syllables(word) {
   return Math.max(n, 1);
 }
 
-// Strip everything that isn't prose the reader parses as a sentence: transcript markers,
-// HTML, code blocks and spans, tables, link targets, and markdown punctuation. Without
-// this, measuring a README measures its markup.
-export function toProse(raw, { dropQuotes = false } = {}) {
-  return raw
-    .replace(/^---\n[\s\S]*?\n---\n/, " ")   // YAML frontmatter is metadata, not prose
-    .replace(/<!--[\s\S]*?-->/g, " ")
-    .replace(dropQuotes ? /^\s*>.*$/gm : /(?!)/g, " ")   // blockquotes are quoted material
-    .replace(/```[\s\S]*?```/g, " ")
-    .replace(/<[^>]+>/g, " ")
-    .replace(/^\s*\|.*\|\s*$/gm, " ")          // table rows
-    .replace(/^---MESSAGE---.*$/gm, " ")
-    .replace(/\bNONE\b/g, " ")
-    .replace(/`[^`]*`/g, " ")                  // inline code
-    .replace(/!\[[^\]]*\]\([^)]*\)/g, " ")     // images carry no prose
-    .replace(/\[([^\]]*)\]\([^)]*\)/g, "$1")   // links keep their text, drop the target
-    .replace(/^[\s·|—–-]*$/gm, " ")             // separator-only lines (badge rows, nav rows)
-    .replace(/^\s*#{1,6}\s.*$/gm, " ")        // headings are labels, not sentences
-    .replace(/^\s*[-*+]\s+(.*?)\s*$/gm, "$1. ")
-    .replace(/^\s*\d+\.\s+(.*?)\s*$/gm, "$1. ")
-    .replace(/[#*>|_]/g, " ")
-    .replace(/\n\s*\n/g, ". ")                // a blank line ends a sentence
-    .replace(/\s+/g, " ")
-    .replace(/(\s*\.)+/g, ".")
-    .trim();
-}
-
 export function analyse(raw, opts) {
   const text = toProse(raw, opts);
-  const words = text.split(/\s+/).filter((w) => /[a-zA-Z]/.test(w));
-  const sentences = text.split(/(?<=[.!?])\s+/).filter((s) => s.trim());
+  const words = wordsOf(text);
+  const sentences = splitSentences(text);
   const W = words.length;
   const S = Math.max(sentences.length, 1);
   const SY = words.reduce((a, w) => a + syllables(w), 0);
