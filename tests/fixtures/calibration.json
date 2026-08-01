@@ -1,5 +1,5 @@
 {
- "note": "Reference scores computed once with textstat (independent Python implementation). Tolerance for our implementation: plus or minus one grade per formula.",
+ "note": "Passages preprocessed by scripts/lib/text.mjs toProse, so our formulas and textstat score identical bytes and only formula internals differ. Reference scores computed once with textstat. Tolerance: plus or minus one grade per formula.",
  "tool": "textstat 0.7.13",
  "computed": "2026-08-01",
  "passages": {
@@ -8,19 +8,9 @@
    "source": "Potter, The Tale of Peter Rabbit (1902), Project Gutenberg #14838",
    "licence": "public domain",
    "expected": {
-    "fleschKincaid": 7.43,
-    "colemanLiau": 7.36,
-    "ari": 8.54
-   }
-  },
-  "pride": {
-   "file": "passage-pride.txt",
-   "source": "Austen, Pride and Prejudice (1813), Project Gutenberg #1342",
-   "licence": "public domain",
-   "expected": {
-    "fleschKincaid": 6.24,
-    "colemanLiau": 5.47,
-    "ari": 6.09
+    "fleschKincaid": 6.43,
+    "colemanLiau": 6.98,
+    "ari": 7.44
    }
   },
   "sherlock": {
@@ -29,8 +19,8 @@
    "licence": "public domain",
    "expected": {
     "fleschKincaid": 11.27,
-    "colemanLiau": 8.81,
-    "ari": 12.42
+    "colemanLiau": 8.79,
+    "ari": 12.41
    }
   },
   "origin": {
@@ -42,6 +32,23 @@
     "colemanLiau": 11.92,
     "ari": 22.33
    }
+  },
+  "alice": {
+   "file": "passage-alice.txt",
+   "source": "Carroll, Alice's Adventures in Wonderland (1865), Project Gutenberg #11",
+   "licence": "public domain",
+   "expected": {
+    "fleschKincaid": 19.96,
+    "colemanLiau": 7.3,
+    "ari": 23.8
+   }
   }
- }
+ },
+ "tolerance": {
+  "fleschKincaid": 1,
+  "colemanLiau": 1,
+  "ari": 2.5,
+  "ari_note": "textstat counts punctuation in ARI characters; we follow the original Senter and Smith 1967 definition (letters and digits). The difference scales with punctuation density, so the tolerance is wider. The micro-fixture in tests/formulas.test.mjs pins our exact definition by hand."
+ },
+ "passage_note": "Passages avoid titled names (Mr., Mrs.): the reference tool splits sentences at those periods and ours correctly does not, which would turn a reference flaw into a test failure. Our abbreviation handling is asserted directly in tests/text.test.mjs."
 }
