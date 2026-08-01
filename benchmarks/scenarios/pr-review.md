@@ -50,3 +50,15 @@ No PR anywhere reports a `/context` number; all four give line counts only (527 
 ## Cheapest fix path (if the user wants it)
 Amend the #668/#669 PR bodies with a suite re-run plus two or three HTML comments,
 and run `/context` once on the stage-4 branch to record the real number.
+
+## Findings checklist
+
+Machine-read by `scripts/lib/recall.mjs`. A finding counts as present when any one of its
+patterns appears in the reply, case-insensitive. The patterns are my judgement of
+acceptable phrasings, recorded here so that judgement is visible and versioned.
+
+- missing-suite-rerun: re-run | rerun | suite
+- missing-context-number: /context | context number
+- missing-html-rationale: html comment | rationale comment | comments at the cut
+- hook-passing-not-failing: hook passing | passing rather | passing instead | weaker evidence
+- unauthorized-destination: knowledge-links | not on the prompt | not on your list | named destination

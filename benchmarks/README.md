@@ -29,9 +29,10 @@ real. The decimal places are not.
 | `turns` | How many separate times the assistant spoke during one task |
 | `words` | Total spoken words across the whole task |
 | `avg-sent` | Average sentence length |
-| `FK` | Flesch-Kincaid grade. Lower is easier. |
+| `grade` | Median of Flesch-Kincaid, Coleman-Liau, and ARI. Lower is easier. Calibrated against an independent implementation in `tests/`. |
 | `>25w` | Sentences over 25 words. Each one asks the reader to hold two ideas at once. |
-| `figurative` | Hits against the list in `scripts/figurative-list.mjs` |
+| `off-list%` | Words outside the NGSL familiar-word list. Tests the vocabulary claim directly. |
+| `idioms` | Hits against the Wiktionary-derived list, see `scripts/build-idiom-list.mjs` |
 | `em-dash` | Em dashes, which split a sentence into two half-thoughts |
 
 Transcripts covering a long task record every message the assistant would speak, including
@@ -43,41 +44,51 @@ judgement rather than an observation. The `pr-orientation` pair has no markers a
 its `1` is the script's default rather than a count. The same caution applies to `em-dash`,
 which records a style choice made while writing both sides.
 
-### Why there is a figurative column at all
+### Why there is an idioms column at all
 
-Flesch-Kincaid measures word length and sentence length. It cannot see idioms. Here is a
-real sentence that scores as easy English:
+Reading formulas measure word length and sentence length. They cannot see idioms. Here is
+a real sentence that scores as easy English:
 
 > that's a product call about how hard an uncited claim should bite
 
 Every word is short. Every reader of English as a second language stops at it anyway.
 
-### What the figurative number is not
+### What the idioms number is not
 
-It is a hit count against one fixed list of 175 expressions. English has thousands. The
-number is a lower bound, comparable between two texts scored by the same list, and
-meaningless as an absolute.
+It is a hit count against one fixed list, and the list's history matters. The first two
+versions were written in this repo, and both contained entries lifted from the transcripts
+they scored. The current list is derived mechanically from Wiktionary's English-idioms
+category by [`scripts/build-idiom-list.mjs`](../scripts/build-idiom-list.mjs): 6,698
+entries, every filter stated with its reason, reproducible byte for byte. Nobody who wrote
+it saw these transcripts.
 
-That list has been rewritten twice, and both rounds are recorded at the top of
-[`scripts/figurative-list.mjs`](../scripts/figurative-list.mjs). The first version had been
-written by reading the transcript it scored. The second version was longer, and six of the
-entries that still fired were the same lifted strings hiding in a bigger crowd.
+The number is a lower bound with named blind spots. Matching is by exact word sequence, so
+inflected forms miss. Literal use of a listed phrase still counts. And a novel metaphor is
+invisible. The real-world sentence quoted above scores **zero** on this list: *should
+bite* is a metaphor someone made up, not a catalogued idiom.
 
-After the second cleanup the column reads zero for every with-and-without pair, and one for
-the real-world reply. **This metric currently provides no evidence that the skill reduces
-idioms.** The argument for the idiom rules rests on the example above, not on this column.
+**This metric still provides no evidence that the skill reduces idioms.** The sapiens
+transcripts score zero, but so does the reply that motivated the idiom rules. The argument
+rests on the example above, not on this column.
 
 ## Results
 
-| transcript | turns | words | avg-sent | FK | >25w | figurative | em-dash |
-|---|---:|---:|---:|---:|---:|---:|---:|
-| `ci-triage--baseline` | 5 | 313 | 9.5 | 5.3 | 2 | 0 | 7 |
-| `ci-triage--sapiens` | **1** | **112** | 8.6 | **4.6** | **0** | 0 | **0** |
-| `pr-orientation--baseline` | 1 | 307 | 13.3 | 9.3 | 1 | 0 | 4 |
-| `pr-orientation--real-world` | 1 | 191 | 14.7 | 8.5 | 1 | **1** | 0 |
-| `pr-orientation--sapiens` | 1 | **113** | 14.1 | **5.9** | **0** | 0 | 0 |
-| `pr-review--baseline` | 3 | 500 | 12.5 | 7.9 | 6 | 0 | 13 |
-| `pr-review--sapiens` | **1** | **207** | 11.5 | **6.1** | 1 | 0 | **0** |
+Regenerate this table with `node scripts/measure.mjs --markdown`. Never edit it by hand.
+
+| transcript | turns | words | avg-sent | grade | >25w | off-list% | idioms | em-dash |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| `ci-triage--baseline` | 5 | 313 | 9.5 | 5.5 | 2 | 13.7 | 1 | 7 |
+| `ci-triage--sapiens` | 1 | 112 | 8.6 | 4.7 | 0 | 20.2 | 0 | 0 |
+| `pr-orientation--baseline` | 1 | 307 | 13.3 | 9.3 | 1 | 11.4 | 1 | 4 |
+| `pr-orientation--real-world` | 1 | 191 | 14.7 | 8.7 | 1 | 9.7 | 0 | 0 |
+| `pr-orientation--sapiens` | 1 | 113 | 14.1 | 6.0 | 0 | 3.5 | 0 | 0 |
+| `pr-review--baseline` | 3 | 500 | 12.5 | 8.2 | 6 | 17 | 0 | 13 |
+| `pr-review--sapiens` | 1 | 207 | 11.5 | 6.3 | 1 | 17.2 | 0 | 0 |
+
+Two numbers in the off-list column go against the skill and stay in the table. The
+CI-triage short answer is worse than its baseline, 20.2% against 13.7%: a 112-word reply
+keeps every package and command name while the denominator shrinks. Short technical
+replies are punished by this metric, and anyone quoting the column should know that.
 
 ## The scenarios
 
@@ -109,7 +120,7 @@ provides. The baseline transcript reports it. The short answer does not.
 This matters more than its size. A shortening pass loses weak-evidence findings first. The
 skill's own last check exists to catch that case, and here it did not fire.
 
-The transcript stays as it is. Editing a result after the fact to make a tool look better
+The transcript stays as it is. Editing a recorded result to make a tool look better
 would make every other number in this folder worthless.
 
 ## What these numbers do not show
@@ -124,6 +135,19 @@ would make every other number in this folder worthless.
 - **Token savings are a side effect.** The skill cuts filler and repetition, never grammar.
   A fragment-style tool will beat this one on words per answer, and will lose on whether a
   second-language reader can parse the result.
+
+## Live runs
+
+`results/` is frozen evidence and never changes. `runs/` is the live counterpart:
+transcripts generated by `benchmarks/generate.mjs`, which drives the Claude CLI headless
+against the same fixtures. Every file records model, skill version, date, and run number
+in its frontmatter. Score them all with `node benchmarks/generate.mjs --score`, which
+also reports recall against each scenario's findings checklist.
+
+Skill edits go through the protocol in `tasks/spec.md`: before runs, the edit, after
+runs. Recall must hold. The keep-or-revert decision lands here as a `DECISION-*.md`
+file with its evidence. The first decision was a revert, and its record explains why that is the
+system working.
 
 ## How to make this better
 

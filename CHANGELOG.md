@@ -3,11 +3,65 @@
 Format follows [Keep a Changelog](https://keepachangelog.com). Versions follow
 [Semantic Versioning](https://semver.org).
 
-> **A note on figures in older entries.** The measurement scripts changed in 3.3.0. The
-> idiom list was rebuilt from scratch, and the text extractor learned to ignore markdown,
-> tables and frontmatter. Numbers quoted in entries before 3.3.0 came from the old scripts
-> and do not reproduce against the current ones. Only the 3.3.0 table below is current.
-> Run `npm run measure` for the live figures.
+> **A note on figures in older entries.** The measurement scripts changed in 3.3.0 and
+> again in 3.5.0. Numbers quoted in an entry reproduce only against the scripts of that
+> entry's version. Only the 3.5.0 table below matches the current scripts. Run
+> `npm run measure` for the live figures.
+
+## [3.5.0]
+
+The measurement layer rebuild. The skill text is unchanged; every instrument that
+measures it was replaced, following the spec in `tasks/spec.md`.
+
+**Changed**
+
+- The reading grade is now the median of three formulas: Flesch-Kincaid, Coleman-Liau,
+  and ARI. Two of the three count characters rather than syllables, so no single
+  heuristic decides the number. The implementation is calibrated in CI against an
+  independent implementation (textstat) on four public-domain passages, with tolerances
+  and both known divergences recorded in `tests/fixtures/calibration.json`.
+- The idiom list is no longer written in this repo. `scripts/build-idiom-list.mjs`
+  derives it from Wiktionary's English-idioms category: 10,585 raw titles, 6,698 kept,
+  every filter mechanical and stated with its reason, reproducible byte for byte.
+  Matching is by exact word sequence, so the substring bugs are structurally gone.
+- The sentence splitter no longer breaks on abbreviations. 'vs.' and 'e.g.' produced
+  five sentences from three before; the abbreviation set is a named constant.
+- self-check applies the same intent on the new instruments: median grade under 9.0,
+  zero idiom hits. Inline double-quoted strings now count as quoted material, so a doc
+  that mentions a banned phrase is not condemned for mentioning it.
+
+**Added**
+
+- `off-list%`: the share of words outside the vendored NGSL familiar-word list, the
+  first direct measurement of the plain-vocabulary claim. Provenance in the data file
+  headers. On the orientation pair it reads 3.5% with the skill against 11.4% without.
+- `npm run test:unit`: 26 tests, including golden snapshots of the text extractor,
+  a 22-phrase false-positive corpus asserted to zero idiom hits, and the calibration
+  suite. CI runs them on both platforms.
+- `node scripts/measure.mjs --markdown` emits the published tables, so no number in
+  the docs is hand-typed.
+- `benchmarks/generate.mjs`: a harness that drives the Claude CLI headless and answers
+  every scenario from its fixture, three runs per arm, with model, skill version, date,
+  and run number recorded in each transcript's frontmatter. 27 live transcripts are
+  committed under `benchmarks/runs/`.
+- Findings checklists in every scenario fixture, and a recall scorer
+  (`scripts/lib/recall.mjs`). Recall is the guard metric: a reply that got shorter by
+  dropping a finding scores worse, whatever the other columns say.
+- The first skill edit went through the new edit protocol and was **reverted on a null
+  result**: the target metric moved 17 to 14 across nine runs, recall held, and the
+  motivating scenario did not move. The full record is
+  `benchmarks/runs/DECISION-2026-08-01-sentence-ceiling.md`. The 25-word breach stands
+  as the top open finding against the skill text.
+
+**Honest findings the new instruments produced**
+
+- The CI-triage short answer scores worse than its baseline on off-list share, 20.2%
+  against 13.7%. Short technical replies keep the jargon while the denominator shrinks.
+  Reported in the README and benchmarks rather than smoothed over.
+- The real-world reply that motivated the idiom rules scores zero on the derived list.
+  Its hardest phrases are novel metaphors, which no catalogued list can see. The idiom
+  effect therefore remains argued, not measured, now with an independent instrument
+  saying so.
 
 ## [3.4.0]
 

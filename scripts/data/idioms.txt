@@ -1,0 +1,6714 @@
+# English idioms, derived from Wiktionary.
+#
+# Source: https://en.wiktionary.org/wiki/Category:English_idioms
+# Licence: CC BY-SA 4.0 (Wiktionary content licence; entry titles used with attribution)
+# Retrieved: 2026-08-01 (10585 raw titles)
+# Derived by: scripts/build-idiom-list.mjs — mechanical filters only, each
+# with its reason in the script. Re-running the script reproduces this file
+# byte for byte from the raw dump.
+#
+# Filter chain: fetched 10585 -> multi-word 9987 -> max-six-words 9740 -> lowercase-ascii 9265 -> no-placeholder 7987 -> not-all-stopwords 7882 -> no-two-word-phrasal-verbs 7031 -> no-two-word-with-stopword 6698 -> deduplicated 6698
+#
+# WHAT THE NUMBER MEANS. A hit count is a lower bound against this list, not
+# an absolute measure of figurative language. Two texts are comparable
+# because the same list scores both. No entry was added or removed by hand;
+# if an entry bothers you, change a filter and re-run, so the change applies
+# to the whole list and is visible in this header.
+a boon and a bane
+a bridge too far
+a cigar is just a cigar
+a dime a dozen
+a far remove
+a good deal
+a great deal
+a hundred and ten percent
+a little bird told me
+a notch above
+a pound to a penny
+a year and a day
+above and beyond
+above the curve
+above the fray
+above the law
+above the salt
+absence makes the heart grow fonder
+abuse of distress
+accident of birth
+accident waiting to happen
+ace in the hole
+acknowledge the corn
+acquired taste
+across the board
+act the hypocrite
+activist judge
+activist justice
+add fuel to the fire
+add insult to injury
+add oil
+added value
+adrenaline rush
+adversarial collaboration
+affair partner
+after the fact
+against all odds
+against the clock
+against the collar
+against the grain
+against the law
+against the run of play
+against the world
+age before beauty
+agree to disagree
+aha moment
+ahead of the curve
+ahead of the game
+ahead of the pack
+ain't what it used to was
+air rage
+air sandwich
+alarums and excursions
+alive and kicking
+all and sundry
+all bark and no bite
+all bedlam breaks loose
+all bets are off
+all duck or no dinner
+all ends up
+all eyes and ears
+all fingers and thumbs
+all fur and no knickers
+all fur coat and no knickers
+all hat and no cattle
+all hat and no cowboy
+all hell breaks loose
+all in the family
+all it's cracked up to be
+all kidding aside
+all mouth and no trousers
+all mouth and trousers
+all of a heap
+all over bar the shouting
+all over but the shouting
+all over hell's half acre
+all over the board
+all over the map
+all over the place
+all over the world
+all points of the compass
+all rights reserved
+all sixes and nines
+all sizzle and no steak
+all systems go
+all talk and no cider
+all that jazz
+all the gear and no idea
+all the marbles
+all the rage
+all things considered
+all things to all people
+all to smash
+all too well
+all very well
+all-weather friend
+almighty dollar
+along the lines of
+amateur hour
+amber gambler
+amber light
+amber nectar
+an arm and a leg
+anaconda mortgage
+ancient history
+and his mother
+and so forth
+and the like
+angel's advocate
+angle for farthings
+angle iron
+answer on a postcard
+answer the call of nature
+any nook or cranny
+any old nook or cranny
+any old thing
+any port in a storm
+any the wiser
+any time now
+any time soon
+any way one slices it
+anybody who is anybody
+anyone's guess
+anything goes
+ape leader
+appetite comes with eating
+apple polisher
+apples and oranges
+apples to apples
+apron string
+apron-string hold
+arch doxy
+are you deaf
+are your ears burning
+arm candy
+arm to the teeth
+arm's length
+armchair quarterback
+army volunteer
+around the clock
+around the corner
+arrow in the quiver
+arse end of nowhere
+arse over tip
+arse over tit
+arsy varsy
+arsy versy
+artful dodger
+article of death
+as a rule
+as a whole
+as all get-out
+as best one can
+as ever trod shoe leather
+as ever trod shoe-leather
+as far as one is concerned
+as far as one knows
+as if there were no tomorrow
+as it gets
+as it goes
+as it happens
+as long as
+as luck may have it
+as luck would have it
+as of late
+as often as not
+as soon as
+as the crow flies
+as the day is long
+as the gull flies
+as the next girl
+as the next guy
+as the next person
+as the wind blows
+as they come
+as you go
+as you know
+ask a stupid question
+ask for it
+ask for the moon
+ask my arse
+ask round
+asking for a friend
+asleep at the switch
+asphalt jungle
+ass over teakettle
+assault and battery
+assume room temperature
+assume the mantle
+assume the position
+at a canter
+at a distance
+at a draught
+at a glance
+at a loss
+at a loss for words
+at a low ebb
+at a moment's notice
+at a pinch
+at a stand
+at all events
+at all hands
+at all hours
+at any given moment
+at arm's length
+at daggers drawn
+at death's door
+at each other's throats
+at first blush
+at full tilt
+at long last
+at loose ends
+at peace with
+at rack and manger
+at sixes and sevens
+at the best of times
+at the coal face
+at the disposal of
+at the door of
+at the drop of a hat
+at the elbow
+at the end of the day
+at the expense of
+at the feet of
+at the helm
+at the high port
+at the last minute
+at the mercy of
+at the ready
+at the receiving end
+at the very least
+at the wheel
+at this point in time
+atomic cocktail
+atta girl
+attention whore
+auld lang syne
+autem cackler
+autem diver
+autem mort
+autumn romance
+avant la lettre
+average bear
+average joe
+away game
+away with the fairies
+ax to grind
+babe in arms
+babe in the woods
+babe magnet
+babies in the eyes
+baby and bathwater
+baby elephant in the room
+baby step
+babysitter test
+back at you
+back forty
+back gammon player
+back in the day
+back in the game
+back in the groove
+back office
+back that train up
+back the right horse
+back the wrong horse
+back to back
+back to square one
+back to the drawing board
+back to the wall
+back up the truck
+back-cloth star
+backhanded compliment
+backwards and forwards
+bad actor
+bad apple
+bad blood
+bad books
+bad business
+bad company
+bad egg
+bad hair day
+bad iron
+bad joke
+bad looker
+bad news
+bad news bears
+bad old days
+bad penny
+bad trip
+bad trot
+bad word
+badge bunny
+badge of honor
+bag of bones
+bag of tricks
+bail out on
+baker's dozen
+baker's half dozen
+baking hot
+balance the books
+ball hog
+ball of fire
+ball of malt
+ballistic podiatry
+balloon goes up
+balloon knot
+ballot stuffing
+ballpark estimate
+ballpark figure
+balls of steel
+balls to the wall
+balum rancum
+bamboo ceiling
+banana nose
+banana republic
+band together
+band-aid solution
+bandwagon fan
+bandwagon jumper
+bang a uey
+bang down the door
+bang for the buck
+bang some heads together
+bang straw
+bang to rights
+bank night
+banker's dozen
+bankers' hours
+bankrupt cart
+banner year
+banyan day
+bar none
+bar sinister
+bar star
+barber's sign
+bare poles
+bark up the wrong tree
+barn find
+barrel of laughs
+barrel of monkeys
+base over apex
+basement battler
+bash into shape
+bash the bishop
+bask in the sunshine
+basket house
+bastardly gullion
+bat a thousand
+bat an eyelid
+bat five hundred
+bat for the other team
+bat of an eye
+bat the breeze
+bate an ace
+bathroom singer
+batten down the hatches
+be a hundred years too early
+be a man
+be aces with
+be at the plague
+be cruel to be kind
+be in luck
+be it as it may
+be left at the post
+be left holding the baby
+be my guest
+be no match for
+be on days
+be on nights
+be still my heart
+be taken ill
+be that as it may
+be the bigger man
+be-all and end-all
+bean counter
+bear a hand
+bear away the bell
+bear fruit
+bear in mind
+bear the brunt
+beard the lion in his den
+beast with two backs
+beat a dead horse
+beat a retreat
+beat around the bush
+beat as one
+beat feet
+beat like a jungle drum
+beat off with a stick
+beat out the chest
+beat the bishop
+beat the bushes
+beat the clock
+beat the cock
+beat the crowd
+beat the daylights out of
+beat the drum for
+beat the dust
+beat the odds
+beat the pants off
+beat the poop out of
+beat the shit out of
+beat the stuffing out of
+beat to the punch
+beat with the ugly stick
+beautiful people
+beauty queen
+beauty sleep
+become one flesh
+bed blocker
+bed of roses
+beef to the hoof
+been to the rodeo
+beer and skittles
+beer goggles
+beer muscles
+before it was cool
+before you can say knife
+beg to differ
+beggars can't be choosers
+behind bars
+behind closed doors
+behind its time
+behind the bit
+behind the counter
+behind the eight-ball
+behind the scenes
+behind the times
+behind time
+belemnite battlefield
+believe it or not
+believe you me
+believing is seeing
+bell the cat
+bells and whistles
+bellwether state
+belly up to the bar
+below the belt
+below the mahogany
+below the salt
+bench jockey
+bend over backwards
+bend the brain
+bend the knee
+bend the truth
+beneath the surface
+benevolent overlord
+bent on a splice
+beside the point
+best bet
+best laid plans
+best of both worlds
+best of the bunch
+best pleased
+best regards
+best thing since sliced bread
+best thing since sliced pan
+best-kept secret
+bet the farm
+bet the house
+bet the ranch
+betray with a kiss
+better angels
+better for it
+better luck next time
+better nature
+better place
+better than sex
+between the hammer and the anvil
+between the jigs and the reels
+between the pipes
+betwixt and between
+beyond a joke
+beyond a shadow of a doubt
+beyond the black stump
+beyond the pale
+bicycle chain
+big boy
+big boys
+big break
+big bucks
+big cheese
+big deal
+big dick energy
+big end of town
+big fat
+big fish
+big fish in a small pond
+big girl
+big gun
+big hand
+big head
+big kahuna
+big mad
+big money
+big mouth
+big name
+big ol'
+big old
+big ole
+big picture
+big screen
+big shop
+big shot
+big sleep
+big spender
+big talk
+big tamale
+big tent
+big wheel
+bigger fish to fry
+bill of goods
+bio queen
+bird in the bosom
+bird of ill omen
+bird's-eye view
+birds and bees
+birds of a feather
+birds of a feather flock together
+birthday suit
+bit by a barn mouse
+bit by bit
+bitch and moan
+bitch goddess
+bite my ass
+bite my shiny metal ass
+bite of the cherry
+bite of the reality sandwich
+bite the big one
+bite the biscuit
+bite the bullet
+bite the curb
+bite the dust
+bite the hand that feeds one
+bite to eat
+bits and bobs
+bitter end
+black babies
+black day
+black gold
+black hat
+black lie
+black mark
+black market
+black oxide
+black rider
+black sheep
+blame game
+blanket term
+blast from the past
+blaze a trail
+bleed red ink
+bleeding edge
+blend into the woodwork
+blessed event
+blind date
+blind leading the blind
+blind with science
+blink first
+blink of an eye
+blocking and tackling
+blood and guts
+blood in the water
+blood is thicker than water
+bloom is off the rose
+blot on the escutcheon
+blow a fuse
+blow a hole through
+blow a kiss
+blow chunks
+blow hot air
+blow hot and cold
+blow me down
+blow off steam
+blow out of proportion
+blow out of proportions
+blow out of the water
+blow the cobwebs away
+blow the doors off
+blow the lid off
+blow the whistle
+blow this pop stand
+blow this taco stand
+blow to kingdom come
+blow tomahawks
+blow town
+blue chamber
+blue devils
+blue moon
+blue note
+blue ribbon
+blue state
+blue wall of silence
+blue-eyed boy
+blue-sky thinking
+bluebird of happiness
+blur the line
+body blow
+boiling frog
+boiling hot
+boiling mad
+boiling point
+bolt bucket
+bolt from the blue
+bolt to the bran
+bone dry
+bone hard
+bone in her teeth
+bone in the throat
+bone of contention
+bone to pick
+booby prize
+boogie on down
+book burning
+book dumping
+boon and bane
+boot camp
+booze can
+bop the bishop
+borderline case
+bored shitless
+born and bred
+born in a barn
+borrow trouble
+borrowed time
+bottom dollar
+bottom fishing
+bottom line
+bottom of the line
+bottom of the ninth
+bottom the house
+bounce off the walls
+bouquets and brickbats
+bow and scrape
+bow down before the porcelain god
+bow-legged wi' brass
+bowl a googly
+bowl of cherries
+box clever
+box seat
+box the compass
+boy howdy
+boy in the boat
+boy toy
+boys and girls
+boys and their toys
+brace of shakes
+bragging rights
+brain blast
+brain bucket
+brain candy
+brain drain
+brain surgeon
+brain surgery
+brass ceiling
+brass farthing
+brass monkey
+brass monkeys
+brass neck
+bread and butter
+bread and circuses
+bread of life
+break a leg
+break a promise
+break a sweat
+break cover
+break even
+break gates
+break into a run
+break it to
+break open
+break ranks
+break reality
+break the back of
+break the bank
+break the buck
+break the cycle
+break the deadlock
+break the fourth wall
+break the ice
+break the mold
+break the seal
+break the story
+break the wheel
+break wind
+breath of fresh air
+breathe a sigh of relief
+breathe a word
+breathe easy
+breed in the bone
+bridge over troubled waters
+bridge the gap
+bright and early
+bright lights
+bright line
+bright side
+bright spark
+bright young thing
+bright-eyed and bushy-tailed
+bright-line rule
+bring a knife to a gunfight
+bring back to life
+bring down the curtain
+bring down the hammer
+bring down the house
+bring forward
+bring home
+bring home the bacon
+bring it weak
+bring out in a rash
+bring round
+bring to an end
+bring to bear
+bring to heel
+bring to justice
+bring to light
+bring to nought
+bring to the hammer
+bring to the table
+bring together
+bring up the rear
+broad and shallow
+broad brush
+broad in the beam
+broad shoulders
+broad strokes
+broken heart
+broken hearted
+broken home
+broken man
+broken record
+broken reed
+broken vessel
+brown bag
+brown bread
+brown noser
+brown power
+brown study
+brown thumb
+brownie point
+buck fever
+buck the trend
+buck up to
+bucket list
+bucket of bolts
+bucket of rust
+bucket of syrup
+buff the muffin
+bug storm
+build a better mousetrap
+build a case
+build bridges
+build castles in the air
+build character
+build on sand
+build the plane while flying it
+built different
+built like a brick outhouse
+built like a brick shipyard
+built like a brick shithouse
+bulk billing
+bull in a china shop
+bull session
+bum rap
+bum rush
+bum steer
+bum's rush
+bump and grind
+bump in the road
+bumper crop
+bun fight
+bundle of energy
+bundle of joy
+bundle of laughs
+bundle of nerves
+bunny hop
+bunny hug
+buried treasure
+burn bread
+burn daylight
+burn rubber
+burn the candle at both ends
+burn the midnight oil
+burn the roof
+burn time
+burning question
+burst into tears
+burst out laughing
+bury the hatchet
+bury the lede
+bus plunge
+bush league
+bush telegraph
+business as usual
+business end
+business girl
+busman's holiday
+bust a cap
+bust a move
+bust a nut
+bust ass
+bust chops
+bust the dust
+busted flush
+busy as a bee
+busy as a nailer
+busy work
+but seriously folks
+butcher's bill
+butcher's thumb
+butt heads
+butter face
+butter the cony
+butterfly upon a wheel
+button nose
+button pusher
+buy a ticket to
+buy and hold
+buy straw hats in winter
+buy the farm
+buy the rights
+buy the rumor
+buy time
+buy to let
+by a hair's breadth
+by a landslide
+by a long chalk
+by a long shot
+by a long way
+by all accounts
+by an eyelash
+by and large
+by any means
+by any stretch of the imagination
+by guess or by gosh
+by hook or by crook
+by no means
+by no stretch
+by no stretch of imagination
+by no stretch of the imagination
+by the book
+by the eye
+by the moment
+by the numbers
+by the same token
+by the score
+by the way
+by vice of
+by virtue of
+cake and gingerbread
+cake crumbs
+cake walk
+cakes and ale
+call a lid
+call a spade a spade
+call an audible
+call it a day
+call it a night
+call it an early night
+call it as one sees it
+call it stumps
+call off the dogs
+call roll
+call to account
+call to the bar
+calm before the storm
+camel's nose
+camp as a row of tents
+camp out on
+can of corn
+can of worms
+can't get enough
+can't stand the sight of
+canary fit
+canary in a coal mine
+candle in the wind
+cannot make it
+cap in hand
+cap it all off
+cap over the windmill
+captain's pick
+carbon burning
+carbonated water
+card of ten
+care a button
+care a jackstraw
+care a whit
+care package
+carriage trade
+carrot and stick
+carry a torch
+carry forward
+carry the ball
+carry the can
+carry the mail
+carry the torch
+carry water for
+carved in stone
+case the joint
+cash on the barrelhead
+cast a chill
+cast a shadow
+cast aside
+cast aspersions
+cast in concrete
+cast loose
+cast of thousands
+cast pearls before swine
+cast snowballs
+cast the first stone
+castle in the air
+cat and dog life
+cat in the meal-tub
+cat in the sack
+cat piss
+cat that ate the canary
+cat's cradle
+cat's meow
+catbird seat
+catch a body
+catch a break
+catch a case
+catch a cold
+catch a date
+catch a fade
+catch a falling knife
+catch a packet
+catch a stray
+catch a wave
+catch air
+catch as catch can
+catch big air
+catch dust
+catch feelings
+catch fire
+catch flies
+catch hands
+catch heat
+catch hell
+catch napping
+catch of the day
+catch red-handed
+catch sight of
+catch some rays
+catch some z's
+catch the eye
+catch the sun
+cattle call
+caucus race
+caught short
+cause a stir
+cautionary tale
+caviar to the general
+cede the field
+center field
+center part
+chalk and cheese
+chalk up to
+champagne taste on a beer budget
+chance upon
+chance'd be a fine thing
+change collars
+change hands
+change horses in midstream
+change of clothes
+change of heart
+change of life
+change of pace
+change of scenery
+change of tack
+change the channel
+change the game
+chaotic neutral
+character assassination
+charity begins at home
+charity mugger
+charley horse
+charm offensive
+charm the birds from the trees
+charmed life
+chase a rainbow
+chase rainbows
+chase tail
+chase the dragon
+cheap and cheerful
+cheap drunk
+cheap thrill
+cheaper by the dozen
+cheat sheet
+check and balance
+check is in the mail
+check the math
+checkered past
+checkup from the neck up
+cheek by jowl
+cheek for chowl
+cheeky monkey
+cheese tax
+cherry on top
+chess piece
+chesterfield rugby
+chew the cud
+chew the scenery
+chicken feed
+chicken scratch
+child's play
+chill to the bone
+chilly climate
+chink in the armor
+chip off the old block
+chip shot
+chocolate teapot
+choke the chicken
+chomp at the bit
+choose violence
+chopped liver
+chrome dome
+chrome horn
+chum in the water
+chump change
+circle the drain
+circle the wagons
+circuit slugger
+circular file
+circular firing squad
+civil tongue
+claim to fame
+clamp down on
+clap eyes on
+clash of the ash
+class clown
+clean as a hound's tooth
+clean as a whistle
+clean break
+clean hands
+clean money
+clear blue water
+clear cut
+clear the air
+clear the table
+click into gear
+click of the fingers
+climb the ladder
+climb the walls
+clock is ticking
+clock the tea
+close enough for government work
+close in on
+close on the heels of
+close one eye
+close season
+close the book on
+close the books
+close the face
+close to home
+closed book
+closet case
+clothespin vote
+cloud nine
+cloud seven
+clout list
+clown college
+clown school
+clue stick
+clutch artist
+cock a snook
+cock cheese
+cock in the henhouse
+cock of the roost
+cock of the walk
+cock-and-bull story
+coffee money
+coffee talk
+coke dick
+cold cash
+cold chills
+cold comfort
+cold fish
+cold hand
+cold hard cash
+cold one
+cold shoulder
+cold snap
+cold treatment
+cold turkey
+collect dust
+come a cropper
+come a long way
+come across
+come alive
+come and go
+come apart at the seams
+come back from the dead
+come clean
+come down in stair rods
+come down to
+come down to earth
+come down to us
+come first
+come forward
+come from a good place
+come full circle
+come hell or high water
+come home by weeping cross
+come home to roost
+come in from the cold
+come in handy
+come in hot
+come into being
+come into the world
+come knocking
+come of age
+come on over
+come on strong
+come online
+come out in the wash
+come out of the broom closet
+come out of the closet
+come out of the woodwork
+come out swinging
+come right
+come the acid
+come the old soldier
+come thick and fast
+come to a close
+come to a head
+come to a sticky end
+come to an end
+come to blows
+come to grief
+come to grips with
+come to life
+come to light
+come to mention it
+come to mind
+come to nothing
+come to nought
+come to papa
+come to pass
+come to power
+come to terms
+come to terms with
+come to think of it
+come to time
+come true
+come unhinged
+come unstuck
+come up and bite
+come up roses
+come up with
+come up with snake eyes
+come up with the goods
+come what may
+come with the territory
+comedy gold
+comedy of errors
+comfort girl
+comfort woman
+comfort zone
+coming and going
+coming into the world
+coming right up
+command performance
+common ground
+common or garden variety
+common purse
+common run
+common touch
+company town
+compare notes
+complete and utter
+completely and utterly
+concrete jungle
+connect the dots
+connecting rod
+conscience money
+consenting adult
+considering cap
+contain multitudes
+cook the books
+cook up a storm
+cooking with gas
+cool cat
+cool head
+coon's age
+corner the market
+corporate ladder
+corporate welfare bum
+corporation pop
+cost cutting
+cost the earth
+couch potato
+could not get elected dogcatcher
+couldn't be more different
+couldn't care less
+couldn't happen to a nicer
+count angels on pinheads
+count noses
+count sheep
+count to five
+count to ten
+count to three
+country mile
+court of public opinion
+covenant of salt
+cow juice
+cowboy killer
+cowboy shower
+cowgirl position
+crab mentality
+crack a crust
+crack a fat
+crack a smile
+crack hardy
+crack of dawn
+cradle robber
+cradle snatcher
+crank the handle
+crash course
+crash dive
+crawl before one walks
+crawl into a hole
+crawl over each other
+crazy enough to work
+cream of the crop
+cream the crop
+creature comfort
+creature feature
+creature of habit
+creature of statute
+creature of the night
+crescent spanner
+criss-cross applesauce
+crock of gold
+crocodile tear
+crony capitalism
+cross my heart
+cross of gold
+cross paths
+cross swords
+cross the aisle
+cross the line
+cross to bear
+cross to take up
+crow to pick
+crow to pluck
+crow to pull
+crowd in on
+crowd sail
+cruel mistress
+crunch numbers
+cry cupboard
+cry for help
+cry foul
+cry over spilt milk
+cry the blues
+cry wolf
+crying shame
+crystal clear
+crystal dick
+culture hero
+cum grano salis
+cup of joe
+cup of tea
+curate's egg
+curb appeal
+curb crawler
+curiouser and curiouser
+curry favor
+cut a dash
+cut a deal
+cut a figure
+cut a rug
+cut a swath
+cut a wide swath
+cut and dried
+cut and thrust
+cut bait
+cut both ways
+cut corners
+cut down the tall poppy
+cut down to size
+cut from the same cloth
+cut it out
+cut loose
+cut one loose
+cut red tape
+cut swathes
+cut the cheese
+cut the cord
+cut the mustard
+cut the pigeon wing
+cut the umbilical cord
+cut to pieces
+cut to the chase
+cut up nasty
+cut up rough
+cutting edge
+daily grind
+damn by association
+damn right
+damn straight
+damn the torpedoes
+damn with faint praise
+damp squib
+dance attendance
+dance of the seven veils
+dance on nothing
+dance with the devil
+dark cloud
+dark horse
+darken a church door
+darn tootin'
+date with destiny
+dawn of a new day
+dawn of time
+day after day
+day and age
+day at the beach
+day in the sun
+day lark
+day of days
+day or night
+daylight robbery
+days of yore
+dead 'n' buried
+dead air
+dead and buried
+dead asleep
+dead cat bounce
+dead center
+dead duck
+dead end
+dead fish
+dead giveaway
+dead heat
+dead inside
+dead last
+dead loss
+dead meat
+dead men's shoes
+dead of night
+dead of winter
+dead ringer
+dead silence
+dead soldier
+dead to rights
+dead to the world
+dead tree edition
+deadbeat dad
+deadstick landing
+deafening silence
+deal a bad hand
+deal a good hand
+deal a hand
+death and taxes
+death by a thousand paper cuts
+death rattle
+death warmed up
+deathbed conversion
+debris field
+decimal dozen
+deep cut
+deep dive
+deep six
+deep thinker
+deep water
+deer in the headlights
+degrade gracefully
+deliver the goods
+deliver up to
+democratic wedding
+desk jockey
+detective work
+devil dancing
+devil in disguise
+devil lies in the details
+devil's advocate
+devil's luck
+dial towards
+diarrhea of the mouth
+dice roll
+dick milk
+dick munch
+dictated but not read
+die a thousand deaths
+die hard
+die in harness
+die on the vine
+die the way one lived
+different breed of cat
+different drummer
+dig deep
+dig out of a hole
+dig up dirt
+digital courage
+dim and distant
+dime's worth
+diminishing returns
+dine on ashes
+dip a toe into
+diplomatic flu
+dire straits
+director of first impressions
+dirt file
+dirty laundry
+dirty look
+dirty money
+dirty pool
+dirty word
+dirty work
+dish the dirt
+dishpan hands
+dismal science
+do a bunk
+do a number on
+do a slow burn
+do away with
+do by halves
+do it tough
+do me a favour
+do me a lemon
+do or die
+do right by
+do the dash
+do the decent thing
+do the dirty on
+do the honors
+do the mahi
+do the math
+do the needful
+do the right thing
+do the talking
+do the trick
+do the work
+do well by doing good
+do with mirrors
+doctors make the worst patients
+dodge a bullet
+dog and cat
+dog and pony show
+dog eat dog
+dog in the hunt
+dog in the manger
+dog my cats
+dog that caught the car
+dog who caught the tire
+dog's breakfast
+dog's chance
+dog's life
+dollar-sign eyes
+don't drop the soap
+don't give up your day job
+don't go there
+don't hold your breath
+don't knock yourself out
+don't shit where you eat
+don't sweat it
+don't tell me
+done and dusted
+done deal
+donkey work
+donkey's ears
+donkey's years
+dope sheet
+dormitive principle
+dormitive virtue
+double booked
+double bookkeeping
+double in brass
+double taker
+double tap
+down at heel
+down for the count
+down in the dumps
+down in the mouth
+down the cludgie
+down the drain
+down the khazi
+down the line
+down the pan
+down the road
+down the toilet
+down the track
+down the tubes
+down to a fine art
+down to the short strokes
+down to the wire
+down with the kids
+drag ass
+drag the chain
+drag through the mud
+drain the python
+drain the snake
+drama king
+drama queen
+draw a blank
+draw a line
+draw a long bow
+draw a straight furrow
+draw even
+draw fire
+draw stumps
+draw the line
+draw the long bow
+draw the short straw
+drawing card
+dream come true
+dress to kill
+dressed to kill
+dressed to the nines
+dried-fish woman
+drift apart
+drink from a firehose
+drink with the flies
+drinking hole
+drinks o'clock
+drive a coach and horses through
+drive a hard bargain
+drive a stake through its heart
+drive a wedge
+drive the porcelain bus
+drive to drink
+drive-by media
+drool bucket
+drop a bollock
+drop a bomb
+drop a bombshell
+drop a brick
+drop a dime
+drop a hint
+drop a log
+drop in the bucket
+drop in the ocean
+drop in the pond
+drop in the sea
+drop off the hooks
+drop off the radar
+drop the ball
+drop the bomb
+drop the f-bomb
+drop the gloves
+drop the mic
+drop the pilot
+drop the topic
+drop the writ
+drop trow
+drown the miller
+drug of choice
+drug on the market
+drunkard's walk
+dry behind the ears
+dry eye
+dry run
+dry up and blow away
+duck soup
+ducks and drakes
+due course
+dumb as a post
+dumb luck
+dumb shit
+dummy run
+dummy spit
+durance vile
+dust mouse
+dust off a batter
+dust settles
+dusty miller
+duty calls
+dyed in the wool
+dying quail
+dynamite charge
+eager beaver
+eagle eye
+ear to the ground
+ear tunnel
+early bath
+early bird
+ears are burning
+easier said than done
+easy does it
+easy mark
+easy money
+easy on the eye
+easy on the eyes
+easy pickings
+easy street
+eat and leave no crumbs
+eat crow
+eat dirt
+eat for two
+eat humble pie
+eat my shorts
+eat shit
+eat the mic
+eat the onion
+eat the rich
+eat up with a spoon
+economical with the truth
+edge of the earth
+edge of the world
+effluxion of time
+eggs in moonshine
+either do or die
+elbow grease
+elbow mentality
+electronic superhighway
+element of surprise
+elephant in the room
+eleventh hour
+embarrassment of riches
+embrace the penguin
+emotional cripple
+emperor's new clothes
+empty suit
+empty the clip
+empty the tank
+empty words
+end in smoke
+end in tears
+end of the line
+end of the world
+enough to choke a horse
+enough to go around
+enough to make a cat laugh
+enough to make the angels weep
+enter on the boards
+err on the side of
+err on the side of caution
+escape fire
+esprit de corps
+eternal sleep
+eternal triangle
+eureka moment
+even keel
+even money
+even the score
+everlasting staircase
+every bit
+every inch
+every last
+every man has a price
+every old nook and cranny
+every time
+every which where
+everybody and his brother
+everybody and their dog
+everybody who is anybody
+everything and the kitchen sink
+everything but the kitchen sink
+everything in the garden is rosy
+everything one touches turns to gold
+everything one touches turns to shit
+evil twin
+excess baggage
+exchange contracts
+exchange flesh
+exchange of contracts
+exit stage left
+expensive drunk
+express elevator
+extra pair of hands
+extract the urine
+eye for an eye
+eye of the beholder
+eye of the storm
+eye sex
+eyes on the ground
+eyes on the prize
+face facts
+face that would stop a clock
+face the music
+face value
+faceless bureaucrat
+faceless man
+fact of life
+factor space
+facts on the ground
+fail at life
+fail upwards
+failure to launch
+fair coin
+fair crack of the whip
+fair enough
+fair game
+fair sex
+fair shake
+fair share
+fair to middling
+fair-haired boy
+fair-weather fan
+fair-weather friend
+fairy money
+fall apart
+fall asleep
+fall at the last hurdle
+fall behind
+fall between the cracks
+fall between two stools
+fall by the wayside
+fall foul
+fall from grace
+fall in line
+fall into a trap
+fall into place
+fall into the wrong hands
+fall off a truck
+fall off the turnip truck
+fall off the twig
+fall off the wagon
+fall on a grenade
+fall short
+fall through the cracks
+fall victim
+false alarm
+false light
+false note
+family jewels
+fan dance
+fan the flames
+far and away
+far be it
+far cry
+far post
+far removed
+fare thee well
+farm nigger
+farmer's tan
+fart fan
+fart in a windstorm
+fart in an elevator
+fashionably late
+fast and furious
+fast asleep
+fast sheet
+fast times
+fat chance
+fat finger
+fat lip
+fat of the land
+faux queen
+favorite person
+feast or famine
+feathered friend
+feathered oof-bird
+featherless biped
+federal case
+fee simple absolute in possession
+feed the dragon
+feed the fire
+feed the meter
+feed the troll
+feeding frenzy
+feel free
+feel like
+feel like death
+feel the pinch
+feet first
+feet of clay
+fence the tables
+fencepost problem
+fend and prove
+fetch a compass
+fetch and carry
+fetch way
+fever pitch
+few and far between
+few sandwiches short of a picnic
+fickle mistress
+field day
+fifth wheel
+fifty-cent tour
+fight a losing battle
+fight fire with fire
+fight fires
+fight shy
+fighting chance
+fighting spirit
+file off the serial numbers
+fill in the blank
+filthy lucre
+filthy rich
+final cut
+final nail in the coffin
+final say
+find another gear
+find fault
+find no bones in
+find the net
+fine feathers make fine birds
+fine line
+fine print
+fine-feathered friend
+finer things
+finest hour
+finger in the pie
+finger on the pulse
+finger pointing at the moon
+finger to the wind
+fingers crossed
+fire drill
+fire hose
+fire in the belly
+fire on all cylinders
+fire sale
+fire the starting gun
+firing line
+first among equals
+first and last
+first annual
+first loser
+first love
+first mile
+first of all
+first of never
+first port of call
+first-mover disadvantage
+fish in troubled waters
+fish or cut bait
+fish out of water
+fish to fry
+fish-eating grin
+fishing expedition
+fist magnet
+fit for a king
+fit the bill
+fit to be tied
+fit to wake the dead
+fits and starts
+five will get you ten
+flannelled fool
+flash for cash
+flash the cash
+flat chat
+flat strap
+flavor of the week
+flick on the afterburners
+flight of fancy
+flip shit
+flip the bird
+flog a dead horse
+flog a dead pony
+flog the dolphin
+flog the log
+flood the zone
+floor one could eat off
+floppy infant syndrome
+flower of the flock
+flutter in the dovecote
+flutter the dovecote
+fly blind
+fly in the face of
+fly in the ointment
+fly low
+fly off at a tangent
+fly off the handle
+fly off the shelves
+fly on the wall
+fly out of the blocks
+fly out of the traps
+fly solo
+fly the flag
+fly too close to the sun
+fly under the radar
+flying start
+flying visit
+fog a mirror
+fold like a cheap suit
+fold under zero pressure
+folk devil
+follow suit
+follow the crowd
+follow the money
+follow to the grave
+food baby
+food chain
+food for thought
+food noise
+fool's bargain
+fool's errand
+fool's paradise
+foot the bill
+foot voting
+foot-in-mouth disease
+for a change
+for a fact
+for a song
+for all one is worth
+for all the world
+for all the world to see
+for all time
+for crying out loud
+for dear life
+for fear of
+for fear that
+for fuck's sake
+for fucking out loud
+for fudge's sake
+for good and all
+for good measure
+for goodness' sake
+for goodness' sakes
+for heaven's sake
+for mercy's sake
+for my money
+for old times' sake
+for one thing
+for pity's sake
+for real and for true
+for shits and giggles
+for shits and grins
+for that matter
+for the ages
+for the asking
+for the birds
+for the book
+for the chop
+for the fuck of it
+for the hell of it
+for the love of
+for the love of me
+for the love of the game
+for the most part
+for the nonce
+for the plot
+for the record
+for the taking
+for the time being
+for two pins
+forbidden fruit
+force of habit
+forever and a day
+forgive and forget
+forgive but don't forget
+forked tongue
+forty minutes of hell
+forty winks
+forward and backward
+fountain of youth
+four score and seven years ago
+four sheets to the wind
+four-leaf clover
+four-minute warning
+fourth estate
+fourth gear
+fourth wall
+fox in the henhouse
+fox sleep
+fox's socks
+freak flag
+free hand
+free lunch
+free ride
+freezing cold
+frequent flyer
+fresh legs
+fresh off the boat
+fresh out of
+fresh start
+fret the gizzard
+friend with benefits
+friends in high places
+friends in low places
+friendship with benefits
+from a mile away
+from can see to can't see
+from central casting
+from cover to cover
+from hand to hand
+from pillar to post
+from post to pillar
+from stem to stern
+from the cradle to the grave
+from the gecko
+from the get-go
+from the ground up
+from the rooter to the tooter
+from the word go
+from time to time
+from womb to tomb
+front and center
+front of mind
+front runner
+fruit of the poisonous tree
+fruit of the union
+fuck knows
+fuck y'all
+fuck's sake
+fucking hell
+fucking shit
+fudge factor
+fudge the issue
+full blast
+full bloom
+full butt
+full circle
+full marks
+full of beans
+full of hot air
+full of it
+full of piss and vinegar
+full ride
+full speed ahead
+full tide
+full tilt
+full tilt boogie
+full to the gills
+full whack
+full-time job
+fully rigged
+fun and games
+funny bone
+funny man
+funny stuff
+gagging for it
+gain momentum
+gain time
+gall and wormwood
+gallows humor
+game face
+game plan
+gandy dancer
+gang up on
+gapers' block
+garden variety
+gas and air
+gateway drug
+gather dust
+gather rosebuds
+gather way
+gavel to order
+gender bender
+genetic lottery
+gentle as a lamb
+gentle giant
+gentle sex
+genuine article
+get a charge out of
+get a clue
+get a fix
+get a grip
+get a kick out of
+get a leg up
+get a life
+get a line on
+get a move on
+get a pair
+get a rise out of
+get a room
+get a wiggle on
+get a wriggle on
+get amongst it
+get away with
+get back at
+get back on the horse
+get beans
+get bent
+get bent out of shape
+get better
+get blood out of a stone
+get busy
+get changed
+get down to bedrock
+get down to brass tacks
+get down to business
+get down to cases
+get even
+get fresh
+get grey hair from
+get high
+get in the boat and row
+get in the way
+get ink
+get into the act
+get into the wrong hands
+get into trouble
+get it how one lives
+get it on
+get late
+get life
+get lost
+get misty
+get moving
+get off lightly
+get off the ground
+get off the mark
+get on the end of
+get on the stick
+get out of here
+get out of jail free card
+get out of my face
+get out of my sight
+get out the vote
+get out while the getting's good
+get outta here
+get rid of
+get right
+get right into it
+get some air
+get started
+get straight
+get stuck in
+get stuck into
+get taken in
+get the ball rolling
+get the band back together
+get the better of
+get the boot
+get the bullet
+get the chop
+get the door
+get the drawers
+get the drift
+get the goods on
+get the hang of
+get the lead out
+get the memo
+get the nod
+get the point
+get the runaround
+get the sack
+get the show on the road
+get the wind up
+get the word out
+get thee behind me
+get to first base
+get to grips with
+get to the bottom of
+get to the fireworks factory
+get to the point
+get to work
+get together
+get up the yard
+get up with the chickens
+get used
+get wasted
+get well
+get wet
+get what one asked for
+get what's coming to one
+get wind
+get wind of
+get with the program
+get with the times
+ghetto bird
+ghetto lottery
+ghost at the feast
+ghost home
+gift from above
+gift from heaven
+gift from the goddesses
+gift from the heavens
+gift horse
+gift of the gab
+gift that keeps on giving
+gild the lily
+gimme a five
+ginger knob
+give a damn
+give a fuck
+give a hang
+give a hoot
+give a light
+give a monkey's
+give a rat's arse
+give a rip
+give a sneck posset
+give and take
+give as good as one gets
+give away the farm
+give away the store
+give birth
+give chase
+give curry
+give dome
+give ear
+give face
+give head
+give heed
+give it a red-hot crack
+give it the big one
+give it the gun
+give life to
+give lip
+give me a break
+give notice
+give pause
+give the axe
+give the devil his due
+give the elbow
+give the game away
+give the lie
+give the lie to
+give the royal treatment
+give the sack
+give the time of day
+give up the ghost
+give weight
+give what for
+give zero fucks
+glad tidings
+glass ceiling
+gloves are off
+glutton for punishment
+go a long way
+go against the grain
+go all out
+go all the way
+go along for the ride
+go along to get along
+go along with
+go along with the gag
+go around the houses
+go at a good clip
+go back in time
+go back to the drawing board
+go ballistic
+go bananas
+go batshit
+go begging
+go berserk
+go big or go home
+go by the board
+go by the wayside
+go climb a tree
+go commando
+go down in flames
+go down on
+go down that road
+go down the drain
+go down the khazi
+go down the pan
+go down the road
+go down the toilet
+go down the tubes
+go down the wrong way
+go downhill
+go downtown
+go far
+go fish
+go fly a kite
+go for a song
+go for broke
+go for it
+go for the gold
+go for the throat
+go forth and multiply
+go free
+go from strength to strength
+go from zero to hero
+go great guns
+go green
+go halfsies
+go halves
+go hang
+go horribly right
+go in the out door
+go in with
+go jump in the lake
+go jump off a building
+go jump off a cliff
+go left
+go moggy
+go native
+go nowhere
+go nowhere fast
+go off at score
+go off half-cocked
+go off into the weeds
+go off the boil
+go on the mitch
+go on the scout
+go or blow
+go out with a bang
+go out with the ark
+go over to the majority
+go overboard
+go pear-shaped
+go places
+go play in the traffic
+go public
+go rogue
+go round in circles
+go shit yourself
+go snake
+go so far as
+go soak your head
+go south
+go straight
+go the distance
+go the extra mile
+go the way of
+go the way of the dinosaurs
+go the way of the dodo
+go the whole hog
+go their separate ways
+go through hell
+go through the gears
+go through the mill
+go through the motions
+go through with
+go to bat
+go to great lengths
+go to ground
+go to sea
+go to seed
+go to sleep
+go to the bow-wows
+go to the dogs
+go to the mat
+go to the mattresses
+go to the polls
+go to the scaffold
+go to the wall
+go to the well
+go to town
+go to town on
+go to work
+go together
+go too far
+go towards
+go tutti-frutti
+go up in flames
+go up in smoke
+go walking
+go wild
+go with the flow
+go with the flow of traffic
+go with the wind
+go without
+go without saying
+go wrong
+god that failed
+going rate
+gold in them thar hills
+gold mine
+golden age
+golden days
+golden duck
+golden goose
+golden handcuffs
+golden handshake
+golden hello
+golden mean
+golden opportunity
+golden parachute
+golden rule
+golden thread
+golden ticket
+golden touch
+golden years
+golf widow
+gone case
+gone fishing
+gone north about
+gone with the wind
+good books
+good boy
+good coin
+good deal
+good doctor
+good doctors
+good drunk
+good egg
+good enough for government work
+good enough for jazz
+good enough to eat
+good girl
+good graces
+good gracious
+good job
+good life
+good looker
+good old days
+good run
+good sense
+good times
+good turn
+good value
+good voice to beg bacon
+goodness gracious
+goodness gracious me
+goon squad
+gooseberry eye
+gooseberry season
+gorilla in the room
+got it going on
+grab and go
+grab by the lapels
+grab the bull by the horns
+grab the popcorn
+graceful degradation
+grain of truth
+grammar police
+grand passion
+grand poobah
+grand scheme
+grand total
+grandstand play
+granny dumping
+grapes of wrath
+grasp at straws
+grass tops
+gravity's pull
+gravy train
+gray hat
+grease monkey
+grease payment
+grease the skids
+grease the wheels
+greasy spoon
+great balls of fire
+great beyond
+great deal
+great job
+great unwashed
+greater of two evils
+greatest thing since sliced bread
+green about the gills
+green as grass
+green fingers
+green handshake
+green in earth
+green indigo
+green light
+green old age
+green state
+green thumb
+green with envy
+greener pastures
+grey area
+grey cells
+grey matter
+grey power
+grin and bear it
+grind the corn
+grinding machine
+grist for the mill
+grist to the mill
+ground ball with eyes
+ground floor
+ground rule
+grow a pair
+grow a set
+grow a tail
+grow apart
+grow cold
+grow out of
+grow some balls
+gruesome twosome
+grunt level
+grunt work
+guilt trip
+guilty pleasure
+gun jumping
+gun to your head
+gunboat diplomacy
+gunner's daughter
+guns blazing
+gut check
+gut factor
+gut feeling
+gut reaction
+gutless wonder
+hair of the dog
+hair out of place
+hair's breadth
+hairy molly
+halcyon days
+hale and hearty
+half a brain
+half a head
+half a mind
+half joke
+half murder
+half-night stand
+halfway decent
+ham it up
+hammer and tongs
+hammer home
+hamster wheel
+hand in glove
+hand over fist
+hand over hand
+hand over head
+hand to mouth
+hand waving
+handbags at dawn
+handbags at ten paces
+handle with kid gloves
+handwriting on the wall
+hang a leg
+hang a uey
+hang an arse
+hang by a thread
+hang heavy
+hang in the balance
+hang low
+hang on every word
+hang out to dry
+hang the moon
+hang tight
+hang together
+hang tough
+hang upon
+hangar queen
+hanging offence
+happily ever after
+happy as a pig in mud
+happy as a pig in shit
+happy chappy
+happy landings
+happy medium
+happy panda
+happy place
+hard as nails
+hard at work
+hard cheese
+hard done by
+hard feelings
+hard nut to crack
+hard of hearing
+hard on the eyes
+hard pass
+hard pill to swallow
+hard to swallow
+hardy perennial
+harp on one string
+harp on the same string
+has left the building
+hash slinger
+hat hair
+hat in hand
+hatchet man
+hate is a strong word
+haul ass
+have a bad time of it
+have a ball
+have a bite
+have a bone to pick
+have a crack at
+have a fable for
+have a fine finger
+have a finger in
+have a fit
+have a gas
+have a go
+have a good one
+have a good time
+have a good time of it
+have a hand in
+have a handle on
+have a hard time
+have a hard time of it
+have a head for
+have a heart
+have a jag on
+have a laugh
+have a moment
+have a mountain to climb
+have a pair
+have a poor time of it
+have a quiet word
+have a rough time of it
+have a say
+have a seat
+have a snootful
+have a stab
+have a tantrum
+have a thin time of it
+have a tiger by the tail
+have a time
+have a time of it
+have a way with
+have a whale of a time
+have a word
+have an accident
+have an easy time of it
+have an eye for
+have another thing coming
+have another think coming
+have been around
+have done with
+have fingers made of lime-twigs
+have green fingers
+have in mind
+have it both ways
+have it coming
+have it going on
+have it in one
+have it large
+have it made
+have it your way
+have its moments
+have no time for
+have one more time
+have other fish to fry
+have other ideas
+have second thoughts
+have seen this movie
+have several seats
+have the biscuit
+have the blues
+have the floor
+have the hots for
+have the last laugh
+have the law of
+have the right time
+have the tiger by the tail
+have the wind up
+have the wolf by the ear
+have the world by the tail
+have truck with
+hazard a guess
+hazard creep
+head and shoulders
+head for the hills
+head loss
+head of steam
+head over heels
+head south
+head start
+head to toe
+heads or tails
+heads will roll
+heady days
+hear the end of it
+hear the grass grow
+hear things
+hear through the grapevine
+hear voices
+heart balm
+heart of glass
+heart of gold
+heart of hearts
+heart to heart
+hearts and flowers
+hearts on sleeves
+heat wave
+heaven forbid
+heavy as a dead donkey
+heavy equipment
+heavy foot
+heavy going
+heavy hand
+heavy hitter
+heavy lifting
+heavy with child
+heffalump trap
+hell from above
+hell on earth
+hell on wheels
+hell or high water
+hell to pay
+hell week
+helmet hair
+helping hand
+hem and haw
+hen's tooth
+herbs and spices
+herd cats
+here goes nothing
+here to stay
+here we go again
+hidden in plain sight
+hide in plain sight
+hide nor hair
+hide the sausage
+hiding to nothing
+high and dry
+high and low
+high and mighty
+high cotton
+high ground
+high horse
+high life
+high living
+high noon
+high on the hog
+high on the totem pole
+high road
+high strangeness
+high summer
+high time
+higher than a kite
+highway robbery
+hill to die on
+hind tit
+hired gun
+hired muscle
+hissing hot
+hit a lick
+hit a snag
+hit a wall
+hit and run
+hit below the belt
+hit home
+hit it big
+hit it up
+hit like a ton of bricks
+hit like a truck
+hit one out of the ballpark
+hit pause
+hit pay dirt
+hit rock bottom
+hit the accelerator
+hit the big time
+hit the bottle
+hit the bricks
+hit the buffers
+hit the fan
+hit the gas
+hit the gold
+hit the ground running
+hit the high notes
+hit the jackpot
+hit the nail on the head
+hit the pan
+hit the pavement
+hit the road
+hit the rocks
+hit the roof
+hit the sheets
+hit the shelves
+hit the shops
+hit the skids
+hit the spot
+hit the stores
+hit the streets
+hit the wall
+hit too close to home
+hit two targets with one arrow
+hit upon
+hit with the stupid stick
+hive of activity
+ho kua bo ho jiak
+hog heaven
+hold a grudge
+hold a light
+hold by the button
+hold cheap
+hold court
+hold fast
+hold firm
+hold hard
+hold it together
+hold onto
+hold onto your hat
+hold sway
+hold tack
+hold that thought
+hold the cards
+hold the floor
+hold the line
+hold the phone
+hold the purse strings
+hold the reins
+hold the ring
+hold the stage
+hold together
+hold water
+hold yew hard
+hold-up play
+holding pattern
+hole in one
+holy buckets
+holy catfish
+holy cow
+holy crap
+holy crap on a stick
+holy crickets
+holy crud
+holy doodle
+holy fire
+holy fuck
+holy macaroni
+holy mackerel
+holy moley
+holy shit
+holy smoke
+home away from home
+home game
+home sweet home
+home team
+home training
+home wrecker
+homeless dumping
+homely as a hedge fence
+honey do list
+honey hole
+honey trap
+honor in the breach
+honorable mention
+hoot owl shift
+hop the wag
+hope against hope
+hopping mad
+horizontal dancing
+horizontal jogging
+horizontal mambo
+horizontal refreshments
+horizontal slam dance
+horizontal tango
+horror show
+horse and rabbit stew
+horse armor
+horse of a different color
+horse opera
+horse pill
+horse tranquilizer
+horse's ass
+horse's mouth
+horseback opinion
+horses for courses
+hot air
+hot and bothered
+hot and cold
+hot and heavy
+hot desking
+hot garbage
+hot hand
+hot minute
+hot off the presses
+hot on the trail
+hot potato
+hot sheet
+hot shit
+hot stuff
+hot under the collar
+hot water
+hotter than a pistol
+house cooling party
+house nigger
+house of cards
+house of ill fame
+house poor
+how goes it
+how's the weather
+howl at the moon
+huckleberry above a persimmon
+hugs and kisses
+hum and haw
+human touch
+humble pie
+hunger sauce
+hunt where the ducks are
+hurler on the ditch
+hurling and burling
+hurrah's nest
+hurry up and wait
+hurt a fly
+hustle and bustle
+hydrogen burning
+ice cool
+ice maiden
+ice queen
+icing on the cake
+idiot box
+idiot mittens
+if need be
+if needs be
+if nothing else
+if pigs had wings
+if the shoe fits
+if these walls could talk
+ill health
+improve the occasion
+in a bake
+in a big way
+in a bind
+in a box
+in a bubble
+in a corner
+in a fix
+in a flash
+in a foam
+in a fog
+in a heartbeat
+in a hen's hiney
+in a jam
+in a major key
+in a mess
+in a minor key
+in a nutshell
+in a pickle
+in a pig's arse
+in a pig's eye
+in a pig's patoot
+in a pinch
+in a real state
+in a right state
+in a rut
+in a snap
+in a state
+in a walk
+in all honesty
+in all modesty
+in any case
+in any event
+in at the deep end
+in bad odor
+in bad shape
+in bad taste
+in black and white
+in capital letters
+in cold blood
+in fighting trim
+in for the kill
+in full force
+in full gear
+in good odor
+in good sorts
+in heaven's name
+in high dudgeon
+in high gear
+in hot pursuit
+in jig time
+in layman's terms
+in layperson's terms
+in laywoman's terms
+in light of
+in living memory
+in no small measure
+in no small part
+in no time
+in no uncertain terms
+in nothing flat
+in one bite
+in one foul swoop
+in one go
+in one piece
+in other news
+in other words
+in plain sight
+in plain view
+in rare form
+in recent memory
+in record time
+in safe hands
+in short pants
+in short trousers
+in spite of
+in the act
+in the air
+in the altogether
+in the back seat
+in the bag
+in the black
+in the blink of an eye
+in the books
+in the buff
+in the business of
+in the can
+in the cards
+in the clear
+in the dark
+in the dock
+in the doghouse
+in the drink
+in the driver's seat
+in the driving seat
+in the fast lane
+in the final analysis
+in the first place
+in the foothills
+in the front row
+in the game
+in the groove
+in the here and now
+in the hole
+in the hopper
+in the hospital
+in the hot seat
+in the interest of justice
+in the know
+in the lead
+in the least
+in the limelight
+in the limit
+in the line of duty
+in the long run
+in the long term
+in the lump
+in the making
+in the money
+in the nick of time
+in the nip
+in the offing
+in the pink of health
+in the pipeline
+in the post
+in the raw
+in the red
+in the running
+in the sack
+in the saddle
+in the same boat
+in the same breath
+in the same shoes
+in the short run
+in the soup
+in the spotlight
+in the stars
+in the stratosphere
+in the straw
+in the streets
+in the swim
+in the tank
+in the thick of
+in the thick of it
+in the toilet
+in the trenches
+in the twinkling of an eye
+in the wake of
+in the way
+in the way of
+in the wind
+in the wink of an eye
+in the works
+in the world
+in the worst way
+in the zone
+in this day and age
+in token of
+in too deep
+in two jumps
+in two shakes
+in view of
+in virtue of
+in with a chance
+in words of one syllable
+in your dreams
+in your face
+inch by inch
+inch forward
+indict a ham sandwich
+inner circle
+inner ear
+inner strength
+ins and outs
+inside baseball
+inside job
+inside joke
+inside scoop
+inside the box
+installed base
+into thin air
+invited to the cookout
+iron eagle
+ironing board
+irons in the fire
+it can't be helped
+it takes one to know one
+it takes two to tango
+it's about time
+it's all good
+it's early days
+it's five o'clock somewhere
+it's none of your business
+it's not even funny
+itch the ditch
+itchy feet
+itchy trigger finger
+ivory tickler
+ivory tower
+jack of all trades
+jam today
+jam tomorrow
+jerkin the gherkin
+jet set
+jewel in the crown
+jiak kentang
+jill of all trades
+jive turkey
+joe job
+join forces
+join hands
+join issue
+join the club
+joined at the hip
+jot and tittle
+judge a book by its cover
+jug ears
+juggling act
+jump at the chance
+jump at the opportunity
+jump before one is pushed
+jump for joy
+jump on the bandwagon
+jump salty
+jump street
+jump the gun
+jump the queue
+jump the shark
+jump through hoops
+jump to conclusions
+jungle telegraph
+junkyard dog
+jury is out
+just a minute
+just a second
+just another pretty face
+just deserts
+just folks
+just like that
+just the same
+kangaroo court
+kao peh kao bu
+keep a close watch
+keep a cool head
+keep a lid on
+keep a low profile
+keep a weather eye open
+keep an eye on
+keep an eye open
+keep an eye out
+keep an eye peeled
+keep company
+keep count
+keep good time
+keep house
+keep it between the ditches
+keep it in the family
+keep it moving
+keep it one hundred
+keep it real
+keep it together
+keep it up
+keep off the streets
+keep on about
+keep on truckin'
+keep pace
+keep quiet
+keep shtum
+keep straight
+keep tabs on
+keep the ball rolling
+keep the bones green
+keep the home fires burning
+keep the peace
+keep the pot boiling
+keep the rent down
+keep the rent low
+keep the show on the road
+keep the wolf from the door
+keep up appearances
+keep up with the times
+keep watch
+kernel of truth
+kettle of fish
+keys to the kingdom
+kick a dog when it's down
+kick against the pricks
+kick ass
+kick ass and take names
+kick at an open door
+kick at the can
+kick bollocks scramble
+kick butt
+kick in the teeth
+kick into the long grass
+kick into touch
+kick loose
+kick out the jams
+kick rocks
+kick some tail
+kick some tires
+kick the beam
+kick the bucket
+kick the can down the road
+kick the habit
+kick the tires
+kick the tyres
+kick to the curb
+kick up a fuss
+kick upstairs
+kick with the other foot
+kicking and screaming
+kicking boots
+kicks and giggles
+kiddie table
+kill the fatted calf
+kill trees
+kill two birds with one stone
+killer instinct
+kind regards
+kindest regards
+kindred soul
+kindred spirit
+king of all one surveys
+king of beasts
+king of birds
+king of the castle
+king of the hill
+king's cushion
+king's ransom
+kiss and cry
+kiss and make up
+kiss and tell
+kiss arse
+kiss ass
+kiss my ass
+kiss of death
+kiss of life
+kiss the gunner's daughter
+kiss up to
+kitchen table software
+knee-high to a grasshopper
+knee-jerk reaction
+knight of the post
+knit together
+knock down a peg
+knock for a loop
+knock it off
+knock it out of the park
+knock on heaven's door
+knock on wood
+knock out of the box
+knock some sense into
+knock the living daylights out of
+knock the stuffing out of
+knock together
+knocking on heaven's door
+know beans about
+know every trick in the book
+know from a bar of soap
+know how many beans make five
+know inside and out
+know no bounds
+know the drill
+know the score
+know what is what
+know where the bodies are buried
+know which end is up
+knuckle dragger
+knuckle sandwich
+lab rat
+labor of love
+labour the point
+laced mutton
+ladies' man
+lady garden
+lady or tiger
+lady's man
+land legs
+land of opportunity
+land poor
+land the plane
+landing strip
+lap of luxury
+large and in charge
+last burst of fire
+last cast
+last full measure
+last hurrah
+last mile
+last minute
+last nail in the coffin
+last of the big spenders
+last refuge
+last resort
+last roundup
+last straw
+last thing
+last thing one needs
+last trump
+last word
+latch onto
+late model
+late to the party
+laugh a minute
+laugh out of court
+laughing stock
+laughing tackle
+laundry list
+lay a finger on
+lay an anchor to the windward
+lay an egg
+lay by the heels
+lay claim
+lay down the law
+lay down the marker
+lay eggs
+lay eyes on
+lay hands on
+lay in lavender
+lay it on
+lay it on thick
+lay odds
+lay of the land
+lay on the line
+lay store by
+lay the groundwork
+lay the wood
+lay to rest
+lead by the nose
+lead foot
+lead nowhere
+lead the line
+lead time
+lead up to
+leading light
+leap to mind
+leaps and bounds
+learned profession
+leave at the door
+leave behind
+leave for dust
+leave home
+leave it all on the field
+leave it alone
+leave it at that
+leave it be
+leave no crumbs
+leave no stone unturned
+leave the door open
+leave the nest
+leave things alone
+leave things be
+leave to the imagination
+left hook
+left turn
+left-handed compliment
+legal beagle
+legal duty
+lemon law
+lend a hand
+lend an ear
+lend itself to
+length and breadth
+les jeux sont faits
+lesser of two evils
+lessons learned
+let a sleeping dog lie
+let alone
+let bygones be bygones
+let drive
+let fly
+let it all hang out
+let it alone
+let it be
+let loose
+let me tell you
+let nature take its course
+let one go
+let sleeping dogs lie
+let slide
+let slip
+let that sink in
+let the buyer beware
+let them eat cake
+let things alone
+let things be
+let this cup pass from me
+let well alone
+let's get the party started
+let's not and say we did
+level best
+level to the ground
+libel chill
+licence to print money
+lick and a promise
+lick into shape
+lick log
+lick my balls
+lick the pants off
+lie in wait
+lie low
+life and soul of the party
+life is too short
+life of its own
+life of the party
+life's a bitch
+lift a finger against
+lift all boats
+light a fire under
+light bucket
+light in the loafers
+light skirt
+light the blue touchpaper
+light up a room
+light-bulb moment
+lightning fast
+lightning in a bottle
+lightning strike
+like a bull at a gate
+like a champ
+like a chicken with the pip
+like a demon
+like a duck takes to water
+like a duck to water
+like a man possessed
+like a phoenix from the ashes
+like cheese at fourpence
+like it or lump it
+like no other
+like talking to a wall
+like there is no tomorrow
+like water off a duck's back
+line in the sand
+line of attack
+line of country
+line of fire
+line of questioning
+lion's den
+lion's share
+lip service
+liquid courage
+little emperor
+little girl
+little hand
+little head
+little mad
+little old
+little pitcher
+little shit
+little strokes fell great oaks
+live a lie
+live and die by
+live and let live
+live in sin
+live in the past
+live in the shadow of
+live it up
+live large
+live on the edge
+live one
+live over the brush
+live paycheck to paycheck
+live rough
+live the dream
+live to tell the tale
+living death
+living end
+living proof
+load of shit
+load up on
+loaded for bear
+loaded language
+loaded word
+lock horns
+locker room humor
+lone gunman
+long arm
+long arm of the law
+long betwixt the fingers
+long drink
+long finger
+long fuse
+long green
+long hour
+long in coming
+long in the tooth
+long odds
+long pork
+long row to hoe
+long run
+long screwdriver
+long shot
+long since
+long story short
+long time
+long time no hear
+long time no see
+look ahere
+look askance
+look before one leaps
+look down on
+look down upon
+look for a dog to kick
+look for number one
+look forward to
+look on the bright side
+look on the dark side
+look out for number one
+look right through
+look round
+look the other way
+look the part
+look up and down
+look up to
+look what the cat's dragged in
+loom large
+loose cannon
+loose end
+loose ends
+loose lip
+loose tongue
+loosen the apron strings
+loosen the purse strings
+lord it over
+lord of gingerbread
+lord of the flies
+lose count
+lose face
+lose ground
+lose patience
+lose the bell
+lose the bubble
+lose the plot
+lose touch
+lose track
+loss of face
+lost cause
+lost errand
+lost in the shuffle
+lost in translation
+lost to the world
+lost to time
+love at first sight
+love buzz
+love goggles
+love it or lump it
+love muscle
+love nest
+low blow
+low on the totem pole
+low road
+low-hanging fruit
+lower the bar
+lower the boom
+lubrication payment
+luck of the draw
+lucky break
+lucky dip
+lucky dog
+lucky duckling
+lucky star
+lush it up
+mad money
+made for each other
+made for life
+made in the shade
+made of sterner stuff
+magic asterisk
+magic box
+magic bullet
+magic touch
+mail it in
+main character
+main event
+main man
+make a big thing out of
+make a break for it
+make a career of
+make a case
+make a case for
+make a clean breast
+make a difference
+make a fist of
+make a go of
+make a grab
+make a killing
+make a leg
+make a light
+make a meal of
+make a mockery of
+make a monkey out of
+make a move
+make a night of it
+make a noise in the world
+make a pig's ear of
+make a point
+make a poor fist of
+make a run for it
+make a scene
+make a splash
+make a statement
+make a virtue of necessity
+make all the difference
+make amends
+make an appearance
+make an ass of
+make an example of
+make an honest woman
+make beautiful music together
+make believe
+make biscuits
+make bones about
+make book
+make bricks without straw
+make do and mend
+make ends meet
+make every effort
+make faces
+make fun of
+make game of
+make garden
+make good
+make good on
+make ground
+make happen
+make hard work of
+make haste slowly
+make hay while the sun shines
+make head or tail of
+make headway
+make heavy going of
+make heavy weather
+make history
+make interesting
+make it interesting
+make it make sense
+make it rain
+make it snappy
+make it up to
+make light of
+make light work of
+make like a banana and split
+make like a tree and leave
+make love to the camera
+make matters worse
+make mention of
+make mincemeat out of
+make money
+make muffins
+make news
+make no bones about
+make noise
+make out like a bandit
+make peace
+make pigs and whistles of
+make quick work of
+make room
+make sense
+make shit of
+make short work of
+make sport of
+make strange
+make the bald man cry
+make the best of
+make the cut
+make the grade
+make the most of
+make the running
+make the weather
+make the welkin ring
+make the world go around
+make time
+make time with
+make tracks
+make tracks for
+make trial of
+make up the numbers
+make waves
+make yourself at home
+mama's boy
+mama's girl
+man about town
+man among men
+man in the street
+man of few words
+man of parts
+man of the people
+man on the street
+man the fort
+manners maketh man
+manoeuvre the apostles
+many a time and oft
+many happy returns
+many moons ago
+many moons from now
+mare's fart
+mark my words
+marriage bed
+marriage penalty
+marry the ketchup
+mass destruction
+master plan
+match made in heaven
+match made in hell
+matter at hand
+matter of course
+matter of life and death
+matter of time
+may as well
+meal ticket
+mean business
+mean streak
+mean the world to
+measure swords with
+measure the drapes
+meat market
+meat on the bones
+meat rack
+meat sweats
+media darling
+meet a sticky end
+meet halfway
+meeting of the mindless
+meeting of the minds
+melon head
+melt in the mouth
+memory lane
+mend fences
+mental gymnast
+merchant of death
+mercy fuck
+mercy sake's alive
+mere mortal
+merry dance
+merry men
+mess of pottage
+mic drop
+middle of nowhere
+middle of the road
+might as well
+mile a minute
+milieu control
+milk can
+milk drinker
+milk of human kindness
+milk the clock
+milling machine
+mince words
+mind how you go
+mind the store
+mind's ear
+mind's eye
+miners' canary
+mines and minerals
+minor miracle
+mint condition
+miss the forest for the trees
+miss the mark
+miss the memo
+miss the wood for the trees
+miss the woods for the trees
+missing stair
+mission creep
+mistake windmills for giants
+mists of time
+mix apples and oranges
+mix it up
+mixed bag
+mixed blessing
+mixed herbs
+mixed message
+mixed picture
+modest proposal
+molehill mountaineer
+moment in the sun
+moment of truth
+mommy brain
+money for jam
+money for old rope
+money pit
+money's worth
+monkey business
+monkey paw
+monkey wrench
+monkey's paw
+moonlight and roses
+moonlight flit
+moral bankruptcy
+moral high ground
+moral low ground
+moral of the story
+morally bankrupt
+more cry than wool
+more often than not
+more than meets the eye
+more than one bargained for
+more's the pity
+morning person
+most an end
+mother hen
+mother lode
+mother of all
+mouth breather
+mouth of a sailor
+mouth the words
+mouthful of marbles
+move furniture
+move heaven and earth
+move house
+move the goalposts
+move the needle
+move the yardsticks
+move through the gears
+move up in the world
+movie jail
+much ado about nothing
+much less
+much of a muchness
+mud fence
+mud monkey
+muddy the waters
+mug's game
+mugged by reality
+mukluk telegraph
+mum's the word
+murder will out
+murderers' row
+mutual admiration society
+my skull's afly
+my way or the highway
+na-na na-na boo-boo
+nail the hammer on the head
+naked ape
+name and shame
+name names
+name of the game
+native soil
+nature abhors a vacuum
+nature calls
+nature of the beast
+near and dear
+near post
+nearest and dearest
+nearly man
+neat and tidy
+necessary evil
+neck and neck
+neck of the woods
+necker's knob
+necktie party
+needle drop
+needle in a haystack
+needle mover
+needless to say
+neither fish nor fowl
+neither here nor there
+nerves of steel
+nervous hit
+never in a million years
+never mind
+never the twain shall meet
+never you mind
+new dawn
+new hotness
+new kid in town
+new kid on the block
+new normal
+new school
+new territory
+new wine in an old bottle
+new wine in an old wineskin
+newspaperman's newspaper
+next thing one knows
+nice guy
+nice guys finish last
+nickel and dime
+nickel nurser
+nickel tour
+nigger nose
+nigger rich
+night owl
+night person
+nine times out of ten
+nine-day wonder
+nip and tuck
+nip in the bud
+no and low
+no bones about it
+no flies on
+no fun at parties
+no great shakes
+no hard feelings
+no horse in this race
+no love lost
+no prize for guessing
+no screaming hell
+no sense no feeling
+no sooner than
+no strings attached
+no such thing
+no two ways about it
+no-good ass
+no-hit wonder
+nodding acquaintance
+non-denial denial
+none other than
+none the wiser
+nook and cranny
+nook or cranny
+north forty
+nose count
+nose out of joint
+nose to the grindstone
+not a chance
+not a minute too soon
+not a pretty sight
+not be caught dead
+not by a jugful
+not by any means
+not care beans
+not for the world
+not grow on trees
+not half bad
+not have a prayer
+not in a million
+not in a million years
+not in the least
+not in the slightest
+not invented here
+not just a pretty face
+not know one is born
+not know what hit one
+not know what one is missing
+not know which way to turn
+not long for this world
+not look a day over
+not much of anything
+not on your life
+not on your nelly
+not so fast
+not the end of the world
+not to brag
+not to mention
+not touch with a barge pole
+not touch with a ten-foot pole
+not want to do that
+not win for losing
+not worth a brass farthing
+not worth a dime
+not worth a plug nickel
+not worth a whistle
+not worth beans
+not worth hell room
+not worth salt
+not worth writing home about
+not your father's
+nothing for it
+nothing if not
+nothing less than
+nothing more than
+nothing short of
+nothing to it
+nothing to write home about
+now and again
+now and then
+now or never
+now you mention it
+now you're cooking
+now you're talking
+nowhere to be found
+nuclear option
+nudge nudge wink wink
+nugget of truth
+nuke the fridge
+null and void
+number games
+number one
+number one with a bullet
+nut-cutting time
+nuts and bolts
+nuts to butts
+oat opera
+odd and curious
+odd duck
+odd fish
+odds and ends
+odds and sods
+of a kind
+of a piece
+of all loves
+of all people
+of all places
+of all things
+of one mind
+of the deepest dye
+of the first water
+of the same leaven
+of the same stripe
+of two minds
+off and running
+off the back foot
+off the bat
+off the beaten path
+off the beaten track
+off the deep end
+off the face of the earth
+off the grid
+off the hook
+off the radar
+off the rails
+off the reservation
+off the scale
+off the table
+off the wagon
+off to the races
+offer affordances
+offer one can't refuse
+oh dark hundred
+oh dark thirty
+oh my goodness
+oh my goodness gracious
+oh my gosh
+oh well
+oil and water
+oil burner
+oil trash
+old as the hills
+old boy network
+old chestnut
+old enough to vote
+old fart
+old flame
+old fogey
+old hand
+old hat
+old head on young shoulders
+old money
+old salt
+old saw
+old school
+old song
+old stager
+old stick
+old wine in a new bottle
+old-fashioned look
+oll korrect
+on a day-to-day basis
+on a dime
+on a first-name basis
+on a full stomach
+on a kick
+on a lark
+on a losing wicket
+on a plate
+on a regular basis
+on a shoestring
+on a silver platter
+on a sixpence
+on a tear
+on a whim
+on account of
+on all fours
+on an irregular basis
+on another note
+on bad terms
+on cloud nine
+on cloud seven
+on eternal patrol
+on good terms
+on in years
+on its merits
+on opposite sides of the barricades
+on pins and needles
+on second thought
+on solid ground
+on talking terms
+on the anvil
+on the back burner
+on the back foot
+on the back of
+on the ball
+on the beach
+on the boob
+on the bounce
+on the brain
+on the breadline
+on the bubble
+on the button
+on the canvas
+on the cards
+on the clock
+on the cuff
+on the cusp
+on the cutting room floor
+on the debit side
+on the dot
+on the double
+on the down-low
+on the drum
+on the dry
+on the edge
+on the face of
+on the face of it
+on the flip side
+on the fly
+on the front burner
+on the front foot
+on the game
+on the go
+on the gripping hand
+on the heels of
+on the high rope
+on the high ropes
+on the hoof
+on the hook
+on the horn
+on the horns of a dilemma
+on the house
+on the hush
+on the ladder
+on the lam
+on the level
+on the lines of
+on the loose
+on the mark
+on the mat
+on the money
+on the move
+on the nose
+on the one hand
+on the other hand
+on the other side of
+on the outs
+on the pill
+on the plus side
+on the point of
+on the prowl
+on the pull
+on the rack
+on the radar
+on the rag
+on the rails
+on the rampage
+on the ready
+on the receiving end
+on the right side of history
+on the rise
+on the run
+on the same page
+on the same wavelength
+on the shelf
+on the side of the angels
+on the skids
+on the sly
+on the spectrum
+on the spot
+on the square
+on the stocks
+on the street
+on the table
+on the toss of a coin
+on the trot
+on the up-and-up
+on the uptake
+on the wagon
+on the wane
+on the warpath
+on the way
+on the whole
+on the wrong side of history
+on thin ice
+on this score
+on top of
+on top of the world
+on what score
+on yer bike
+once in a blue moon
+once or twice
+one after another
+one age with
+one and all
+one and only
+one and the same
+one at a time
+one big happy family
+one could hear a pin drop
+one fell swoop
+one flesh
+one for the road
+one hundred and one
+one in the eye for
+one man and his dog
+one moment
+one more again
+one of a kind
+one of those things
+one side
+one step ahead
+one step at a time
+one thing led to another
+one thing or another
+one too many
+one-hit wonder
+one-horse race
+one-horse town
+one-man band
+one-night stand
+one-track mind
+one-trick pony
+only game in town
+only time will tell
+onward and upward
+onwards and upwards
+open a can of whoop ass
+open book
+open doors
+open field
+open fire
+open invitation
+open season
+open the batting
+open the door
+open the floodgates
+open the kimono
+open the schools
+open wide
+open-door policy
+opening of an envelope
+opinions are like assholes
+opposite number
+or words to that effect
+orange wine
+oranges with oranges
+ostrich policy
+other end of the ball
+other fish in the sea
+otherwise engaged
+out for blood
+out of a nightmare
+out of bounds
+out of central casting
+out of character
+out of collar
+out of date
+out of fix
+out of frame
+out of gas
+out of harness
+out of house and home
+out of kilter
+out of line
+out of luck
+out of nowhere
+out of order
+out of place
+out of pocket
+out of proportion
+out of season
+out of shape
+out of sight
+out of sorts
+out of spoons
+out of the blue
+out of the chute
+out of the gate
+out of the loop
+out of the ordinary
+out of the picture
+out of the question
+out of the running
+out of the way
+out of the woods
+out of thin air
+out of this world
+out of touch
+out of wedlock
+out of whack
+out on a limb
+out on the tiles
+out the window
+out to lunch
+outrun the constable
+outside chance
+outside job
+outside the box
+outside world
+over a barrel
+over my dead body
+over nine thousand
+over the hill
+over the hills and far away
+over the hump
+over the line
+over the moon
+over the top
+over the transom
+over the wire
+overstep the mark
+ox is in the ditch
+oxygen burning
+pack fudge
+pack heat
+pack of lies
+pack shit
+packaged goods
+packed to the gills
+packed to the rafters
+pact of silence
+padded cell
+pagoda tree
+pain in the ass
+pain in the neck
+painful on the eyes
+paint a rosy picture
+paint the town red
+paint the wagon
+paint with a broad brush
+painting rocks
+pair of shoes
+paisa vasool
+palace intrigue
+palace politics
+pale in comparison
+pale rider
+paper bag
+paper tiger
+paper trail
+par for the course
+parade of horribles
+paradise on earth
+park that thought
+park the bus
+parting of the ways
+parting shot
+party animal
+party cry
+party hardy
+party hearty
+pass muster
+pass the bottle of smoke
+pass the buck
+pass the hat
+pass the river
+pass the torch
+pass under the yoke
+pat on the back
+patience of a saint
+patience of an angel
+pave the road to hell
+pave the way
+pay a visit
+pay attention
+pay dividends
+pay heed
+pay homage to
+pay no mind
+pay off old scores
+pay packet
+pay the bills
+pay the fiddler
+pay the freight
+pay the penalty
+pay the piper
+pay the price
+pay the rent
+pay through the nose
+pea patch
+pea-time is past
+peace of mind
+peaches and cream
+peanut butter
+peanut gallery
+pearl of wisdom
+pearls before swine
+pearly whites
+pedal to the metal
+peel the onion
+peep of day
+peg the needle
+pellet moulding
+pelt of the dog
+pen picture
+penalty box
+pencil whip
+penny for your thoughts
+penny in the fusebox
+penny pincher
+penny wedding
+penny wise and pound foolish
+people person
+perfect storm
+permanent shave
+perp walk
+personal capital
+pet peeve
+phone tag
+physical break
+pick a fight
+pick apart
+pick corners
+pick holes
+pick of the litter
+pick out of a hat
+pick up on
+pick up stitches
+pick up the pace
+pick up the pieces
+pick up the tab
+pick up the threads
+pickin' and grinnin'
+pie in the sky
+piece of ass
+piece of cake
+piece of crap
+piece of shit
+piece of tail
+piece of the action
+piece of the pie
+piece of the puzzle
+piece of work
+piffy on a rock bun
+pig in a poke
+pigs can fly
+pigs might fly
+pill in the pocket
+pill mill
+pillow talk
+pin money
+pinch one off
+pink slip
+pip to the post
+pipe dream
+pipe the eye
+piping hot
+piping times
+piping times of peace
+piss and moan
+piss in the wind
+piss like a racehorse
+piss money up the wall
+piss more than one drinks
+piss up a wall
+pissing war
+pitch woo
+pity fuck
+pixel peeper
+pizza table
+place of business
+place to be
+plain dealing
+plant a seed
+play a part
+play a role
+play ball
+play booty
+play both sides against the middle
+play by ear
+play chicken
+play dumb
+play fast and loose
+play first fiddle
+play for love
+play for time
+play games
+play hard to get
+play hardball
+play hob with
+play hooky
+play it cheap
+play it cool
+play it for all it's worth
+play it straight
+play merry havoc with
+play merry hell with
+play on words
+play one against another
+play politics
+play possum
+play second fiddle
+play silly buggers
+play the angles
+play the cat and banjo with
+play the deuce with
+play the devil with
+play the dickens with
+play the field
+play the fool
+play the gender card
+play the hand one is dealt
+play the mischief with
+play the ponies
+play the race card
+play the same tape
+play the victim card
+play the wag
+play to the gallery
+play to win
+play well with others
+play with a full deck
+play with fire
+play with house money
+plough a lonely furrow
+plough money
+plough the back forty
+plow the sands
+plumber's helper
+poacher turned gamekeeper
+pocket dial
+poetry in motion
+pogi point
+point blank
+point fingers
+point man
+point the finger at
+poison pen
+poison-pen letter
+poisoned chalice
+poke holes in
+poke the bear
+poles apart
+polish a turd
+polite fiction
+political football
+politically correct
+pony in the barn
+poop factory
+poop machine
+poophole loophole
+poor as a church mouse
+poor as a rat
+poor little rich boy
+poor little rich girl
+poor man's shilling
+poor power
+pop the cherry
+pop the question
+popcorn movie
+pope's nose
+porcelain god
+porcelain goddess
+porcelain skin
+poster boy
+poster child
+poster girl
+pot calling the kettle black
+pot of gold
+potato chaser
+potter's clay
+potter's field
+potty mouth
+pound a beat
+pound of flesh
+pound sand
+pound the pavement
+pour cold water on
+pour cold water over
+pour down the drain
+pour fuel on the fire
+pour gasoline on the fire
+pour honey on
+pour oil on troubled waters
+pour one out
+powder keg
+power behind the throne
+power coffee
+power grab
+power lunch
+power luncher
+power lunching
+power of the pencil
+power of the purse
+powers that be
+prairie dog
+praise to the skies
+praise with faint damns
+prawn cocktail offensive
+pray tell
+pray to the porcelain god
+pray to the porcelain goddess
+preach in the desert
+preach to deaf ears
+preach to the choir
+preach water and drink wine
+precious little
+prepare the ground
+present company excepted
+preserved in aspic
+press into service
+press the flesh
+press the panic button
+pressed for time
+pretty penny
+pretty pictures
+prevail upon
+price is right
+price of eggs
+prim and proper
+prime of life
+prime the pump
+primitive type
+primrose path
+private credit
+private eye
+prize pig
+pro and con
+pro tip
+problem child
+professional suicide
+professional victim
+progressive love
+prop up the bar
+prophet of doom
+protest too much
+proud as a peacock
+psychological warfare
+public intellectual
+public purse
+publicity hound
+puddle jumper
+pull a face
+pull a fast one
+pull a lever
+pull ahead
+pull an all-nighter
+pull back the curtain
+pull faces
+pull my finger
+pull out all the stops
+pull out of the fire
+pull out of the hat
+pull punches
+pull rank
+pull strings
+pull teeth
+pull the long bow
+pull the other leg
+pull the rug out from under
+pull the shutters down
+pull the trigger
+pull up on
+pull up stakes
+pulling power
+pulling the plug
+pumpkin head
+push against an open door
+push the boat out
+push the envelope
+push up daisies
+push water uphill
+put a blanket over
+put a brave face on
+put a damper on
+put a finger to the wind
+put a foot wrong
+put a hat on a hat
+put a lid on
+put a lid on it
+put a shift in
+put a slight upon
+put a sock in it
+put a stop to
+put an end to
+put case
+put down as
+put down for
+put down roots
+put down to
+put facts on the ground
+put food on the table
+put foot to ass
+put forward
+put in mind
+put in pledge
+put in the ground
+put in with
+put into practice
+put it past
+put it there
+put it to
+put lipstick on a pig
+put new wine in old bottles
+put on a brave face
+put on a clinic
+put on a pedestal
+put on airs
+put on frills
+put on the dog
+put on the long finger
+put on the map
+put on the red light
+put on the ritz
+put one over
+put one past
+put out a fire
+put out feelers
+put paid to
+put past
+put pen to paper
+put some timber on
+put store by
+put store in
+put the bad mouth on
+put the bee on
+put the beggar on the gentleman
+put the boot in
+put the bottom rail on top
+put the brakes on
+put the cart before the horse
+put the cat among the pigeons
+put the clock back
+put the clock forward
+put the finger on
+put the hammer down
+put the moves on
+put the pedal to the metal
+put the plug in the jug
+put the screws
+put the wood in the hole
+put through hoops
+put through the mangle
+put through the wringer
+put to bed
+put to good use
+put to the sword
+put to the test
+put to use
+put to work
+put two and two together
+put up a brick
+put up or shut up
+put up to
+put up with
+put-up job
+quality over quantity
+quantum tunnel
+queen bee
+queen of beasts
+queer bashing
+queer fish
+quelle surprise
+quick as a flash
+quick as lightning
+quick buck
+quick off the mark
+quick on the draw
+quick on the uptake
+quick read
+quick study
+quiet as a church mouse
+quiet as a mouse
+quiet quit
+quit scores
+quit while one is ahead
+quite a bit
+quote unquote
+qwerty syndrome
+rabble rouser
+raccoon eyes
+race against time
+race of truth
+race out of the traps
+race queen
+race riot
+rack and ruin
+rafter snapper
+rag bagger
+rag the puck
+rain buckets
+rain cats and dogs
+rain death
+rain dogs and cats
+rain fire and brimstone
+rain hellfire
+rain or shine
+rain pitchforks
+rain stopped play
+rainbow baby
+rainbows and unicorns
+rainy day
+raise eyebrows
+raise hell
+raise the bar
+raise the line
+raise the roof
+raise the spectre
+raise the stakes
+raise to the purple
+raised by wolves
+rake over the coals
+rake together
+rally round
+rally round the flag
+rank and file
+rant and rave
+rap and rend
+rare animal
+rat run
+rat's nest
+raw deal
+ray of light
+reach for the sky
+reach for the stars
+read between the lines
+read lips
+read minds
+read the car
+read the green
+read the room
+ready and waiting
+ready or not
+ready to roll
+real deal
+real live
+real quick
+reality check
+reality distortion field
+reap the harvest
+reap the whirlwind
+rebound relationship
+recipe for disaster
+record book
+red face test
+red flag
+red ink
+red letter day
+red light
+red meat
+red rider
+red tape
+rediscover fire
+reflect upon
+refrigerator mom
+refrigerator mother
+reign supreme
+reinvent the wheel
+release the kraken
+remain to be seen
+rent-lowering gunshot
+reopen old wounds
+reset the dial
+rest assured
+rest easy
+rest his soul
+return the favor
+return to form
+returns to scale
+reverse course
+revolving door syndrome
+rhyme or reason
+rice chaser
+rich bitch
+rickle o' banes
+ridden hard and put away wet
+riddle wrapped in an enigma
+ride fence
+ride hard and put away wet
+ride herd on
+ride high
+ride off into the sunset
+ride on a rail
+ride on the back of
+ride roughshod over
+ride shotgun
+ride tall in the saddle
+ride the coattails
+ride the crest of the wave
+ride the pine
+ride the rails
+ride the short bus
+ride the tiger
+ride the wave
+ring a bell
+ring down the curtain
+ring false
+ring hollow
+ring of truth
+ring off the hook
+ring true
+ringside seat
+rip it up
+rip off the band-aid
+rip off the bandage
+rip to shreds
+rip-snorting mad
+ripe for the picking
+ripe for the plucking
+ripe old age
+rise and shine
+rise from the ashes
+rise to the challenge
+rise to the occasion
+rise to the purple
+rise with the lark
+risk creep
+risk it for the biscuit
+rivet counter
+roach coach
+road hog
+road less traveled
+rob the cradle
+robber baron
+rock bottom
+rock hound
+rock the boat
+rocket science
+rocket scientist
+rocket surgery
+rocking horse shit
+rocking-horse shit
+rod in pickle
+roll back the years
+roll in the aisles
+roll in wealth
+roll of the dice
+roll off the tongue
+roll out the red carpet
+roll tape
+roll the pitch
+roll up on
+roll up the sidewalks
+roll with it
+rolling in it
+rolling stone
+romp home
+room for doubt
+root cause
+rooting interest
+rope of sand
+rose garden
+rose-colored glasses
+rot in hell
+rotten apple
+rotten egg
+rough and ready
+rough around the edges
+rough justice
+rough patch
+rough sledding
+rough sleeper
+rough trot
+round of applause
+round the bend
+round the clock
+roving eye
+row in the same boat
+row of pins
+royal bumps
+rub elbows
+rub it in
+rub off on
+rub salt in the wound
+rub shoulders
+rub up the wrong way
+rubber hose
+rubber johnny
+rubber room
+ruby slippers
+rue the day
+rule of thumb
+rule the day
+rule the roost
+rule the school
+rumor campaign
+rumor mill
+run a mile
+run a risk
+run a temperature
+run across
+run afoul of
+run amok
+run and gun
+run around after
+run around with
+run at the mouth
+run away from
+run down the clock
+run for the hills
+run for the roses
+run high
+run hot and cold
+run in the family
+run into a brick wall
+run into the ground
+run late
+run of play
+run off at the mouth
+run off with
+run on empty
+run out of steam
+run out of town
+run out on
+run out the clock
+run past
+run rampant
+run rings around
+run riot
+run scared
+run the clock down
+run the gamut
+run the gauntlet
+run the rule over
+run the show
+run to earth
+run wild
+run with scissors
+runners and riders
+running start
+running target
+runt of the litter
+rush hour
+rush to judgement
+sack drill
+sack of crap
+sacred cow
+sad drunk
+sad panda
+saddle tramp
+safe and sound
+safe in the knowledge
+sail the high seas
+sail under false colors
+salad days
+salad year
+salami slicing
+salt in the wound
+salt of the earth
+salt the earth
+salty tooth
+same old story
+save by the bell
+save face
+save for a rainy day
+save the day
+save the furniture
+saved by the bell
+saw logs
+saw wood
+sawdust trail
+say cheese
+say goodbye
+say grace
+say it all
+say no more
+say the quiet part loud
+say the word
+say uncle
+scalding hot
+scare story
+scare straight
+scare the life out of
+scare the living daylights out of
+scare the pants off
+scared green
+scared shitless
+scared to death
+scholar and gentleman
+school of hard knocks
+schoolboy error
+scrape the bottom of the barrel
+scrape together
+scratch an itch
+scratch beneath the surface
+scratch the itch
+scratch the surface
+scratch together
+scream bloody murder
+scream loudest
+screaming trots
+screen door on a submarine
+screw the pooch
+scum of the earth
+sea change
+sea legs
+sea load
+seagull approach
+seagull manager
+seal the deal
+second banana
+second childhood
+second fiddle
+second gear
+second nature
+second string
+secretary spread
+see a man
+see a man about a dog
+see a man about a horse
+see daylight
+see eye to eye
+see into a millstone
+see red
+see stars
+see the forest for the trees
+see the light
+see the light of day
+see the trees through the forest
+see the wood for the trees
+see things
+see what sticks
+see which way the cat jumps
+see with half an eye
+see yellow
+see you later
+seeing is believing
+seismic shift
+seize the day
+seize the opportunity
+sell bargains
+sell dearly
+sell down the river
+sell like hot cakes
+sell the family silver
+sell the pass
+sell-by date
+seller's market
+selling point
+send a message
+send away for
+send for a toss
+send to dorse
+send to the glue factory
+send word
+sense of craft
+separate the wheat from the chaff
+serve notice
+serve the turn
+serve time
+serve two masters
+set a spell
+set by the ears
+set eyes on
+set foot
+set for life
+set in motion
+set in stone
+set of pipes
+set of wheels
+set pulses racing
+set store by
+set straight
+set the bar
+set the pace
+set the record straight
+set the stage
+set the wheels in motion
+set the world on fire
+set to work
+set up shop
+settle a score
+settle upon
+sew buttons
+sex machine
+sex on legs
+sex pact
+sex talk
+sexual congress
+sexual relation
+sexual relations
+sexual tension
+shake a leg
+shake a stick at
+shake like a leaf
+shake the pagoda tree
+shake the plum tree
+shanks' mare
+shanks' nag
+shanks' pony
+shape up or ship out
+share and share alike
+shark bait
+sharp cookie
+sharp elbows
+sharp tongue
+shatter the ice
+she'll be right
+sheathe the sword
+shed a tear
+shed blood
+shed find
+shed light upon
+shift gears
+shift the dial
+shimmy on down
+shit a brick
+shit on toast
+shit or get off the can
+shit or get off the pot
+shit out of luck
+shit sandwich
+shit stain
+shit the bed
+shit-eating grin
+shitting match
+shiver me timbers
+shock to the system
+shoot 'em up
+shoot first and ask questions later
+shoot from the lip
+shoot holes
+shoot off at the mouth
+shoot the boots
+shoot the breeze
+shoot the bull
+shoot the gold
+shoot the messenger
+short end of the stick
+short fuse
+short hairs
+short leash
+short of a length
+short on looks
+short strokes
+short temper
+shot across the bow
+shot heard round the world
+shot in the dark
+shotgun approach
+shotgun wedding
+shots fired
+shoulder to cry on
+shout fire in a crowded theater
+shove it up your ass
+show a clean pair of heels
+show a leg
+show ankle
+show colour
+show of hands
+show pony
+show the flag
+show who's boss
+shower thought
+shrinking violet
+shuffle off this mortal coil
+shut my mouth
+shy bladder
+sick and tired
+sick as a parrot
+sick at heart
+sick list
+sick man
+sick puppy
+sick to the back teeth
+side issue
+side part
+sigh of relief
+sight for sore eyes
+sight to behold
+sight unseen
+sign of the times
+sign on the dotted line
+silent as the grave
+silent killer
+silky smooth
+silly money
+silly season
+silver handshake
+silver screen
+silver sheet
+silver spoon
+silver tongue
+simple as kiss your hand
+sin tax
+sing a different tune
+sing from the same hymnbook
+sing like a bird
+sing off the same hymn sheet
+sing small
+sing soprano
+sing the praises of
+sing the same tune
+singing soprano
+sink of iniquity
+sink or swim
+sinking ship
+siren song
+sit in for
+sit in with
+sit on a tack
+sit on the fence
+sit right
+sit still
+sit tight
+sitting duck
+sitting pretty
+six and two threes
+six feet under
+six of the best
+six-pack of rolls
+size queen
+skate on thin ice
+skate rat
+skeleton at the feast
+skeleton crew
+skeleton in the closet
+skeleton in the cupboard
+ski-jump nose
+skin and bones
+skin in the game
+skin trade
+skip a beat
+skip rope
+skirt chaser
+skittles party
+skunk at a garden party
+slam dunk
+slap and tickle
+slap leather
+slap the salami
+slave to fashion
+sleep a wink
+sleep camel
+sleep funny
+sleep in heavenly peace
+sleep rough
+sleep together
+sleep with the fishes
+sleeping at the switch
+sleeping giant
+sleeping policeman
+sleeveless errand
+slender reed
+slings and arrows
+slip it to
+slip of the keyboard
+slip of the pen
+slip of the tongue
+slip the cable
+slip through the cracks
+slippery as an eel
+slop bowl
+slow burn
+slow march
+slow off the mark
+slow on the uptake
+slow study
+slower than molasses
+slug it out
+slut's wool
+small change
+small dick energy
+small fry
+small potatoes
+small print
+small talk
+small wonder
+smart arse
+smart as a whip
+smart chance
+smash hit
+smear campaign
+smell a rat
+smell blood
+smell fishy
+smell like a rose
+smell like a tart's handbag
+smell of an oily rag
+smell of the lamp
+smell of the shop
+smell the barn
+smile a thousand smiles
+smile from ear to ear
+smite hip and thigh
+smoke like a chimney
+smoke signal
+smoke the whole pack
+smoke-filled room
+smoking gun
+smooth operator
+smooth sailing
+snail's pace
+snake eyes
+snake oil
+snap it up
+snap judgment
+snap of the fingers
+snap out of
+snap to attention
+snatch the pebble
+sneaking suspicion
+sneck posset
+sneeze on the truth
+snipe hunt
+snitches get stitches
+snow job
+snow on the mountaintop
+snow on the rooftop
+snowball effect
+snowball in hell
+snowball's chance in hell
+snuggle bunny
+so far so good
+so long as
+so much for
+soaked to the skin
+soaking wet
+sob story
+social death
+social ladder
+social lubricant
+soda jerk
+soft kill
+soft sawder
+soft shoe
+soft spot
+soft touch
+soft underbelly
+soften the blow
+soften the ground
+somewhere along the line
+somewhere over the rainbow
+son of the morning
+song and dance
+sore point
+sound asleep
+sound mind
+sounds like a plan
+soup sandwich
+sour grapes
+sour note
+sour stomach
+sour tooth
+sow dragon's teeth
+sow the seeds of
+spank the monkey
+spanner in the works
+spare no effort
+spark spread
+speak in circles
+speak of the devil
+speak with a forked tongue
+spear carrier
+special delivery
+special military operation
+special needs
+special relationship
+special treatment
+specialty crop
+spectator sport
+speed merchant
+sperm donor
+spicy tooth
+spill ink
+spill juice
+spill the beans
+spilt milk
+spin a yarn
+spin doctor
+spit feathers
+spit fire
+spit in the ocean
+spit in the wind
+spit into the wind
+spit nails
+spit the dummy
+spitting distance
+spitting image
+splice the mainbrace
+split hairs
+split on a rock
+split the baby
+split the breeze
+split the difference
+spoil market
+spoil the market
+spoilt for choice
+spoon bowl
+spot check
+spot of bother
+spread the word
+spring fever
+spring to life
+spring to mind
+spur of the moment
+square meal
+square one
+square peg in a round hole
+square shooter
+squash the beef
+squeeze one out
+squint like a bag of nails
+squirrels in the attic
+stab in the back
+stab in the dark
+stack the cards
+staff of life
+stage business
+stage of the game
+stage right
+staircase wit
+stake a claim
+stalking horse
+stall for time
+stand a chance
+stand and deliver
+stand behind
+stand corrected
+stand fast
+stand fire
+stand firm
+stand from under
+stand in for
+stand in the gap
+stand in the gate
+stand on ceremony
+stand on its own
+stand on the shoulders of
+stand on the shoulders of giants
+stand pat
+stand shilly-shally
+stand tall
+stand the test of time
+stand to reason
+stand treat
+stand trial
+stand up and be counted
+stand up with
+standard fare
+star turn
+star vehicle
+stars align
+stars are aligned
+start a family
+start a fresh hare
+start with a clean sheet
+start with a clean slate
+starving artist
+state of affairs
+statistical tie
+stay behind
+stay hungry
+stay put
+stay the course
+stay tuned
+steady hand on the tiller
+steady the ship
+steal a glance
+steal a living
+steal a march
+steal the show
+steaming hot
+stem the rose
+stem the tide
+step forward
+step lively
+step on a rake
+step on it
+step up to the plate
+stepping razor
+stepping stone
+stick in the mud
+stick it to
+stick it to the man
+stick out a mile
+stick the knife in
+stick the landing
+stick together
+sticker shock
+sticking plaster
+sticking point
+sticks and stones
+sticky fingers
+stiff upper lip
+stink eye
+stink on ice
+stink the joint out
+stir shit
+stir the embers
+stock phrase
+stomping ground
+stone cold
+stone dead
+stone deaf
+stone's throw
+stop a bullet
+stop and smell the roses
+stop at nothing
+stop cold
+stop dead
+stop press
+stop the bleeding
+stop the lights
+stop the presses
+storm out of the blocks
+stormy weather
+stovepipe hat
+straight and narrow
+straight face
+straight from the horse's mouth
+straight from the shoulder
+straight goods
+straight man
+straight out of the chute
+straight shooter
+straight-face test
+straighten up and fly right
+strain a point
+strain at a gnat
+strain at the leash
+strain every nerve
+strange bedfellows
+strange bird
+strangle the parrot
+strap on a pair
+straw poll
+straw that stirs the drink
+street appeal
+streets ahead
+streets behind
+stretch the truth
+strike a blow
+strike a chord
+strike a false note
+strike a light
+strike it lucky
+strike it rich
+strike oil
+strike tallies
+strike the tent
+strike while the iron is hot
+string attached
+stroke of business
+stroke of luck
+stroke of work
+strong suit
+stuck in the mud
+stud muffin
+student union politics
+stuff the ballot box
+stuffed like a turkey
+stuffed shirt
+stuffed to the gills
+stumbling block
+success story
+suck a big one
+suck a lemon
+suck and blow
+suck donkey balls
+suck dry
+suck face
+suck hind tit
+suck it up
+suck my balls
+suck my cock
+suck my dick
+suck on that
+suck the kumara
+suck the mop
+suck tits
+suffer fools gladly
+suffer in silence
+sugar and spice
+sugar and spice and everything nice
+sugar coated
+sugarcoat a bitter pill
+sugarcoat the pill
+suit down to the ground
+suit the action to the word
+summer and winter
+sun worshipper
+sunshine and rainbows
+sure enough
+suspended congress
+swaddling clothes
+swallow a bitter pill
+swallow the dictionary
+swallow the leek
+swallow whole
+swan song
+swap horses in midstream
+sweat bricks
+sweat bullets
+sweat equity
+sweat the small stuff
+sweep aside
+sweep the board
+sweep the deck
+sweet dreams
+sweet fuck all
+sweet hereafter
+sweet nothings
+sweet smell of success
+sweet stuff
+sweet summer child
+sweet tooth
+sweet young thing
+sweeten the pill
+sweeten the pot
+sweetheart deal
+sweetness and light
+swim upstream
+swim with sharks
+swing and a miss
+swing both ways
+swing for the fences
+swing of things
+swing round the circle
+sword and sorcery
+table scrap
+table talk
+tail wagging the dog
+take a back seat
+take a bath
+take a bead on
+take a bite
+take a bite out of
+take a bow
+take a breath
+take a breather
+take a bullet
+take a chance
+take a cotton to
+take a crack at
+take a deep breath
+take a dim view of
+take a dive
+take a dookie
+take a fancy to
+take a flyer
+take a gamble
+take a gander
+take a hike
+take a hit
+take a joke
+take a liking to
+take a load off
+take a look
+take a nap
+take a pew
+take a picture
+take a piss
+take a powder
+take a risk
+take a run at
+take a shine to
+take a shit
+take a shot in the dark
+take a stab at
+take a stand
+take a tumble
+take a turn
+take a turn for the better
+take a turn for the worse
+take a walk
+take a walkout powder
+take a whack at
+take a wife
+take aback
+take aim
+take air
+take an axe to
+take bread and salt
+take by storm
+take care of business
+take check
+take cover
+take credit
+take delight in
+take down a notch
+take down a peg
+take easy
+take fire
+take flight
+take for a ride
+take for a spin
+take for granted
+take form
+take great pains
+take guard
+take heed
+take huff
+take ill
+take into account
+take into consideration
+take it away
+take it easy
+take it on the lam
+take it or leave it
+take it out on
+take it outside
+take it up the ass
+take its rise
+take its toll
+take kindly
+take liberties
+take lightly
+take no for an answer
+take no notice of
+take no prisoners
+take occasion
+take on faith
+take on the chin
+take on water
+take one day at a time
+take one for the team
+take out an onion
+take out in trade
+take out of context
+take out the trash
+take part
+take pride
+take refuge
+take roll
+take sides
+take silk
+take soil
+take stock
+take the biscuit
+take the bitter with the sweet
+take the cake
+take the count
+take the cure
+take the fall
+take the fifth
+take the front seat
+take the game to
+take the gilt off the gingerbread
+take the hint
+take the initiative
+take the lead
+take the liberty
+take the mask off
+take the meaning
+take the mick
+take the mickey
+take the offensive
+take the pee
+take the piss
+take the plunge
+take the point
+take the rap
+take the red pill
+take the reins
+take the ride
+take the shadow for the substance
+take the stand
+take the veil
+take the wheel
+take time
+take time by the forelock
+take time off
+take time out
+take to heart
+take to task
+take to the bank
+take to the cleaners
+take to the grave
+take to the hills
+take up a collection
+take up the cudgel for
+take up the cudgels
+take up the gauntlet
+take up the hatchet
+take up the running
+talent management
+talk a blue streak
+talk a good game
+talk a mile a minute
+talk about the weather
+talk dirty
+talk in circles
+talk is cheap
+talk jockey
+talk like an apothecary
+talk of the devil
+talk out of turn
+talk the legs off a pot
+talk the talk
+talk to a brick wall
+talk trash
+talk turkey
+talking head
+tall in the saddle
+tall order
+tall story
+tall tale
+tap dance
+teach grandma how to suck eggs
+teacher's pet
+team up with
+tear a cat
+tear to shreds
+tear up the dance floor
+tear up the pea patch
+tears before bedtime
+teensy weensy
+teeny weeny
+teething issues
+teething problem
+teething trouble
+teething troubles
+telephone tag
+tell apart
+tell fortunes
+tell it like it is
+tell it to the judge
+tell it to the marines
+tell its own tale
+tell tales
+tell tales out of school
+tell the truth
+tell you the truth
+temper temper
+tempest in a teapot
+temple of immensity
+tempt fate
+ten a penny
+ten to one
+ten-cent word
+ten-dollar word
+tentpole movie
+term of years
+term of years absolute
+term of years determinable
+terra firma
+territorial pissing
+test bed
+test the waters
+textbook case
+than a bygod
+thanks a bunch
+thanks for nothing
+that dog don't run
+that ever walked on two legs
+that will do
+that'll be the day
+that's about the size of it
+that's all she wrote
+that's done it
+that's just me
+that's the thing
+that's the ticket
+that's what she said
+that's your lot
+the bee's knees
+the buck stops here
+the cat's out of the bag
+the cat's pajamas
+the cat's pyjamas
+the chickens come home to roost
+the coast is clear
+the cupboard is bare
+the curtain falls
+the devil a one
+the devil is a liar
+the devil is in the details
+the die is cast
+the feathers fly
+the game is up
+the genie's out of the bottle
+the good doctor
+the good doctors
+the half of it
+the handbags come out
+the hard way
+the hell you say
+the jig is up
+the juice is worth the squeeze
+the last of pea-time
+the moon on a stick
+the nose knows
+the one that got away
+the other day
+the other white meat
+the pants off
+the plot thickens
+the rabbit died
+the rest is history
+the rubber meets the road
+the seventh water after kissel
+the show must go on
+the streets are paved with gold
+the terrorists will have won
+the thing is
+the thing of it
+the vultures are circling
+the wheels fell off
+the whole world and his dog
+the word is go
+the world over
+them's the breaks
+them's the facts
+there and back
+there for everyone to see
+there is no telling
+there we go
+there you go
+therein lies the rub
+they should have sent a poet
+thick and thin
+thick and threefold
+thick as thieves
+thick end
+thick of things
+thick skin
+thief in the night
+thin air
+thin end of the wedge
+thin the herd
+thing of the past
+think aloud
+think one hung the moon
+think out loud
+think tank
+think the world of
+think twice
+thinking cap
+thinking man's
+third hand
+third string
+third wheel
+thirteenth reason why
+this is where we came in
+thorn in the flesh
+thought bubble
+thread of thought
+thread the needle
+three guys in a garage
+three score and ten
+three sheets to the wind
+three skips of a louse
+three squares
+three-dog night
+three-martini lunch
+three-ring circus
+thrill kill
+thrill killer
+thrill of the hunt
+through the looking-glass
+through the mill
+through the roof
+through thick and thin
+throw a bone to
+throw a fit
+throw a kiss
+throw a spanner in the works
+throw a tantrum
+throw a wet blanket on
+throw a wobbly
+throw a wrench in
+throw a wrench in the gears
+throw a wrench in the works
+throw an ant into a sty
+throw an eye
+throw aside
+throw away the key
+throw caution to the wind
+throw cold water on
+throw down the gauntlet
+throw good money after bad
+throw in at the deep end
+throw in the towel
+throw in with
+throw money away
+throw of the dice
+throw off balance
+throw off the trail
+throw overboard
+throw shapes
+throw spaghetti at the wall
+throw stones
+throw stones in a glass house
+throw the book at
+throw the bull
+throw the bull around
+throw to the dogs
+throw to the wind
+throw to the wolves
+throw up the sponge
+throw wobblies
+thud and blunder
+thumb a ride
+thumb on the scale
+thus and so
+thus and such
+tick a lot of boxes
+tick all the boxes
+ticket to ride
+tickle pink
+tickle the dragon's tail
+tickle the ear
+tickle the sausage
+tickle the wire
+tickled pink
+tie in knots
+tie in with
+tie one on
+tie the knot
+tie up loose ends
+tied in knots
+tiger of a different stripe
+tight lips
+tight ship
+tight spot
+tight squeeze
+tighten the purse strings
+till death do us part
+tilt at windmills
+time after time
+time alone will tell
+time and material
+time bandit
+time burglar
+time flies
+time forgot
+time is ripe
+time is short
+time is ticking
+time of old
+time out of mind
+time thief
+time will tell
+tin god
+tin-pot dictatorship
+tip of the hat
+tip of the ice cube
+tip of the iceberg
+tip the scale
+tip the scales
+tip the wink
+tiptoe through a minefield
+tire fire
+tired and emotional
+tit for tat
+to a degree
+to a fare-thee-well
+to a fault
+to a greater extent
+to a hair
+to a nicety
+to a turn
+to all intents and purposes
+to and fro
+to be honest
+to be sure
+to beat the band
+to die for
+to hell and back
+to hell in a handbasket
+to high heaven
+to little avail
+to no avail
+to say nothing of
+to say the least
+to speak of
+to tell the truth
+to that end
+to the backbone
+to the bone
+to the death
+to the fore
+to the gills
+to the letter
+to the limit
+to the marrow
+to the max
+to the moon and back
+to the nth degree
+to the point
+to the tee
+to the tonsils
+toast of the town
+today we are all
+toe the line
+tonsil hockey
+tonsil tennis
+too clever by half
+too cool for school
+too good for this world
+too good to be true
+too hot to hold
+too many balls in the air
+tools of trade
+toothpaste is out of the tube
+top banana
+top cat
+top dog
+top dollar
+top drawer
+top end of town
+top it off
+top notch
+top of mind
+top of the hour
+top of the line
+top of the morning
+top shelf
+top the charts
+top to bottom
+top-heavy with drink
+total package
+totus porcus
+touch a nerve
+touch base
+touch cotton
+touch wood
+tough as nails
+tough beans
+tough break
+tough call
+tough case
+tough cookies
+tough going
+tough love
+tough luck
+tough sledding
+tough titty
+tough tuchus
+town and gown
+toys in the attic
+track record
+trade hands
+trailer park trash
+trailer trash
+train wreck
+transform and roll out
+tread carefully
+tread lightly
+tread the boards
+tremble and obey
+trench mouth
+trial balloon
+trial by fire
+trial by media
+trials and tribulations
+trick of the trade
+trick question
+tried and tested
+tried and trusted
+trip to the woodshed
+trophy wife
+trotter case
+trouble at mill
+trouble in paradise
+true stripes
+true to form
+trust me bro
+truth be told
+try it on
+try on for size
+tube steak
+tug of war
+tulip mania
+tuppence worth
+turd in the punchbowl
+turf war
+turkey shoot
+turn a blind eye
+turn a corner
+turn a deaf ear
+turn a hair
+turn a phrase
+turn a profit
+turn a setback into a comeback
+turn a trick
+turn back the clock
+turn heads
+turn into a pumpkin
+turn loose
+turn of events
+turn of the screw
+turn on its head
+turn over a new leaf
+turn tail
+turn the air blue
+turn the boat
+turn the corner
+turn the other cheek
+turn the page
+turn the scale
+turn the screw
+turn the tables
+turn the tide
+turn to dust
+turn to good account
+turn turtle
+turn two
+turn up for the book
+turn up the heat
+turn up the volume on
+turn up trumps
+turn upside down
+turning point
+turtle head
+twelve-ounce curls
+twenty to the dozen
+twenty winks
+twenty-twenty hindsight
+twilight industry
+twilight years
+twilight zone
+twist in the wind
+twist of fate
+two a penny
+two birds with one stone
+two bob
+two cents
+two for two
+two ha'pennies for a penny
+two left feet
+two left hands
+two penn'orth
+two pennies to rub together
+two pennies' worth
+two sides of the same coin
+two slips of latinum
+two steps ahead
+two tears in a bucket
+two thumbs up
+two-fisted drinker
+two-hit wonder
+two-second rule
+two-way street
+tyre kicker
+ugly customer
+ugly duckling
+under a cloud
+under a spell
+under lock and key
+under no circumstances
+under one roof
+under the carpet
+under the covers
+under the gun
+under the hammer
+under the illusion
+under the impression
+under the influence
+under the mahogany
+under the microscope
+under the radar
+under the rose
+under the rug
+under the saya
+under the sheets
+under the sun
+under the surface
+under the weather
+under the wire
+understand the assignment
+unicorn barf
+unicorn puke
+unicorn vomit
+university of life
+university of the streets
+unknown quantity
+uno ab alto
+unring a bell
+unsung hero
+until hell freezes over
+until the cows come home
+until the cows freeze over
+until the last dog is hung
+unto the ages of ages
+up a gum tree
+up a height
+up a tree
+up and at 'em
+up and away
+up and coming
+up and running
+up for grabs
+up hill and down dale
+up in the air
+up poo creek
+up shit creek without a paddle
+up shit's creek
+up shit's creek without a paddle
+up the ante
+up the boohai
+up the creek
+up the river
+up the wall
+up the walls
+up the yin-yang
+up to eleven
+up to no good
+up to scratch
+up to speed
+up to the hub
+up with the chickens
+up with the lark
+up with the larks
+uphill battle
+upon the instant
+upon the tapis
+upper crust
+upper hand
+upper storey
+ups and downs
+upset the applecart
+urban fabric
+use in anger
+uterine cancer
+vale of tears
+valley of death
+valley of the shadow of death
+vanish to the four winds
+vast majority
+velvet handcuffs
+victory at sea
+view from the top
+vim and vigor
+virtuous circle
+voice in the wilderness
+vote off the island
+wag a finger
+wag the dog
+wait for it
+wait for the ball to drop
+wait for the dust to settle
+wait in the wings
+wait till the clouds roll by
+wait upon hand and foot
+waiting game
+wake the dead
+wake up and smell the coffee
+wake up one day
+walk all over
+walk away from
+walk free
+walk in on
+walk in the park
+walk in the snow
+walk of life
+walk off with
+walk on broken glass
+walk on eggshells
+walk on sunshine
+walk on the wild side
+walk on water
+walk the beat
+walk the chalk
+walk the dog
+walk the floor
+walk the line
+walk the plank
+walk the streets
+walk the talk
+walk the walk
+wall of silence
+wanker's cramp
+want for nothing
+want to know
+war bride
+war of nerves
+war of words
+warm body
+warm regards
+warmest regards
+warts and all
+wash a blackamoor white
+waste breath
+waste of breath
+waste of space
+watch the world burn
+watch the world go by
+watch this space
+water over the dam
+water under the bridge
+waterfowl alignment
+watering hole
+watery grave
+wave aside
+wave goodbye
+wave of the hand
+wave the white flag
+wax the dolphin
+way back when
+way of thinking
+way out of a paper bag
+we been knew
+we haven't got all day
+weak sister
+weak tea
+weaker vessel
+weaponized incompetence
+wear many hats
+wear rose-colored glasses
+wear sackcloth and ashes
+wear the trousers
+wear thin
+wear too many hats
+wear two hats
+wear yellow stockings
+weather the storm
+weight of the world
+welcome to my world
+well and good
+well and truly
+well done
+well-oiled machine
+were you born in a tent
+wet behind the ears
+wet blanket
+wet boy
+wet firecracker
+wet the bed
+wet the shamrock
+whack one out
+what are the odds
+what do you say
+what happens twice happens thrice
+what in tarnation
+what in time
+what it takes
+what the doctor ordered
+what's eating you
+what's going on
+what's the beef
+what's the difference
+what's the good of
+what's the matter
+what's the story
+what's your poison
+whatcha know good
+whatever butters your biscuit
+whatever butters your bread
+whatever butters your muffin
+whatever butters your toast
+whatever creams your twinkie
+whatever floats your boat
+whatever helps you sleep at night
+whatever humps your camel
+whatever it takes
+whatever melts your butter
+whatever sizzles your bacon
+whatever tickles your pickle
+whatever winds your clock
+wheat bread
+wheel within a wheel
+wheels are turning
+when all is said and done
+when it comes to
+when it's at home
+when pigs fly
+when push comes to shove
+when the chips are down
+when the music stops
+where's the beef
+where's the fire
+where's the lie
+which foot the shoe is on
+which way the wind is blowing
+while we're young
+whip hand
+whip into shape
+whip the cat
+whip up a storm
+whips and jingles
+whiskey dick
+whisper campaign
+whistle in the dark
+whistle in the wind
+whistle past the graveyard
+whistle walk
+white bread
+white coat hypertension
+white hat
+white lie
+white magic
+white marriage
+white on rice
+white pee
+white rabbit
+white rider
+white satin
+white sheep
+white trash
+white trashery
+who are you telling
+who wants to know
+whole ball of wax
+whole box of tricks
+whole cloth
+whole enchilada
+whole package
+whole shebang
+whole shooting match
+whoop ass
+whoop it up
+why in the world
+why in time
+wicked tongue
+wide awake
+wide berth
+wide of the mark
+wide open
+widow's mite
+wild horses
+wild-goose chase
+wilful ignorance
+willing horse
+willow in the wind
+win by a nose
+win the day
+win the lottery
+wind back the clock
+wind tunnel testing
+window on the world
+wine tosser
+winged word
+winning ways
+winter rat
+winter wonderland
+wipe the slate clean
+wise apple
+wise head on young shoulders
+wish one joy of it
+wishful thinking
+with a grain of salt
+with a quickness
+with a vengeance
+with a view to
+with a wet finger
+with a will
+with all due respect
+with an eye to
+with an eye towards
+with bated breath
+with bells on
+with both hands
+with every breath
+with flying colors
+with knobs on
+with no further ado
+with one voice
+with open arms
+with the manner
+with whole skin
+wither on the vine
+within ames ace
+within an ace of
+within living memory
+within reach
+without a hitch
+without a trace
+without batting an eye
+without fail
+without further ado
+woe betide
+wolf guarding the sheep
+wolf in sheep's clothing
+woman among women
+woman of few words
+woman of the hour
+woman of the people
+woman on the street
+wooden ear
+wooden spoon
+wooden spoonist
+word is bond
+word of finger
+word of mouth
+word on the street
+word on the wire
+word to the wise
+words of one syllable
+work into the ground
+work it out on the remix
+work like a dog
+work like a dream
+work like a horse
+work of art
+work spouse
+work the crowd
+work the room
+work to rule
+work wonders
+working girl
+world of difference
+world record
+worlds apart
+worm food
+worm turns
+worm's-eye view
+worse for liquor
+worse for wear
+worship the porcelain god
+worship the porcelain goddess
+worst comes to worst
+worst of both worlds
+worst-kept secret
+worth every penny
+wouldn't be seen dead
+wouldn't you know
+wouldn't you say
+wrack and ruin
+wrap in cotton wool
+wrap in the flag
+wrestle with a pig
+write checks one can't cash
+write for the drawer
+write the book
+writer's cramp
+writing on the wall
+written in blood
+written in the stars
+wrong crowd
+wrong number
+wrong side of the tracks
+yardarm to yardarm
+ye gods
+year dot
+yell silently
+yellow brick road
+yellow grease
+yellow journalism
+yellow journalist
+yellow light
+yellow press
+yellow state
+yeoman's service
+yes man
+yes to death
+yield the ghost
+yield up the ghost
+you can say that again
+you can't be half pregnant
+you can't polish a turd
+you can't say fairer than that
+you know it
+you know what
+you knows it
+you name it
+you'll never guess
+you're telling me
+young at heart
+young blood
+young fogey
+your mileage may vary
+zig when one should zag

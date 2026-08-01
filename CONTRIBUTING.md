@@ -54,7 +54,7 @@ means a green PR.
 
 `skills/sapiens/references/plain-english.md` holds the long lookup tables. Prefer adding
 there over adding to `SKILL.md`, because reference files load on demand and `SKILL.md`
-loads every time the skill activates.
+loads each time the skill activates.
 
 Only promote something into `SKILL.md` if it shows up often enough that the model needs
 it resident. If you think a phrase qualifies, say why in the PR.

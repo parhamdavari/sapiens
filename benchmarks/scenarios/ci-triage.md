@@ -26,3 +26,15 @@ The test asserts a retry happens "within 100ms" and CI runners are sometimes slo
 No product impact. Fix is to widen the tolerance or use a fake timer.
 
 **Overall:** 18 failing tests, 3 packages, but only one is a real user-facing bug.
+
+## Findings checklist
+
+Machine-read by `scripts/lib/recall.mjs`. A finding counts as present when any one of its
+patterns appears in the reply, case-insensitive. The patterns are my judgement of
+acceptable phrasings, recorded here so that judgement is visible and versioned.
+
+- web-cart-regression: usecart | empty cart | cart hook | undefined
+- web-user-impact: crash | user-facing | ships to users
+- api-frozen-clock: clock | date.now | fixture | setup file
+- worker-flaky: flaky | tolerance | fake timer | 100ms
+- only-one-real-bug: only one | only real | one real | one is a real
