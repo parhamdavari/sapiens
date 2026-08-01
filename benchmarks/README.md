@@ -144,8 +144,8 @@ against the same fixtures. Every file records model, skill version, date, and ru
 in its frontmatter. Score them all with `node benchmarks/generate.mjs --score`, which
 also reports recall against each scenario's findings checklist.
 
-Skill edits go through the protocol in `tasks/spec.md`: before runs, the edit, after
-runs. Recall must hold. The keep-or-revert decision lands here as a `DECISION-*.md`
+Skill edits go through [the edit protocol](../docs/edit-protocol.md): before runs, the
+edit, after runs. Recall must hold. The keep-or-revert decision lands here as a `DECISION-*.md`
 file with its evidence. The first decision was a revert, and its record explains why that is the
 system working.
 

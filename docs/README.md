@@ -4,5 +4,7 @@
 - [Choosing a level](levels.md): lead, dev, geek, and when each fits
 - [Why not just use caveman?](why-not-caveman.md): where token compression breaks down,
   and the aerospace standard that settled it
+- [Changing the skill text](edit-protocol.md): the evidence a skill edit needs before
+  it can be kept
 - [Benchmarks](../benchmarks/README.md): method, raw transcripts, and how to reproduce
 - [The skill itself](../skills/sapiens/SKILL.md): the instructions Claude actually reads

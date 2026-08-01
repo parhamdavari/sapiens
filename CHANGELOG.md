@@ -11,7 +11,8 @@ Format follows [Keep a Changelog](https://keepachangelog.com). Versions follow
 ## [3.5.0]
 
 The measurement layer rebuild. The skill text is unchanged; every instrument that
-measures it was replaced, following the spec in `tasks/spec.md`.
+measures it was replaced. The procedure it established for changing the skill text
+now lives in [`docs/edit-protocol.md`](docs/edit-protocol.md).
 
 **Changed**
 
