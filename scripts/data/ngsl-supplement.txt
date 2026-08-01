@@ -1,0 +1,67 @@
+# NGSL supplemental words: numbers, weekdays, months.
+#
+# The NGSL publishes these as supplemental lists beside the 2,801 core
+# headwords (http://www.newgeneralservicelist.com). The vendored mirror in
+# ngsl.txt omitted them, so they are reconstructed here from the published
+# category definitions. Reconstruction, not measurement: the categories are
+# closed sets, so membership is not a judgement call.
+one
+two
+three
+four
+five
+six
+seven
+eight
+nine
+ten
+eleven
+twelve
+thirteen
+fourteen
+fifteen
+sixteen
+seventeen
+eighteen
+nineteen
+twenty
+thirty
+forty
+fifty
+sixty
+seventy
+eighty
+ninety
+hundred
+thousand
+million
+billion
+first
+second
+third
+fourth
+fifth
+sixth
+seventh
+eighth
+ninth
+tenth
+monday
+tuesday
+wednesday
+thursday
+friday
+saturday
+sunday
+january
+february
+march
+april
+may
+june
+july
+august
+september
+october
+november
+december
