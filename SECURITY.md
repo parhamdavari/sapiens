@@ -6,8 +6,8 @@ connections, and collects nothing. The install script copies files into
 
 The realistic security surface is small but not zero:
 
-- The install script writes to your home directory. Read it before you run it. It is
-  about forty lines and does one thing.
+- The install script writes to your home directory. Read it before you run it. It is 90
+  lines and does one thing.
 - A malicious fork could publish a modified `SKILL.md`. Install from a source you trust
   and check the diff on updates.
 
