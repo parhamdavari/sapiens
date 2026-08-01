@@ -40,6 +40,18 @@ measures it was replaced, following the spec in `tasks/spec.md`.
   suite. CI runs them on both platforms.
 - `node scripts/measure.mjs --markdown` emits the published tables, so no number in
   the docs is hand-typed.
+- `benchmarks/generate.mjs`: a harness that drives the Claude CLI headless and answers
+  every scenario from its fixture, three runs per arm, with model, skill version, date,
+  and run number recorded in each transcript's frontmatter. 27 live transcripts are
+  committed under `benchmarks/runs/`.
+- Findings checklists in every scenario fixture, and a recall scorer
+  (`scripts/lib/recall.mjs`). Recall is the guard metric: a reply that got shorter by
+  dropping a finding scores worse, whatever the other columns say.
+- The first skill edit went through the new edit protocol and was **reverted on a null
+  result**: the target metric moved 17 to 14 across nine runs, recall held, and the
+  motivating scenario did not move. The full record is
+  `benchmarks/runs/DECISION-2026-08-01-sentence-ceiling.md`. The 25-word breach stands
+  as the top open finding against the skill text.
 
 **Honest findings the new instruments produced**
 
