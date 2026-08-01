@@ -36,3 +36,15 @@ The new strict grading rule also fails members that genuinely did the work but d
 cite it in the required format. Because of this, the real-model test suite does not fully
 pass. The author wants a product decision on how strict an uncited-but-correct claim
 should be treated.
+
+## Findings checklist
+
+Machine-read by `scripts/lib/recall.mjs`. A finding counts as present when any one of its
+patterns appears in the reply, case-insensitive. The patterns are my judgement of
+acceptable phrasings, recorded here so that judgement is visible and versioned.
+
+- grounding-main-fix: grounding
+- success-despite-no-work: succeeded | charged | billed
+- fix-count: six | five smaller | five more
+- status-waiting-review: waiting on | not merged | open and
+- cto-open-question: cto | product decision | design question
