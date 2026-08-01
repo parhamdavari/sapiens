@@ -18,7 +18,7 @@ Plain, complete, unpadded English, for people who work in English but do not thi
 [![Stars](https://img.shields.io/github/stars/parhamdavari/sapiens?style=flat-square&color=ffc86f)](https://github.com/parhamdavari/sapiens/stargazers)
 [![Validate](https://img.shields.io/github/actions/workflow/status/parhamdavari/sapiens/validate.yml?style=flat-square&label=validate)](https://github.com/parhamdavari/sapiens/actions)
 
-[Install](#install) · [Before / after](#before-and-after) · [Levels](#three-levels) · [What I measured](#what-i-measured) · [Limits](#what-this-evidence-does-not-show) · [How it works](#how-it-works) · [vs caveman](#how-this-differs-from-caveman)
+[Install](#install) · [Before / after](#before-and-after) · [Levels](#three-levels) · [What I measured](#what-i-measured) · [Limits](#what-this-evidence-does-not-show) · [Where it fails](#the-25-word-rule-does-not-hold) · [How it works](#how-it-works) · [vs caveman](#how-this-differs-from-caveman)
 
 </div>
 
@@ -266,6 +266,51 @@ Read this before you trust the table above.
   [`benchmarks/README.md`](benchmarks/README.md) rather than quietly fixed.
 - **Correctness is not measured.** Word counts and reading grades say nothing about whether
   an answer is right.
+- **The skill misses its own 25-word ceiling, and three attempts to fix it failed.** See
+  the section below.
+
+## The 25-word rule does not hold
+
+Core rule 3 sets a 25-word ceiling on sentences. Pre-send check 3 says to count. Replies
+generated with the skill loaded break that ceiling about as often as replies generated
+without it.
+
+Measured over 36 runs per arm on `claude-opus-5[1m]`, the current skill text averages 1.47
+sentences over the ceiling per reply. The breaches are not marginal. Most are longer than
+29 words, and the worst seen was 57.
+
+The failure has a shape. It appears when a reply names three or more parallel items and
+packs them into one comma chain. The `ci-triage` scenario, whose answer names a single
+decision, almost never breaches. The two scenarios that list findings breach in nearly
+every run.
+
+Three edits have tried to fix it, and each is recorded in
+[`benchmarks/runs/`](benchmarks/runs/) with its numbers:
+
+| Attempt | What changed | Result |
+|---|---|---|
+| Wording of the pre-send check | strengthened the instruction to count | no effect |
+| A target below the ceiling | aim for 15 to 20 words | p = 0.784 |
+| An enumeration rule | parallel items never share a sentence | p = 0.475 at n=36 |
+
+The third one is worth reading if you build with skills. At 18 runs per arm it showed the
+target metric falling 38%, with every scenario improving and p = 0.158. Doubling the
+sample collapsed the effect to nothing. Deciding after the first block would have put a
+false claim on this page.
+
+**The honest conclusion: this behaviour does not appear to be reachable by adding or
+rewording a rule.** The instruction already appears twice. A third statement changed
+nothing.
+
+The rule stays in the skill. The writing it asks for is right even when compliance is
+imperfect. Replies that break it are still far shorter and plainer than the baseline.
+What changes is the claim. This page does not say the skill holds a 25-word
+ceiling, because it does not.
+
+Open as [issue #6](https://github.com/parhamdavari/sapiens/issues/6). The useful next step
+is probably not a fourth rule. A severity-weighted metric would say whether the worst
+sentences are shrinking even when the count does not move. A reader study would say
+whether these sentences cost a reader anything at all.
 
 ## Does this repo follow its own rules?
 

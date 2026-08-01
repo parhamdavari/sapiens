@@ -8,6 +8,18 @@ Format follows [Keep a Changelog](https://keepachangelog.com). Versions follow
 > entry's version. Only the 3.5.0 table below matches the current scripts. Run
 > `npm run measure` for the live figures.
 
+## [Unreleased]
+
+**Changed**
+
+- The README now carries a section, "The 25-word rule does not hold", stating plainly that
+  the skill misses its own sentence-length ceiling and that three attempts to fix it
+  failed. It is linked from the navigation row and from the limits list. The page no
+  longer implies the ceiling is enforced.
+- Three README figures corrected after the 3.5.0 formula change. The orientation reading
+  grade is 6.0 rather than 5.9. 112 of 313 words is a third rather than a quarter. The
+  self-check exclusion wording now says `benchmarks/README.md` is checked.
+
 ## [3.5.0]
 
 The measurement layer rebuild. The skill text is unchanged; every instrument that
