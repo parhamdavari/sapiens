@@ -21,11 +21,12 @@ $targetRoot = if ($Project) { Join-Path $PWD ".claude\skills" }
               else { Join-Path $HOME ".claude\skills" }
 $target = Join-Path $targetRoot $skill
 
-$localSrc = Join-Path $PSScriptRoot "skills\$skill\SKILL.md"
+# $PSScriptRoot is $null when this script is piped into iex, so guard before using it.
+$localSrc = if ($PSScriptRoot) { Join-Path $PSScriptRoot "skills\$skill\SKILL.md" } else { $null }
 $tmp = Join-Path ([System.IO.Path]::GetTempPath()) ("sapiens-" + [guid]::NewGuid())
 
 try {
-  if (Test-Path $localSrc) {
+  if ($localSrc -and (Test-Path $localSrc)) {
     $src = Join-Path $PSScriptRoot "skills\$skill"
     Write-Host "installing from local checkout" -ForegroundColor DarkGray
   } else {
