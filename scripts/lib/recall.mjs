@@ -15,7 +15,21 @@
 // judgement visible and versioned instead of buried in scorer code.
 
 import { readFileSync } from "node:fs";
-import { toProse } from "./text.mjs";
+
+// Recall matches against the raw reply, not the toProse output. The other
+// metrics strip code spans because backticked tokens are not prose to grade;
+// here a backticked token ("/context", a file name) often IS the finding, and
+// stripping it made the scorer blind to facts stated as code. Only backticks
+// themselves and whitespace runs are normalised away.
+function normalise(raw) {
+  return raw
+    .replace(/^---\n[\s\S]*?\n---\n/, " ")
+    .replace(/^---MESSAGE---.*$/gm, " ")
+    .replace(/`/g, "")
+    .replace(/[*_]/g, "")
+    .replace(/\s+/g, " ")
+    .toLowerCase();
+}
 
 export function parseChecklist(scenarioRaw) {
   const section = scenarioRaw.split(/^## Findings checklist$/m)[1];
@@ -28,7 +42,7 @@ export function parseChecklist(scenarioRaw) {
 
 export function recall(scenarioPath, replyRaw) {
   const checklist = parseChecklist(readFileSync(scenarioPath, "utf8"));
-  const text = toProse(replyRaw).toLowerCase();
+  const text = normalise(replyRaw);
   const missing = checklist
     .filter((f) => !f.patterns.some((p) => text.includes(p)))
     .map((f) => f.id);
