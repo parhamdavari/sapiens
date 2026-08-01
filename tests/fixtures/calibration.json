@@ -1,0 +1,47 @@
+{
+ "note": "Reference scores computed once with textstat (independent Python implementation). Tolerance for our implementation: plus or minus one grade per formula.",
+ "tool": "textstat 0.7.13",
+ "computed": "2026-08-01",
+ "passages": {
+  "peter-rabbit": {
+   "file": "passage-peter-rabbit.txt",
+   "source": "Potter, The Tale of Peter Rabbit (1902), Project Gutenberg #14838",
+   "licence": "public domain",
+   "expected": {
+    "fleschKincaid": 7.43,
+    "colemanLiau": 7.36,
+    "ari": 8.54
+   }
+  },
+  "pride": {
+   "file": "passage-pride.txt",
+   "source": "Austen, Pride and Prejudice (1813), Project Gutenberg #1342",
+   "licence": "public domain",
+   "expected": {
+    "fleschKincaid": 6.24,
+    "colemanLiau": 5.47,
+    "ari": 6.09
+   }
+  },
+  "sherlock": {
+   "file": "passage-sherlock.txt",
+   "source": "Doyle, A Scandal in Bohemia (1891), Project Gutenberg #1661",
+   "licence": "public domain",
+   "expected": {
+    "fleschKincaid": 11.27,
+    "colemanLiau": 8.81,
+    "ari": 12.42
+   }
+  },
+  "origin": {
+   "file": "passage-origin.txt",
+   "source": "Darwin, On the Origin of Species (1859), Project Gutenberg #1228",
+   "licence": "public domain",
+   "expected": {
+    "fleschKincaid": 19.81,
+    "colemanLiau": 11.92,
+    "ari": 22.33
+   }
+  }
+ }
+}
