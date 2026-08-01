@@ -1,0 +1,28 @@
+<!doctype html><meta charset="utf-8">
+<style>
+@font-face{font-family:ID;src:url(InterDisplay-Bold.ttf);font-weight:700}
+@font-face{font-family:IR;src:url(Inter-Regular.ttf)}
+@font-face{font-family:JB;src:url(JetBrainsMono-Regular.ttf)}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1280px;height:400px;overflow:hidden}
+body{background:#1C1A17;display:flex;align-items:center;gap:74px;padding-left:104px;
+     position:relative}
+body::after{content:"";position:absolute;inset:0;
+     background:radial-gradient(120% 90% at 18% 50%, rgba(200,98,47,.10), transparent 60%);
+     pointer-events:none}
+.mark{width:330px;height:192px;flex:0 0 auto;
+      background:url(mark-transparent.png) center/contain no-repeat;
+      filter:drop-shadow(0 6px 34px rgba(200,98,47,.28))}
+h1{font:700 108px/1 ID;color:#F2EEE8;letter-spacing:-4px;margin-bottom:14px}
+.t{font:23px/1 JB;color:#C8622F;letter-spacing:.2px;margin-bottom:22px}
+.r{width:74px;height:4px;border-radius:2px;background:#C8622F;margin-bottom:22px}
+.s{font:20px/1.5 IR;color:#7E7468}
+</style>
+<div class="mark"></div>
+<div>
+  <h1>sapiens</h1>
+  <div class="t">talk like a person, not a caveman</div>
+  <div class="r"></div>
+  <div class="s">a Claude skill for plain, complete, unpadded English<br>
+    <span style="color:#5E574E">built for readers whose first language isn't English</span></div>
+</div>

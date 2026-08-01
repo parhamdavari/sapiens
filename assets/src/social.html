@@ -1,0 +1,21 @@
+<!doctype html><meta charset="utf-8">
+<style>
+@font-face{font-family:ID;src:url(InterDisplay-Bold.ttf);font-weight:700}
+@font-face{font-family:IR;src:url(Inter-Regular.ttf)}
+@font-face{font-family:JB;src:url(JetBrainsMono-Regular.ttf)}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1280px;height:640px;overflow:hidden}
+body{background:#1C1A17;display:flex;flex-direction:column;align-items:center;
+     justify-content:center;gap:0;position:relative;text-align:center}
+body::after{content:"";position:absolute;inset:0;
+  background:radial-gradient(80% 70% at 50% 38%, rgba(200,98,47,.13), transparent 65%)}
+.mark{width:430px;height:250px;background:url(mark-transparent.png) center/contain no-repeat;
+      filter:drop-shadow(0 8px 44px rgba(200,98,47,.30));margin-bottom:56px}
+h1{font:700 116px/1 ID;color:#F2EEE8;letter-spacing:-4px;margin-bottom:22px}
+.t{font:26px/1 JB;color:#C8622F;margin-bottom:34px}
+.s{font:22px/1 IR;color:#7E7468}
+</style>
+<div class="mark"></div>
+<h1>sapiens</h1>
+<div class="t">talk like a person, not a caveman</div>
+<div class="s">a Claude skill for plain, complete, unpadded English</div>

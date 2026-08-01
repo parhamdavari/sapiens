@@ -1,0 +1,42 @@
+name: validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  spec:
+    name: Agent Skills spec
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Validate SKILL.md against the specification
+        run: node scripts/validate.mjs
+
+  metrics:
+    name: Readability metrics
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Measure benchmark transcripts
+        run: node scripts/measure.mjs
+
+  installer:
+    name: Installer
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install from the local checkout
+        run: SAPIENS_DIR="$RUNNER_TEMP/skills" bash install.sh
+      - name: Confirm the skill landed
+        run: test -f "$RUNNER_TEMP/skills/sapiens/SKILL.md"
