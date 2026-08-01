@@ -65,3 +65,16 @@ jobs:
           node-version: 22
       - name: Calibration, golden snapshots, and corpora
         run: npm run test:unit
+
+  evidence-gate:
+    name: Skill edits need evidence
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: A skill edit must ship with a decision record
+        run: node scripts/evidence-gate.mjs "origin/${{ github.base_ref || 'main' }}"

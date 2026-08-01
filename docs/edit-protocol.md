@@ -84,6 +84,21 @@ The first decision under this protocol is
 [`DECISION-2026-08-01-sentence-ceiling.md`](../benchmarks/runs/DECISION-2026-08-01-sentence-ceiling.md).
 It was a revert.
 
+## What CI enforces
+
+`npm run evidence-gate` runs on every pull request. It fails a pull request that changes
+`SKILL.md` without adding a decision record. It also fails a record that is missing a
+comparison table, recall figures, or a named model, and one that cites a transcript
+nobody committed.
+
+Two things it deliberately does not do. It does not generate replies. Generation needs
+credentials, costs tokens per run, and varies between runs, so a contributor's change
+could fail on variance rather than on its own quality. It also cannot tell whether a
+decision was right. It checks that the evidence exists and is reachable. A reviewer still
+reads the numbers and decides.
+
+A release that only bumps the version line in the frontmatter passes without a record.
+
 ## Rules that hold for any change in this repo
 
 **Always.** Run `npm test` before a commit. Keep the provenance headers in

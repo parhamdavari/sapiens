@@ -12,7 +12,8 @@
     "render": "node scripts/render-assets.mjs",
     "test": "npm run validate && npm run self-check && npm run test:unit",
     "self-check": "node scripts/self-check.mjs",
-    "test:unit": "node --test tests/*.test.mjs"
+    "test:unit": "node --test tests/*.test.mjs",
+    "evidence-gate": "node scripts/evidence-gate.mjs"
   },
   "keywords": [
     "claude",
