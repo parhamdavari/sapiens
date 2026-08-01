@@ -51,3 +51,17 @@ jobs:
         run: SAPIENS_DIR="$RUNNER_TEMP/skills" bash install.sh
       - name: Confirm the skill landed
         run: test -f "$RUNNER_TEMP/skills/sapiens/SKILL.md"
+
+  unit-tests:
+    name: Measurement layer unit tests
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Calibration, golden snapshots, and corpora
+        run: npm run test:unit

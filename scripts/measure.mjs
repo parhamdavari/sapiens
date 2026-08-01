@@ -83,7 +83,7 @@ function report(rows, showTurns) {
   for (const [name, m] of rows) {
     console.log(
       pad(name, 30) + (showTurns ? num(m.spokenTurns, 6) : "") + num(m.words, 7) +
-      num(m.avgSentence, 10) + num(m.grade, 7) + num(m.longSentences, 6) +
+      num(m.avgSentence, 10) + num(m.grade.toFixed(1), 7) + num(m.longSentences, 6) +
       num(m.offListShare, 11) + num(m.idioms, 8) + num(m.emDashes, 9)
     );
   }
@@ -107,7 +107,7 @@ function markdownTable(rows) {
   ];
   for (const [name, m] of rows) {
     lines.push(
-      `| \`${name}\` | ${m.spokenTurns} | ${m.words} | ${m.avgSentence} | ${m.grade} | ` +
+      `| \`${name}\` | ${m.spokenTurns} | ${m.words} | ${m.avgSentence} | ${m.grade.toFixed(1)} | ` +
       `${m.longSentences} | ${m.offListShare} | ${m.idioms} | ${m.emDashes} |`
     );
   }

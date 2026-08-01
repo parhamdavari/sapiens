@@ -180,20 +180,33 @@ variable is how the answer gets written.
 Raw transcripts and the full method are in [`benchmarks/`](benchmarks/). Recount them with
 `npm run measure`.
 
-| Scenario | | Times spoken | Words | Reading grade | Sentences >25w |
-|---|---|---:|---:|---:|---:|
-| **4-PR review** | without | 3 | 500 | 7.9 | 6 |
-| | with | **1** | **207** | **6.1** | **1** |
-| **CI triage, 3 packages** | without | 5 | 313 | 5.3 | 2 |
-| | with | **1** | **112** | **4.6** | **0** |
-| **"what is this PR about?"** | without | n/a | 307 | 9.3 | 1 |
-| | with | n/a | **113** | **5.9** | **0** |
+The reading grade is the median of three formulas (Flesch-Kincaid, Coleman-Liau, ARI), so
+no single heuristic decides the number. Words off-list is the share of words outside the
+[NGSL](http://www.newgeneralservicelist.com), a published list of the core vocabulary a
+competent learner knows. That column tests the plain-vocabulary claim directly.
+
+| Scenario | | Times spoken | Words | Reading grade | Sentences >25w | Words off-list |
+|---|---|---:|---:|---:|---:|---:|
+| **4-PR review** | without | 3 | 500 | 8.2 | 6 | 17.0% |
+| | with | **1** | **207** | **6.3** | **1** | 17.2% |
+| **CI triage, 3 packages** | without | 5 | 313 | 5.5 | 2 | 13.7% |
+| | with | **1** | **112** | **4.7** | **0** | **20.2%** |
+| **"what is this PR about?"** | without | n/a | 307 | 9.3 | 1 | 11.4% |
+| | with | n/a | **113** | **6.0** | **0** | **3.5%** |
 
 Words spoken fell by 59%, 64% and 63%. In the two multi-step scenarios the assistant spoke
 once instead of three and five times. The third scenario is a single question with no
 sub-agents, so a turn count means nothing there.
 
-One caution about that first column. A turn is counted from where the transcript records a
+The off-list column goes the wrong way in two rows, and one is large. The CI-triage short
+answer is **worse** than its baseline, 20.2% against 13.7%. The reason is arithmetic: a
+112-word reply keeps every package and command name but has a quarter of the denominator.
+The orientation scenario shows the opposite, 3.5% against 11.4%, because there the skill
+defines or drops jargon instead of listing it. Both facts are in the table because the
+metric found them. A shorter denominator punishes short replies, and anyone quoting the
+column should know that limit.
+
+One caution about the turns column. A turn is counted from where the transcript records a
 message rather than a silence, and I wrote the transcripts. It reports a judgement about
 what the skill should suppress, not an observation of a live session.
 
@@ -208,18 +221,27 @@ Every word is short and the sentence is short, so it scores as easy English. A r
 knows every one of those words still cannot say what the sentence means. That gap is the
 reason this skill exists, and it is the reason to distrust a readability score on its own.
 
-The measurement is a different story, and it has not gone well.
+The measurement is a different story. It has taken three attempts, and the third finally
+removed me from it.
 
-I built a detector for it. `npm run measure` reports a figurative column, counted against a
-list in [`scripts/figurative-list.mjs`](scripts/figurative-list.mjs). Twice now I have had
-to rewrite that list, because entries had been lifted from the very transcript they were
-scoring. The file's header records both rounds. After the second cleanup the column reads
-zero for every with-and-without pair in the benchmark, and one for the real-world reply.
+The first two idiom lists were written in this repo, and both turned out to contain
+entries lifted from the very transcripts they scored. The current list is derived
+mechanically from Wiktionary's English-idioms category by
+[`scripts/build-idiom-list.mjs`](scripts/build-idiom-list.mjs). It keeps 6,698 of 10,585
+raw entries. Every filter is stated in the script with its reason, and anyone can
+reproduce the file byte for byte. Nobody who wrote that list ever saw this repo. Matching
+is by exact word sequence, so a literal phrase can no longer trip a substring. A corpus
+of literal phrases is asserted to zero hits in CI.
 
-So the honest position: **the idiom effect is argued, not measured.** The argument is
-sound and the example is real. The number behind it is not evidence yet. A phrase list can
-only find phrases someone thought to write down, and the ones worth catching are the ones
-nobody noticed.
+The result on the benchmarks: the sapiens transcripts score zero, and the baselines score
+one hit each in two scenarios. The real-world reply, the one that motivated all of this,
+**also scores zero.** Its sentences fail readers on phrases like *how hard an uncited
+claim should bite*, which is a novel metaphor, not a catalogued idiom. No list catches a
+metaphor someone just made up.
+
+So the honest position stands: **the idiom effect is argued, not measured.** What changed
+is the instrument. It is now independent and precise, and its blind spot is named. It
+finds catalogued idioms, and the phrases that hurt most are the ones nobody catalogued.
 
 ## What this evidence does not show
 
@@ -253,17 +275,18 @@ Some of them, and CI checks it on every push.
 npm run self-check
 ```
 
-That sweeps the 17 markdown files this project wrote and applies four of the skill's rules.
-No sentence over 25 words. No idiom from the list. A reading grade under nine. At most three
-em dashes per file. A failure blocks the merge.
+That sweeps the markdown files this project wrote and applies four of the skill's rules.
+No sentence over 25 words. No idiom from the derived list. A median reading grade under
+nine. At most three em dashes per file. A failure blocks the merge.
 
 Everything under `benchmarks/` is excluded. The transcripts are evidence and the scenarios
 are inputs to it, so editing either one to pass a style check would be worse than failing.
 
 Two things it does not do. It cannot check whether the writing is clear, only whether it
-breaks countable rules. And it skips blockquotes, so a quoted bad example does not fail the
-file that quotes it. That exclusion also covers blockquotes I wrote myself, which is a hole
-I have not closed.
+breaks countable rules. And quoted material is exempt, both blockquotes and inline quoted
+strings, so a doc that mentions a banned phrase does not fail for mentioning it. The same
+exemption would cover a bad sentence I chose to wrap in quotes, which is a hole I have
+named rather than closed.
 
 The version of this README before the pre-launch audit failed two of the four rules. It had
 four sentences over the ceiling and fifteen em dashes against a budget of three. Its reading
