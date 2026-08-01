@@ -42,6 +42,11 @@ export function toProse(raw, { dropQuotes = false } = {}) {
     .replace(/^---\n[\s\S]*?\n---\n/, " ")   // YAML frontmatter is metadata, not prose
     .replace(/<!--[\s\S]*?-->/g, " ")
     .replace(dropQuotes ? /^\s*>.*$/gm : /(?!)/g, " ")   // blockquotes are quoted material
+    // Inline double-quoted strings are quoted material too: a doc that mentions
+    // a banned phrase ("Feel free to reach out") is not using it. Same scope
+    // rule as blockquotes, same documented hole: quoting your own sentence
+    // would evade the check. Straight and curly quotes, within one line.
+    .replace(dropQuotes ? /["“][^"“”\n]{1,120}["”]/g : /(?!)/g, " ")
     .replace(/```[\s\S]*?```/g, " ")
     .replace(/<[^>]+>/g, " ")
     .replace(/^\s*\|.*\|\s*$/gm, " ")          // table rows

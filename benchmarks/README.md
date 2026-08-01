@@ -109,7 +109,7 @@ provides. The baseline transcript reports it. The short answer does not.
 This matters more than its size. A shortening pass loses weak-evidence findings first. The
 skill's own last check exists to catch that case, and here it did not fire.
 
-The transcript stays as it is. Editing a result after the fact to make a tool look better
+The transcript stays as it is. Editing a recorded result to make a tool look better
 would make every other number in this folder worthless.
 
 ## What these numbers do not show

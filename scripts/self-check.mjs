@@ -19,9 +19,14 @@ import { analyse } from "./measure.mjs";
 
 // One budget for every markdown file this project writes. No per-file exemptions, because
 // an exemption is where the embarrassing sentence goes to hide.
-const MAX_FK = 9.0;
+// Thresholds, recalibrated for measurement layer v2 (see CHANGELOG 3.5.0).
+// MAX_GRADE applies to the median of FK, Coleman-Liau, and ARI. The old rule
+// was FK < 9.0 alone; the median is stricter against any one formula being
+// fooled, and 9.0 keeps the same intent: comfortable reading for a competent
+// non-native reader. Idiom hits stay at zero, now against the derived list.
+const MAX_GRADE = 9.0;
 const MAX_LONG = 0;
-const MAX_FIGURATIVE = 0;
+const MAX_FIGURATIVE = 0; // against the Wiktionary-derived list
 const MAX_EM_DASH = 3;
 
 // Transcripts are evidence, not prose this project wrote to be read. Scoring them here
@@ -59,20 +64,20 @@ let failed = 0;
 const pad = (s, n) => String(s).padEnd(n);
 const num = (s, n) => String(s).padStart(n);
 
-console.log(pad("file", 30) + num("FK", 7) + num(">25w", 7) + num("idiom", 7) + num("em-dash", 9));
+console.log(pad("file", 30) + num("grade", 7) + num(">25w", 7) + num("idiom", 7) + num("em-dash", 9));
 console.log("-".repeat(60));
 
 for (const file of TARGETS) {
   const m = analyse(readFileSync(file, "utf8"), { dropQuotes: true });
   const bad = [];
-  if (m.fleschKincaid > MAX_FK) bad.push(`FK ${m.fleschKincaid} > ${MAX_FK}`);
+  if (m.grade > MAX_GRADE) bad.push(`grade ${m.grade} > ${MAX_GRADE}`);
   if (m.longSentences > MAX_LONG) bad.push(`${m.longSentences} sentence(s) over 25 words`);
-  if (m.figurative > MAX_FIGURATIVE) bad.push(`figurative: ${m.figurativeHits.join(", ")}`);
+  if (m.idioms > MAX_FIGURATIVE) bad.push(`figurative: ${m.idiomHits.join(", ")}`);
   if (m.emDashes > MAX_EM_DASH) bad.push(`${m.emDashes} em dashes > ${MAX_EM_DASH}`);
 
   const mark = bad.length ? c.red("✗") : c.green("✓");
-  console.log(`${mark} ` + pad(file, 28) + num(m.fleschKincaid, 7) + num(m.longSentences, 7) +
-              num(m.figurative, 7) + num(m.emDashes, 9));
+  console.log(`${mark} ` + pad(file, 28) + num(m.grade, 7) + num(m.longSentences, 7) +
+              num(m.idioms, 7) + num(m.emDashes, 9));
   for (const b of bad) console.log(c.red(`    ${b}`));
   if (bad.length) failed++;
 }

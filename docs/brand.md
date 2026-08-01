@@ -20,7 +20,7 @@ like neither.
 | **default AI** | Elaborate, padded, ornamental. | A dense tangled scribble. Noise. |
 | **sapiens** | Simple, complete, ordered speech. | A person saying three clear things. Signal. |
 
-Ochre is the pigment of the first human marks. It also keeps the project out of the
+Ochre is the pigment of the first human marks. It also keeps the project away from the
 blue-grey that most developer tooling defaults to.
 
 **Two things the mark is deliberately not.** It is not the ape-to-man walking line. That
