@@ -22,7 +22,7 @@ but doesn't think in it. Every change should be arguable against that.
 
 - New rules. The skill sits near the spec's token budget. A new rule usually means an
   existing one has to go, or move to a reference file. Open an issue first.
-- Changes to the three levels. `dev` is the default, so changing what it means affects
+- Changes to the three levels. `lead` is the default, so changing what it means affects
   everyone.
 
 ## The rule that governs every change

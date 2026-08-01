@@ -33,8 +33,8 @@ Measured on two long tasks, a four-PR consistency review and a three-package CI 
 
 | Level | Sounds like | Use when |
 |---|---|---|
-| `lead` | A tech lead giving a status update, big picture only | You just want to know what happened and whether it's handled |
-| `dev` (default) | A solid teammate explaining a change | Everyday use, balanced detail |
+| `lead` (default) | A tech lead giving a status update, big picture only | You just want to know what happened and whether it's handled |
+| `dev` | A solid teammate explaining a change | Everyday use, balanced detail |
 | `geek` | A technical peer who likes the details | You want exact file names, functions, and precise cause and effect |
 
 ## How to turn it on

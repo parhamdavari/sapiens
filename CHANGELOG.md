@@ -9,6 +9,22 @@ Format follows [Keep a Changelog](https://keepachangelog.com). Versions follow
 > and do not reproduce against the current ones. Only the 3.3.0 table below is current.
 > Run `npm run measure` for the live figures.
 
+## [3.4.0]
+
+**Changed**
+
+- `lead` is now the default level. It was `dev`. Without a named level, a reply is a status
+  update rather than a teammate's explanation, and asking for more costs one line.
+- The reason recorded for the old default was that `dev` is the level that is rarely wrong.
+  That reason still holds, and it is now stated under `dev` in `docs/levels.md` for anyone
+  who wants to switch back. The new default trades a small risk of omission for a shorter
+  reply by default.
+- `SKILL.md` and `docs/levels.md` both carry the caution that comes with the change: `lead`
+  can leave out a detail you needed, and you will not always notice it is missing. Any
+  detail that changes what the reader does next stays in, at every level.
+- No measured figure changed. The benchmark transcripts are not level-tagged, so this
+  release adds no new numbers and removes none.
+
 ## [3.3.0]
 
 The pre-launch audit release. Nothing about the skill's behaviour changed. Everything about

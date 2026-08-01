@@ -148,8 +148,8 @@ All three write full sentences in plain words. Only the technical depth changes.
 
 | | Sounds like | Use when |
 |---|---|---|
-| **lead** | A tech lead giving a status update | You want the outcome and whether it is handled |
-| **dev** *(default)* | A solid teammate explaining a change | Everyday use |
+| **lead** *(default)* | A tech lead giving a status update | You want the outcome and whether it is handled |
+| **dev** | A solid teammate explaining a change | Everyday use, when you will act on the answer yourself |
 | **geek** | A technical peer who wants the details | You want exact files, functions and cause |
 
 <details>

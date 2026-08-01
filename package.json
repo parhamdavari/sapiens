@@ -1,6 +1,6 @@
 {
   "name": "sapiens-skill",
-  "version": "3.3.0",
+  "version": "3.4.0",
   "description": "A Claude skill that makes replies read like a person wrote them: plain, complete, unpadded English, built for readers whose first language isn't English.",
   "type": "module",
   "private": true,
