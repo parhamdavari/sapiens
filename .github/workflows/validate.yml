@@ -17,6 +17,17 @@ jobs:
       - name: Validate SKILL.md against the specification
         run: node scripts/validate.mjs
 
+  self-check:
+    name: This repo against its own standard
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: A project that sells plain English has to write it
+        run: node scripts/self-check.mjs
+
   metrics:
     name: Readability metrics
     runs-on: ubuntu-latest

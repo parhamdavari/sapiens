@@ -3,9 +3,9 @@
 Full lookup tables for sapiens. `SKILL.md` carries the rules and the most frequent
 offenders inline. This file is the complete list.
 
-Read it when you are unsure whether a specific phrase belongs in a reply, when a draft
-fails the figurative-language check and you want the plain replacement, or when you want
-the full banned-phrase list rather than the sample.
+Read it when you are unsure whether a phrase belongs in a reply. Read it when a draft fails
+the figurative-language check and you want the plain replacement. Read it when you want the
+full list rather than the sample.
 
 ## Contents
 
@@ -203,8 +203,9 @@ plain phrasing over the term entirely.
 - **Stacked dramatic fragments.** "No config. No setup. No waiting." Three same-shaped
   fragments in a row is a drumroll, not information. It also breaks core rule 1.
 - **Diff-anchored description.** When explaining code, describe how it works now, not the
-  edit that produced it. "This function caches results in a hash map" beats "I changed this
-  function to use a hash map instead of the previous loop." Exception: the user asked what changed.
+  edit that produced it. Write "this function caches results in a hash map".
+  Do not write "I changed this function to use a hash map instead of the previous loop".
+  The exception is a user who asked what changed.
 - **Invented labels.** Coining a term mid-sentence ("the context-collapse problem") and never
   defining it names a thing instead of explaining it. Describe the mechanism.
 - **Title Case Headings.** Use sentence case. Title case only for a document's main title.

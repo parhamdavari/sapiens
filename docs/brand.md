@@ -4,10 +4,12 @@
 
 A human head in profile, speaking three ochre strokes.
 
-The head is early-human but dignified: a heavy brow, a broad nose, a full jaw. Not a modern
-silhouette, and not a caveman caricature either. The three strokes leaving the mouth are the
-speech — short, separate, ordered, each one shorter than the last, so they read as three
-plain words rather than a stream or a scribble.
+The head is early-human but dignified: a heavy brow, a broad nose, a full jaw. It is not a
+modern silhouette, and not a caveman caricature either.
+
+The three strokes leaving the mouth are the speech. They are short, separate and ordered,
+and each one is shorter than the last. They read as three plain words rather than as a
+stream or a scribble.
 
 That combination is the whole positioning. Sapiens sits between two things and has to look
 like neither.
@@ -21,15 +23,15 @@ like neither.
 Ochre is the pigment of the first human marks. It also keeps the project out of the
 blue-grey that most developer tooling defaults to.
 
-**Two things the mark is deliberately not.** It isn't the ape-to-man walking line, which is
-both the most overused image in graphic design and a retelling of caveman's evolution joke
-rather than this project's point. And it isn't cave imagery — these are early humans *after*
-the cave.
+**Two things the mark is deliberately not.** It is not the ape-to-man walking line. That
+image is the most overused in graphic design, and it retells caveman's evolution joke rather
+than this project's point. It is also not cave imagery. These are early humans *after* the
+cave.
 
 ## Palette
 
 ```
-Ochre / burnt sienna   #C8622F   the marks — primary
+Ochre / burnt sienna   #C8622F   the marks, primary
 Warm highlight         #F0A860   accent, inner glow
 Dark stone             #1C1A17   background
 Stone shadow           #2A2723   depth
@@ -56,8 +58,8 @@ Both fonts are open-licensed and vendored in `assets/src/` so a rebuild is repro
 | `logo.png`, `logo-light.png` | 1024 icon, rounded tile, dark and light |
 | `logo-128/64/32.png` | Icon exports |
 | `mark-dark-square.png`, `mark-light-square.png` | The mark on a square, no rounding |
-| `logo-banner.png`, `logo-banner-light.png` | README hero, 1280×400 |
-| `social-preview.png` | GitHub → Settings → General → Social preview, 1280×640 |
+| `logo-banner.png`, `logo-banner-light.png` | README hero. 2560×800, a 2x export of a 1280×400 layout. |
+| `social-preview.png` | GitHub social preview. 2560×1280, a 2x export of a 1280×640 layout. |
 | `favicon.png` + `-64/48/32/16` | Head only. See below. |
 | `favicon-light.png` + sizes | Same, for light browser chrome |
 | `src/` | Layout HTML for the composites, plus the vendored fonts |
@@ -79,8 +81,9 @@ npm i -D playwright
 npm run render
 ```
 
-The mark is a raster and is checked in. Everything laid out around it — wordmark, tagline,
-spacing — is HTML and CSS, so the type stays crisp and editable. Edit the HTML, re-render.
+The mark is a raster and is checked in. Everything laid out around it is HTML and CSS: the
+wordmark, the tagline, the spacing. The type stays crisp and editable. Edit the HTML, then
+re-render.
 
 `npm run render` rebuilds `social-preview.png`. The two banners were produced alongside the
 mark and are checked in as they are.

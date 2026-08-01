@@ -20,10 +20,10 @@ but doesn't think in it. Every change should be arguable against that.
 
 **Things that need discussion first:**
 
-- New rules. The skill is already near the spec's token budget, so a new rule usually
-  means an existing one has to go or move to a reference file. Open an issue first.
-- Changes to the three levels. They're load-tested; changing what `dev` means affects
-  everyone's default.
+- New rules. The skill sits near the spec's token budget. A new rule usually means an
+  existing one has to go, or move to a reference file. Open an issue first.
+- Changes to the three levels. `dev` is the default, so changing what it means affects
+  everyone.
 
 ## The rule that governs every change
 
@@ -35,9 +35,15 @@ can't be measured is still welcome — just say so plainly rather than inventing
 ## Before you open a pull request
 
 ```bash
-npm run validate     # checks SKILL.md against the Agent Skills specification
-npm run measure      # re-runs the readability metrics over benchmarks/results
+npm run validate     # SKILL.md against the Agent Skills specification
+npm run self-check   # this repo's own writing against the standard the skill sells
+npm run measure      # recounts the readability metrics over benchmarks/results
 ```
+
+`self-check` is the one that catches people out. It holds the README and the docs to the
+rules the skill teaches. No sentence over 25 words. No idiom from the list. A reading grade
+under nine. At most three em dashes per file. Blockquotes are excluded, because a quoted bad
+example is quoted material. CI runs it, and a failure blocks the merge.
 
 `validate` enforces the [Agent Skills spec](https://agentskills.io/specification.md):
 frontmatter keys, the 1024-character description limit, the name format, and the

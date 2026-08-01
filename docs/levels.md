@@ -19,8 +19,9 @@ upward, or when you're catching up on work you didn't do yourself.
 A capable teammate explaining a change. Reaches for a technical term or a specific name only
 when you need it to act.
 
-Use it for everyday work. It's the default because it's the only level that's rarely wrong:
-the lead level can leave out something you needed, and the geek level can bury the answer.
+Use it for everyday work. It is the default because it is the level that is rarely wrong.
+The lead level can leave out something you needed. The geek level can hide the answer under
+detail.
 
 > Found the bug in the login flow. The session token was being checked before it finished
 > saving, so valid logins sometimes failed. I added a check that waits for the save to

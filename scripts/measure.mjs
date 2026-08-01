@@ -1,31 +1,27 @@
 #!/usr/bin/env node
 // Measures readability over the transcripts in benchmarks/results/.
 //
-// Two families of metric, because they catch different problems:
+//   node scripts/measure.mjs                 # the benchmark transcripts
+//   node scripts/measure.mjs README.md ...   # any file, including this repo's own docs
 //
-//   Flesch-Kincaid grade   — word length and sentence length. Catches dense,
-//                            Latinate, long-clause writing.
-//   figurative hits        — idioms and metaphors. FK cannot see these at all:
-//                            "how hard an uncited claim should bite" is all short
-//                            words in a short sentence, so it scores as easy while
-//                            being unreadable to a non-native reader. This column is
-//                            the reason the skill has a separate check for it.
+// Two families of metric, because they catch different problems.
+//
+//   Flesch-Kincaid grade   Word length and sentence length. Catches dense, Latinate,
+//                          long-clause writing.
+//   figurative hits        Idioms and metaphors. FK cannot see these. "How hard an
+//                          uncited claim should bite" is all short words in a short
+//                          sentence, so it scores as easy while being opaque to a reader
+//                          working in a second language.
+//
+// The figurative list is in scripts/figurative-list.mjs. Read the note at the top of that
+// file before quoting any number this script prints: a hit count is a lower bound against
+// one fixed list, not an absolute measure.
 
 import { readFileSync, readdirSync, existsSync } from "node:fs";
-import { join } from "node:path";
+import { join, basename } from "node:path";
+import { FIGURATIVE } from "./figurative-list.mjs";
 
 const RESULTS = "benchmarks/results";
-
-// Sampled from references/plain-english.md. Not exhaustive by design — it measures a
-// habit, it does not police a vocabulary.
-const FIGURATIVE = [
-  "headline one", "the big one", "finished green", "tests are green", "not fully green",
-  "should bite", "product call", "judgment call", "settled as", "ship it", "moving parts",
-  "low-hanging", "out of the box", "down the line", "down the road", "gotcha", "bake it in",
-  "kick the can", "quietly", "under the hood", "footgun", "happy path", "blast radius",
-  "paper over", "band-aid", "stopgap", "eat the cost", "in the weeds", "move the needle",
-  "no-brainer", "dispatched", "a bundle of",
-];
 
 function syllables(word) {
   const w = word.toLowerCase().replace(/[^a-z]/g, "");
@@ -40,59 +36,105 @@ function syllables(word) {
   return Math.max(n, 1);
 }
 
-export function analyse(raw) {
-  const text = raw
-    .replace(/<!--[\s\S]*?-->/g, "")          // notes about the transcript, not part of it
-    .replace(/^---MESSAGE---.*$/gm, "")
-    .replace(/\bNONE\b/g, "")
-    .replace(/[#*`>|_]/g, " ")
+// Strip everything that isn't prose the reader parses as a sentence: transcript markers,
+// HTML, code blocks and spans, tables, link targets, and markdown punctuation. Without
+// this, measuring a README measures its markup.
+export function toProse(raw, { dropQuotes = false } = {}) {
+  return raw
+    .replace(/^---\n[\s\S]*?\n---\n/, " ")   // YAML frontmatter is metadata, not prose
+    .replace(/<!--[\s\S]*?-->/g, " ")
+    .replace(dropQuotes ? /^\s*>.*$/gm : /(?!)/g, " ")   // blockquotes are quoted material
+    .replace(/```[\s\S]*?```/g, " ")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/^\s*\|.*\|\s*$/gm, " ")          // table rows
+    .replace(/^---MESSAGE---.*$/gm, " ")
+    .replace(/\bNONE\b/g, " ")
+    .replace(/`[^`]*`/g, " ")                  // inline code
+    .replace(/!\[[^\]]*\]\([^)]*\)/g, " ")     // images carry no prose
+    .replace(/\[([^\]]*)\]\([^)]*\)/g, "$1")   // links keep their text, drop the target
+    .replace(/^[\s·|—–-]*$/gm, " ")             // separator-only lines (badge rows, nav rows)
+    .replace(/^\s*#{1,6}\s.*$/gm, " ")        // headings are labels, not sentences
+    .replace(/^\s*[-*+]\s+(.*?)\s*$/gm, "$1. ")
+    .replace(/^\s*\d+\.\s+(.*?)\s*$/gm, "$1. ")
+    .replace(/[#*>|_]/g, " ")
+    .replace(/\n\s*\n/g, ". ")                // a blank line ends a sentence
+    .replace(/\s+/g, " ")
+    .replace(/(\s*\.)+/g, ".")
     .trim();
+}
 
-  const words = text.split(/\s+/).filter(Boolean);
-  const sentences = text.split(/(?<=[.!?])\s+/).filter((s) => s.split(/\s+/).length > 2);
+export function analyse(raw, opts) {
+  const text = toProse(raw, opts);
+  const words = text.split(/\s+/).filter((w) => /[a-zA-Z]/.test(w));
+  const sentences = text.split(/(?<=[.!?])\s+/).filter((s) => s.trim());
   const W = words.length;
   const S = Math.max(sentences.length, 1);
   const SY = words.reduce((a, w) => a + syllables(w), 0);
+  const lower = text.toLowerCase();
 
   return {
     words: W,
     sentences: S,
     avgSentence: +(W / S).toFixed(1),
     fleschKincaid: +(0.39 * (W / S) + 11.8 * (SY / W) - 15.59).toFixed(1),
-    longSentences: sentences.filter((s) => s.split(/\s+/).length > 25).length,
-    figurative: FIGURATIVE.filter((f) => text.toLowerCase().includes(f)).length,
-    spokenTurns: (raw.match(/^---MESSAGE---/gm) || []).length
+    longSentences: sentences.filter((s) => s.split(/\s+/).filter(Boolean).length > 25).length,
+    figurative: FIGURATIVE.filter((f) => lower.includes(f)).length,
+    figurativeHits: FIGURATIVE.filter((f) => lower.includes(f)),
+    emDashes: (text.match(/—/g) || []).length,
+    spokenTurns: /^---MESSAGE---/m.test(raw)
       ? raw.split(/^---MESSAGE---.*$/m).slice(1).filter((p) => p.trim() && p.trim() !== "NONE").length
       : 1,
   };
 }
 
-if (!existsSync(RESULTS)) {
-  console.error(`${RESULTS}/ not found. Run this from the repo root.`);
-  process.exit(1);
-}
-
-const files = readdirSync(RESULTS).filter((f) => f.endsWith(".md")).sort();
 const pad = (s, n) => String(s).padEnd(n);
 const num = (s, n) => String(s).padStart(n);
 
-console.log("");
-console.log(
-  pad("transcript", 30) + num("turns", 6) + num("words", 7) + num("avg-sent", 10) +
-  num("FK", 6) + num(">25w", 6) + num("figurative", 12)
-);
-console.log("-".repeat(77));
-
-for (const f of files) {
-  const m = analyse(readFileSync(join(RESULTS, f), "utf8"));
+function report(rows, showTurns) {
+  console.log("");
   console.log(
-    pad(f.replace(/\.md$/, ""), 30) + num(m.spokenTurns, 6) + num(m.words, 7) +
-    num(m.avgSentence, 10) + num(m.fleschKincaid, 6) + num(m.longSentences, 6) +
-    num(m.figurative, 12)
+    pad("file", 30) + (showTurns ? num("turns", 6) : "") + num("words", 7) +
+    num("avg-sent", 10) + num("FK", 6) + num(">25w", 6) + num("figurative", 12) + num("em-dash", 9)
   );
+  console.log("-".repeat(showTurns ? 86 : 80));
+  for (const [name, m] of rows) {
+    console.log(
+      pad(name, 30) + (showTurns ? num(m.spokenTurns, 6) : "") + num(m.words, 7) +
+      num(m.avgSentence, 10) + num(m.fleschKincaid, 6) + num(m.longSentences, 6) +
+      num(m.figurative, 12) + num(m.emDashes, 9)
+    );
+  }
+  console.log("");
 }
-console.log("");
-console.log("FK = Flesch-Kincaid grade. Lower is easier. An IELTS Band 6 reader is");
-console.log("comfortable around grade 8. FK is blind to idioms, which is what the");
-console.log("figurative column is for.");
-console.log("");
+
+// Only run the CLI when invoked directly, so self-check.mjs can import analyse().
+const isMain = import.meta.url === `file://${process.argv[1]}`;
+const args = isMain ? process.argv.slice(2) : null;
+if (isMain) main();
+
+function main() {
+// --prose-only drops blockquotes. Use it when measuring this repo's own docs: a quoted
+// bad example is quoted material, and the skill's own scope rule leaves quotes alone.
+const dropQuotes = args.includes("--prose-only");
+const files = args.filter((a) => !a.startsWith("--"));
+
+if (files.length) {
+  const rows = files.map((f) => [basename(f), analyse(readFileSync(f, "utf8"), { dropQuotes })]);
+  report(rows, false);
+  for (const [name, m] of rows) {
+    if (m.figurativeHits.length) console.log(`${name} figurative: ${m.figurativeHits.join(", ")}`);
+  }
+  console.log("");
+} else {
+  if (!existsSync(RESULTS)) {
+    console.error(`${RESULTS}/ not found. Run this from the repo root.`);
+    process.exit(1);
+  }
+  const found = readdirSync(RESULTS).filter((f) => f.endsWith(".md")).sort();
+  report(found.map((f) => [f.replace(/\.md$/, ""), analyse(readFileSync(join(RESULTS, f), "utf8"))]), true);
+  console.log("FK = Flesch-Kincaid grade. Lower is easier. FK is blind to idioms, which is");
+  console.log("what the figurative column is for. See scripts/figurative-list.mjs for how");
+  console.log("that list was built and what its number does and does not mean.");
+  console.log("");
+}
+}
