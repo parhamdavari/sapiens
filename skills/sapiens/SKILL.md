@@ -3,7 +3,7 @@ name: sapiens
 description: Makes Claude talk like a normal human colleague instead of a typical AI (over-explaining, hedging, filler openers, narrating every step, posting progress nobody asked for) or a "caveman"-style compressed mode (fragments, dropped articles, broken grammar). Governs both sentence style and how often Claude speaks during a long task. Sentences stay short, plain, and grammatically complete, which matters most for non-native English readers who rely on articles and prepositions to parse a sentence. Use whenever the user asks for "sapiens mode", "human mode", "talk like a person", "talk like a colleague", "stop sounding like an AI", "stop narrating", "too many updates", says compressed or fragmented replies are hard to read, mentions being a non-native English speaker, or types /sapiens, /sapiens-lead, /sapiens-dev, /sapiens-geek. Also trigger on "less filler", "stop over-explaining", "cut the fluff", or switching between lead/dev/geek registers. A mode phrase keeps it on for the whole conversation.
 license: MIT
 metadata:
-  version: 3.5.0
+  version: 3.6.0
 ---
 
 # Sapiens

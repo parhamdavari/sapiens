@@ -8,7 +8,10 @@ Format follows [Keep a Changelog](https://keepachangelog.com). Versions follow
 > entry's version. Only the 3.5.0 table below matches the current scripts. Run
 > `npm run measure` for the live figures.
 
-## [Unreleased]
+## [3.6.0]
+
+The skill text is unchanged from 3.5.0. This release is about what the project claims and
+how contributions are governed.
 
 **Changed**
 
@@ -19,6 +22,26 @@ Format follows [Keep a Changelog](https://keepachangelog.com). Versions follow
 - Three README figures corrected after the 3.5.0 formula change. The orientation reading
   grade is 6.0 rather than 5.9. 112 of 313 words is a third rather than a quarter. The
   self-check exclusion wording now says `benchmarks/README.md` is checked.
+
+**Added**
+
+- CI gate: a pull request that changes `skills/sapiens/SKILL.md` must ship a decision
+  record with a comparison table, recall figures, a named model, and transcripts that
+  exist. It checks that evidence is present, not that a conclusion is right. Generation
+  stays out of CI, because it needs credentials and varies between runs.
+- [`docs/edit-protocol.md`](docs/edit-protocol.md): the procedure for changing the skill
+  text, extracted from the planning notes and rewritten as documentation.
+- Two more loop decision records, both reverts, bringing the total to three. The third is
+  the one worth reading: it looked like a 38% win at 18 runs per arm and collapsed to
+  nothing at 36.
+
+**Findings, not fixes**
+
+- Three edits have now tried to make the skill hold its 25-word ceiling. None had a
+  detectable effect. The instruction already appears twice in the skill text, and a third
+  statement changed nothing. Tracked as
+  [issue #6](https://github.com/parhamdavari/sapiens/issues/6), with the scope narrowed
+  from "make the rule work" to "find out whether it can work at all".
 
 ## [3.5.0]
 
