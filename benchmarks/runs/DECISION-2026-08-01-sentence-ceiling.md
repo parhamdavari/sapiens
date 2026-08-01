@@ -1,6 +1,7 @@
 # Loop decision: strengthen pre-send check 3 — REVERTED
 
-The first `SKILL.md` edit taken through the D9 protocol (`tasks/spec.md`). Recorded
+The first `SKILL.md` edit taken through the [edit protocol](../../docs/edit-protocol.md).
+Recorded
 whether kept or not, because the decision and its evidence are the point.
 
 ## The observation that motivated the edit

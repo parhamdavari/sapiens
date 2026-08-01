@@ -31,7 +31,7 @@ const MAX_EM_DASH = 3;
 
 // Transcripts are evidence, not prose this project wrote to be read. Scoring them here
 // would mean editing evidence to pass a style check.
-const SKIP = [/^benchmarks\//, /^node_modules\//, /^dist\//, /^\.git\//];
+const SKIP = [/^benchmarks\//, /^tasks\//, /^node_modules\//, /^dist\//, /^\.git\//];
 
 function walk(dir, out = []) {
   for (const name of readdirSync(dir)) {
