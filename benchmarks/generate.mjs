@@ -16,14 +16,69 @@
 // that the mode is active. That is what "skill loaded" means operationally,
 // and it does not depend on skills-directory discovery in headless mode.
 
-import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
+// Batch modes:
+//   node benchmarks/generate.mjs --all 3    every scenario, both arms, runs 1..3
+//                                           (files that already exist are kept,
+//                                           so an interrupted batch resumes)
+//   node benchmarks/generate.mjs --score    score everything in benchmarks/runs/
+
+import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from "node:fs";
 import { execFileSync } from "node:child_process";
 import { join } from "node:path";
+import { analyse } from "../scripts/measure.mjs";
+import { recall } from "../scripts/lib/recall.mjs";
 
-const [scenario, arm, runArg] = process.argv.slice(2);
+const argv = process.argv.slice(2);
+const SCENARIOS = ["pr-review", "ci-triage", "pr-orientation"];
+
+if (argv[0] === "--score") {
+  const files = readdirSync("benchmarks/runs").filter((f) => f.endsWith(".md")).sort();
+  const pad = (s, n) => String(s).padEnd(n);
+  const num = (s, n) => String(s).padStart(n);
+  console.log(
+    pad("run", 44) + num("words", 7) + num("grade", 7) + num(">25w", 6) +
+    num("off-list%", 11) + num("idioms", 8) + num("recall", 8)
+  );
+  console.log("-".repeat(91));
+  for (const f of files) {
+    const raw = readFileSync(join("benchmarks/runs", f), "utf8");
+    const scenario = (raw.match(/^scenario: (\S+)$/m) || [])[1];
+    const m = analyse(raw);
+    const r = recall(join("benchmarks/scenarios", scenario + ".md"), raw);
+    console.log(
+      pad(f.replace(/\.md$/, ""), 44) + num(m.words, 7) + num(m.grade.toFixed(1), 7) +
+      num(m.longSentences, 6) + num(m.offListShare, 11) + num(m.idioms, 8) +
+      num(`${r.found}/${r.total}`, 8)
+    );
+    if (r.missing.length) console.log(`  missing: ${r.missing.join(", ")}`);
+  }
+  process.exit(0);
+}
+
+if (argv[0] === "--all") {
+  const runs = Number(argv[1] ?? 3);
+  for (const sc of SCENARIOS) {
+    for (const a of ["baseline", "sapiens"]) {
+      for (let r = 1; r <= runs; r++) {
+        const stamp = new Date().toISOString().slice(0, 10);
+        const file = join("benchmarks/runs", `${stamp}--${sc}--${a}--r${r}.md`);
+        if (existsSync(file)) { console.log(`skip ${file} (exists)`); continue; }
+        execFileSync("node", ["benchmarks/generate.mjs", sc, a, String(r)], {
+          stdio: "inherit",
+          timeout: 15 * 60 * 1000,
+        });
+      }
+    }
+  }
+  process.exit(0);
+}
+
+const [scenario, arm, runArg] = argv;
 const run = Number(runArg);
 if (!scenario || !["sapiens", "baseline"].includes(arm) || !Number.isInteger(run)) {
   console.error("usage: node benchmarks/generate.mjs <scenario> <sapiens|baseline> <run>");
+  console.error("       node benchmarks/generate.mjs --all [runs]");
+  console.error("       node benchmarks/generate.mjs --score");
   process.exit(1);
 }
 
@@ -37,7 +92,13 @@ const skill = readFileSync("skills/sapiens/SKILL.md", "utf8");
 const skillVersion = (skill.match(/^\s*version:\s*(\S+)/m) || [])[1] || "unknown";
 
 const question = (fixture.match(/^>\s*(.+)$/m) || [])[1] || "(question not found)";
-const facts = fixture.slice(fixture.indexOf("## Raw facts"));
+// The whole fixture is the context, minus the findings checklist: leaking the
+// scoring key into the prompt would make every recall number worthless.
+const facts = fixture.split(/^## Findings checklist$/m)[0].trim();
+if (/checklist/i.test(facts)) {
+  console.error("refusing to run: checklist text leaked into the prompt");
+  process.exit(1);
+}
 
 const prompt = [
   "You are an AI coding assistant in a working session. The research phase is",
