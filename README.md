@@ -68,7 +68,7 @@ The question was: *what is this PR about?* The PR contained six separate fixes.
 > claim without calling any tool. The run was still marked SUCCEEDED, and the user was still
 > charged for it. Now a member that can't show the tool call is marked as failed. …
 
-`113 words` · `reading grade 5.9` · `average sentence 14.1 words`
+`113 words` · `reading grade 6.0` · `average sentence 14.1 words`
 
 [full text](benchmarks/results/pr-orientation--sapiens.md)
 
@@ -200,7 +200,7 @@ sub-agents, so a turn count means nothing there.
 
 The off-list column goes the wrong way in two rows, and one is large. The CI-triage short
 answer is **worse** than its baseline, 20.2% against 13.7%. The reason is arithmetic: a
-112-word reply keeps every package and command name but has a quarter of the denominator.
+112-word reply keeps every package and command name but has a third of the denominator.
 The orientation scenario shows the opposite, 3.5% against 11.4%, because there the skill
 defines or drops jargon instead of listing it. Both facts are in the table because the
 metric found them. A shorter denominator punishes short replies, and anyone quoting the
@@ -279,8 +279,9 @@ That sweeps the markdown files this project wrote and applies four of the skill'
 No sentence over 25 words. No idiom from the derived list. A median reading grade under
 nine. At most three em dashes per file. A failure blocks the merge.
 
-Everything under `benchmarks/` is excluded. The transcripts are evidence and the scenarios
-are inputs to it, so editing either one to pass a style check would be worse than failing.
+The transcripts and scenarios under `benchmarks/` are excluded. They are evidence and the
+inputs to it, so editing either one to pass a style check would be worse than failing.
+`benchmarks/README.md` is prose this project wrote, so it is checked.
 
 Two things it does not do. It cannot check whether the writing is clear, only whether it
 breaks countable rules. And quoted material is exempt, both blockquotes and inline quoted
