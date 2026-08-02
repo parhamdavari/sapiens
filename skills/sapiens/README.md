@@ -1,6 +1,12 @@
 # Sapiens
 
-A communication-style skill for Claude. It answers one complaint:
+A communication-style skill for Claude, built for reading a codebase you did not write.
+
+Joining an existing project is mostly reading. You ask the agent what a pull request does,
+why a module exists, what breaks if you touch it. A padded answer costs you the most exactly
+there, because you cannot skim what you do not yet understand.
+
+It started from one complaint:
 
 > I don't want the AI to over-explain everything, but I also don't want it stripped down to
 > caveman fragments I can't parse, because English isn't my first language.

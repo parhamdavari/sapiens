@@ -43,6 +43,13 @@ how contributions are governed.
   [issue #6](https://github.com/parhamdavari/sapiens/issues/6), with the scope narrowed
   from "make the rule work" to "find out whether it can work at all".
 
+**Positioning**
+
+- The README now leads with brown-field work: reading a codebase you did not write. All
+  three benchmark scenarios were already that job, and the page did not say so. A new
+  "Where this helps most" section names the four rules that target it. The second-language
+  reader stays as the reason the rules are strict, and as the split from caveman.
+
 ## [3.5.0]
 
 The measurement layer rebuild. The skill text is unchanged; every instrument that
