@@ -8,8 +8,9 @@
 
 <br>
 
-**A Claude skill that makes replies read like a person wrote them.**
-Plain, complete, unpadded English, for people who work in English but do not think in it.
+**A Claude skill for reading a codebase you did not write.**
+It keeps the agent's answers short, plain and complete. You join a project in the middle and
+understand it, without drowning in the reply.
 
 <br>
 
@@ -18,22 +19,26 @@ Plain, complete, unpadded English, for people who work in English but do not thi
 [![Stars](https://img.shields.io/github/stars/parhamdavari/sapiens?style=flat-square&color=ffc86f)](https://github.com/parhamdavari/sapiens/stargazers)
 [![Validate](https://img.shields.io/github/actions/workflow/status/parhamdavari/sapiens/validate.yml?style=flat-square&label=validate)](https://github.com/parhamdavari/sapiens/actions)
 
-[Install](#install) · [Before / after](#before-and-after) · [Levels](#three-levels) · [What I measured](#what-i-measured) · [Limits](#what-this-evidence-does-not-show) · [Where it fails](#the-25-word-rule-does-not-hold) · [How it works](#how-it-works) · [vs caveman](#how-this-differs-from-caveman)
+[Install](#install) · [Before / after](#before-and-after) · [Where it helps](#where-this-helps-most) · [Levels](#three-levels) · [What I measured](#what-i-measured) · [Limits](#what-this-evidence-does-not-show) · [vs caveman](#how-this-differs-from-caveman)
 
 </div>
 
 ---
 
-An AI assistant can be hard to read in two ways, and most tools only fix one.
+Joining an existing project is mostly reading. You ask the agent what a pull request does,
+why a module exists, what breaks if you touch it. The agent is your interface to a system
+nobody is going to walk you through.
 
-It can **say too much**. It narrates every step. It restates your question before answering.
-It pads plain statements with "I've gone ahead and…". On a long task it reports each
-sub-agent as that agent finishes, then repeats all of it in the final answer.
+That is where the default answer costs you most. It narrates every step. It restates your
+question. It answers a bigger question than you asked, so the part you needed is buried. It
+uses the team's internal words without explaining them, which is the one thing a newcomer
+cannot afford. On a task that fans out to sub-agents it reports each one as it lands, then
+repeats all of it at the end.
 
-It can also **say too little**. Token-compression tools drop articles, prepositions and
+The usual fix makes it worse. Token-compression tools drop articles, prepositions and
 connecting words. That reads fine if English is your first language. If it is not, those
-small words are what tell you which noun is the subject and how the clauses relate.
-Removing them turns a terse reply into a puzzle.
+small words are what tell you which noun is the subject and how the clauses relate. Removing
+them turns a terse reply into a puzzle.
 
 Sapiens takes the middle path. It cuts the padding and keeps the grammar.
 
@@ -85,6 +90,31 @@ Length fell by 63%. Sentence length did not.
 
 The short version ends by **offering** the remaining detail in one line instead of
 delivering it. The skill has a rule for that.
+
+## Where this helps most
+
+Brown-field work. Code that already exists, that you did not write, and that nobody has time
+to explain to you.
+
+Every scenario in the benchmark below is that job. What does this PR do? Do these four PRs
+follow our rules? CI is red across three packages, what do I fix first? Those are the
+questions of your first month on a codebase. They are also the ones where a padded answer
+costs you the most time.
+
+Four things in the skill target that job directly.
+
+- **Undefined jargon gets defined once, in four or five plain words.** A codebase carries
+  terms only its team knows. `grounding`, `fail-closed`, `credential broker`. A newcomer
+  cannot look those up, because they mean something specific here and nothing anywhere else.
+- **The answer is the size of the question.** "What is this PR about?" asks for orientation.
+  It does not ask for a walk through all six fixes plus the review status.
+- **The agent speaks once, not once per sub-agent.** Exploring a large repo fans out.
+  Without a budget you read the same findings three times.
+- **You pick the depth.** `lead` while you are orienting. `geek` when you are about to touch
+  the code and need the exact function name.
+
+It works on any long reply, not only on code. Brown-field reading is where the difference is
+largest, because that is where you are least able to skim.
 
 ## Install
 
@@ -173,9 +203,9 @@ All three write full sentences in plain words. Only the technical depth changes.
 
 ## What I measured
 
-Three scenarios. Each one is a frozen set of facts. Two agents answer the same question from
-those facts, one with the skill loaded and one without. The facts do not change, so the only
-variable is how the answer gets written.
+Three scenarios, all of them brown-field reading tasks. Each one is a frozen set of facts.
+Two agents answer the same question from those facts, one with the skill loaded and one
+without. The facts do not change, so the only variable is how the answer gets written.
 
 Raw transcripts and the full method are in [`benchmarks/`](benchmarks/). Recount them with
 `npm run measure`.
