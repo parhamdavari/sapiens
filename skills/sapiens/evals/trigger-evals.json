@@ -1,0 +1,39 @@
+{
+  "purpose": "Tests the description layer only: does this prompt activate the skill with no mode phrase and no prior context? Run these against skill selection, not against reply quality. Behavior is tested in evals.json, where every prompt carries an explicit mode phrase.",
+  "cases": [
+    {
+      "id": "tagline-exact",
+      "prompt": "talk like a person, not a caveman",
+      "should_trigger": true,
+      "note": "The project's own tagline, verbatim from the README."
+    },
+    {
+      "id": "esl-mention",
+      "prompt": "english is not my first language, could you keep your replies simple and complete?",
+      "should_trigger": true
+    },
+    {
+      "id": "too-chatty",
+      "prompt": "you post an update after every single step, stop narrating and just give me the result",
+      "should_trigger": true
+    },
+    {
+      "id": "near-miss-persona",
+      "prompt": "talk like a pirate for the rest of this chat",
+      "should_trigger": false,
+      "note": "Shares 'talk like a' with the triggers, but asks for a character voice."
+    },
+    {
+      "id": "near-miss-editing-job",
+      "prompt": "this blog draft sounds like AI wrote it, can you clean it up?",
+      "should_trigger": false,
+      "note": "Editing existing text is avoid-ai-writing's job; SKILL.md's scope section says so."
+    },
+    {
+      "id": "near-miss-token-compression",
+      "prompt": "answer in as few tokens as possible, fragments are fine",
+      "should_trigger": false,
+      "note": "Asks for the compressed style sapiens exists to avoid; that is caveman's territory."
+    }
+  ]
+}
