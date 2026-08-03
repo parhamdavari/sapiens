@@ -3,10 +3,67 @@
 Format follows [Keep a Changelog](https://keepachangelog.com). Versions follow
 [Semantic Versioning](https://semver.org).
 
-> **A note on figures in older entries.** The measurement scripts changed in 3.3.0 and
-> again in 3.5.0. Numbers quoted in an entry reproduce only against the scripts of that
-> entry's version. Only the 3.5.0 table below matches the current scripts. Run
-> `npm run measure` for the live figures.
+> **A note on figures.** The measurement scripts changed in 3.3.0 and again in 3.5.0,
+> and 3.7.0 added a second instrument. Numbers quoted in an entry reproduce only against
+> the scripts of that entry's version. The benchmark figures in the 3.5.0 and 3.6.0
+> entries come from `scripts/measure.mjs`, run with `npm run measure`. The probe figures
+> in the 3.7.0 entry come from `scripts/measure.py`, run against `out/`. Older entries
+> match neither script.
+
+## [3.7.0]
+
+Every change below is backed by a baseline comparison: eight scenarios, each answered twice by the same model, once with the skill and once with none. Probes, raw outputs, method and results are in `probes/`, `out/`, and `docs/HONEST-NUMBERS.md`.
+
+### Moved out of the body, because the baseline never violated them
+
+- The "Phrases to never use" list. 0 violations in 8 baseline replies.
+- The inflated-vocabulary swap table, 37 words tested. 0 violations.
+- Core rule "Don't restate the question". 0 violations.
+- Core rule "Common vocabulary, roughly IELTS Band 6". 0 violations.
+
+The first two were checked twice. Six task-shaped probes are a weak test for phrases that surface in conversation, so two conversational probes were written to bait them: one asks for an opinion, one opens with praise and a vague follow-up. Neither produced a single hit.
+
+Nothing was deleted from the project. `references/plain-english.md` holds all of it, and `SKILL.md` names each section so the model knows what is in there. The instruction is explicit: read it when a draft fails a check, not as a routine step.
+
+Figurative language went the other way. It was the only lexical rule with any hits, and the count rose when the sample widened. It stays in the body.
+
+### Reordered
+
+- "One idea per sentence, 25 words" is now core rule 1. It had 23 baseline violations, the most of any rule by a wide margin. (An earlier count said 37; the first `measure.py` merged list items into fake sentences and totalled two probes twice. `docs/HONEST-NUMBERS.md` records the correction.)
+- "Keep full grammar" moved to rule 2. It had 0 violations, because a model does not drop articles unless something tells it to. The rule is defensive, not additive. It still matters, and it is still wrong as the first thing the model reads.
+
+### Restored
+
+- The narration check, now check 5. Version 3.6.0 dropped it while compressing 11 checks to 6, and it was the only rule that lost its check without being merged anywhere.
+
+### Split
+
+- Old check 1 held a whole-reply size test and a per-paragraph test. Now checks 1 and 2. A numbered step gets run; a sub-clause labelled "two steps at the same pass" is the same merge with a label on it.
+- The last-line test moved into check 7, whose subject is already repetition.
+
+### Fixed
+
+- `description`: restored "talk like a person", the project's own tagline, plus "stop over-explaining" and "less filler". 692 characters, under the 1,024 cap.
+- Check 1 said "the defaults above". It now names the section.
+- Check 8 is concrete, and names the one category measured to disappear.
+- New defaults row for "Did X finish? / Is X done?".
+
+### Evals
+
+- Rebuilt on the skill-creator schema, with `assertions`, `files`, and a `baseline` field recording what the run without the skill produced.
+- `trigger-evals.json` split out, 10 positive and 10 near-miss negatives. Triggering and behaviour are different measurements.
+- New: the three levels, the counterweight, and two regression tests.
+- **Evals 5 and 7 ship red.** See below.
+
+### Known failure, shipped visible
+
+The baseline volunteers advice attached to a later moment: make the migration re-runnable before production, do the invasive fix as its own revertible change. The skill drops it. Not by editing it out, but by never generating it, which is why check 8 could not catch it: a check that runs on a finished draft cannot recover a thought that was never had.
+
+Check 8 now names the category. Measured against both probes, it produces a deferred-consequence warning where there was none, at a cost of about 50 words per reply. It still does not produce the specific item the baseline produced. Evals 5 and 7 stay red rather than having their assertions relaxed.
+
+### Size
+
+Body 3,343 to 3,393 tokens. Slightly larger, and that is the honest result. About 600 tokens of unearned vocabulary rules came out; the restored check, the concrete check 8, the reordering and the measurement pointers put roughly the same back. The file is not shorter. It is carrying only rules that changed an output.
 
 ## [3.6.0]
 

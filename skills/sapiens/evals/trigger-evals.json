@@ -1,39 +1,28 @@
 {
-  "purpose": "Tests the description layer only: does this prompt activate the skill with no mode phrase and no prior context? Run these against skill selection, not against reply quality. Behavior is tested in evals.json, where every prompt carries an explicit mode phrase.",
-  "cases": [
-    {
-      "id": "tagline-exact",
-      "prompt": "talk like a person, not a caveman",
-      "should_trigger": true,
-      "note": "The project's own tagline, verbatim from the README."
-    },
-    {
-      "id": "esl-mention",
-      "prompt": "english is not my first language, could you keep your replies simple and complete?",
-      "should_trigger": true
-    },
-    {
-      "id": "too-chatty",
-      "prompt": "you post an update after every single step, stop narrating and just give me the result",
-      "should_trigger": true
-    },
-    {
-      "id": "near-miss-persona",
-      "prompt": "talk like a pirate for the rest of this chat",
-      "should_trigger": false,
-      "note": "Shares 'talk like a' with the triggers, but asks for a character voice."
-    },
-    {
-      "id": "near-miss-editing-job",
-      "prompt": "this blog draft sounds like AI wrote it, can you clean it up?",
-      "should_trigger": false,
-      "note": "Editing existing text is avoid-ai-writing's job; SKILL.md's scope section says so."
-    },
-    {
-      "id": "near-miss-token-compression",
-      "prompt": "answer in as few tokens as possible, fragments are fine",
-      "should_trigger": false,
-      "note": "Asks for the compressed style sapiens exists to avoid; that is caveman's territory."
-    }
+  "skill_name": "sapiens",
+  "purpose": "Measures whether the description field triggers the skill. This is a different measurement from evals.json, which tests behaviour once the skill is already loaded. Keeping them in one file would mean a failure could not be traced to a layer.",
+  "note": "The negatives are deliberately near-misses. They share vocabulary or intent with sapiens but need something else, usually the avoid-ai-writing skill or no skill at all.",
+  "evals": [
+    { "query": "sapiens mode. help me figure out why this webhook retry keeps looping", "should_trigger": true },
+    { "query": "talk like a person, not a robot please", "should_trigger": true },
+    { "query": "human mode from now on", "should_trigger": true },
+    { "query": "can you stop narrating every single step? just tell me when it's done", "should_trigger": true },
+    { "query": "im not a native english speaker and your replies are really hard to follow. can you keep it simple, short sentences", "should_trigger": true },
+    { "query": "/sapiens geek", "should_trigger": true },
+    { "query": "you're posting way too many updates during these long refactor tasks, it's noise", "should_trigger": true },
+    { "query": "cut the fluff please, i just want the answer", "should_trigger": true },
+    { "query": "switch to dev level", "should_trigger": true },
+    { "query": "your answers are like three times longer than they need to be. can you be more like a colleague and less like an AI", "should_trigger": true },
+
+    { "query": "rewrite this blog post so it doesn't sound like an AI wrote it, it's in drafts/launch-post.md", "should_trigger": false },
+    { "query": "our onboarding docs are way too long, help me cut them down by half", "should_trigger": false },
+    { "query": "use caveman mode", "should_trigger": false },
+    { "query": "write the commit message for what's staged, keep it short", "should_trigger": false },
+    { "query": "explain how borrow checking works in simple english, i'm new to rust", "should_trigger": false },
+    { "query": "can you make the error messages in auth.py more human readable? they're really cryptic right now", "should_trigger": false },
+    { "query": "summarize this thread in 3 bullets", "should_trigger": false },
+    { "query": "stop using so many emojis in the slack messages you draft", "should_trigger": false },
+    { "query": "my agent keeps timing out mid-task and i can't tell where it stopped", "should_trigger": false },
+    { "query": "the PR description you wrote is too verbose, tighten it up", "should_trigger": false }
   ]
 }

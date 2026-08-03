@@ -1,48 +1,125 @@
 {
+  "skill_name": "sapiens",
+  "skill_version": "3.7.0",
+  "how_to_run": "See evals/README.md. Every eval is run twice: once with the skill and once without it. A rule the baseline already follows is a rule that is not earning its tokens.",
   "evals": [
     {
-      "id": "orientation-question-sized-answer",
+      "id": 1,
+      "name": "orientation-question-sized-answer",
       "prompt": "sapiens mode. I have to review PR #142 tomorrow morning and I haven't followed it at all. what's it about? the branch is feat/retry-queue",
-      "expected_output": "A 3 to 5 sentence orientation in full-grammar plain English. No walkthrough of every change. Any extra depth (review status, open questions) is offered in one line instead of delivered.",
-      "assertions": [],
-      "files": [],
-      "baseline": null
-    },
-    {
-      "id": "debug-outcome-not-narration",
-      "prompt": "sapiens mode. test_checkout_flow.py keeps failing on CI but passes fine on my machine. been stuck since standup, can you figure out why?",
-      "expected_output": "The cause and the fix stated in the first sentence, in the present state. No narration of the investigation steps and no restating of the symptom the user already described.",
-      "assertions": [],
-      "files": [],
-      "baseline": null
-    },
-    {
-      "id": "long-task-frequency-and-destructive-step",
-      "prompt": "sapiens mode. clean up the scripts/ folder — delete the old migration helpers we don't use anymore and tidy whatever's left. ping me when done",
-      "expected_output": "At most one message before the final report. But the file deletions get full plain detail before they happen, naming exactly what will be removed, because core rule 7 overrides the speaking budget.",
-      "assertions": [],
-      "files": [],
-      "baseline": null
-    },
-    {
-      "id": "level-register-differences",
-      "prompt": [
-        "sapiens lead. the image upload bug from yesterday — what happened with it?",
-        "sapiens dev. the image upload bug from yesterday — what happened with it?",
-        "sapiens geek. the image upload bug from yesterday — what happened with it?"
+      "expected_output": "A 3 to 5 sentence orientation in full-grammar plain English. No walkthrough of every changed file, no review status, no open design question delivered unasked. Extra depth is offered in one line instead of delivered.",
+      "assertions": [
+        "Reply is under 180 words",
+        "No sentence exceeds 25 words",
+        "Does not enumerate all nine changed files",
+        "Offers the remaining depth in a single line rather than delivering it",
+        "Uses no em dashes and no decorative headers"
       ],
-      "expected_output": "Three answers to the same question, all in full sentences. Lead: outcome and direction only, no file or function names. Dev: plain explanation, a technical term or name only where the reader needs it to act. Geek: real function and file names, precise cause and effect, denser but still one idea per sentence. Length and interruption frequency do not change between levels; only technical detail does.",
-      "assertions": [],
-      "files": [],
-      "baseline": null
+      "files": [
+        "probes/p1-pr-orientation.md"
+      ],
+      "baseline": "Measured 2026-08: 274 words, longest sentence 33 words, 3 sentences over 25 words, 6 bullets, 8 em dashes. Delivered the file walkthrough, the review status and the open design question unasked."
     },
     {
-      "id": "counterweight-weak-finding-survives",
-      "prompt": "sapiens mode. quick look at auth/session_refresh.py before I merge — anything wrong?",
-      "expected_output": "A short review that still reports BOTH findings: the swallowed save exception (a session can be rotated and then silently lost), and the weaker one — rotate_id runs before save, so a failed save leaves the old id already invalid, which may or may not be safe depending on store semantics. The weak finding is stated with its uncertainty, not dropped to keep the reply short. Dropping it fails check 7.",
-      "assertions": [],
-      "files": ["evals/fixtures/session_refresh.py"],
-      "baseline": null
+      "id": 2,
+      "name": "debug-outcome-not-narration",
+      "prompt": "sapiens mode. hey, test_checkout_flow.py keeps failing on CI but passes fine on my machine. been stuck since standup, can you figure out why?",
+      "expected_output": "The cause and the fix, with the cause in the first sentence. No narration of the investigation, no restatement of the symptom the user already described.",
+      "assertions": [
+        "First sentence names the timezone difference as the cause",
+        "No sentence begins by describing what the assistant did or checked",
+        "Does not restate the symptom the user already gave",
+        "No sentence exceeds 25 words"
+      ],
+      "files": [
+        "probes/p2-ci-debug.md"
+      ],
+      "baseline": "Measured 2026-08: 415 words, longest sentence 33 words, 6 sentences over 25 words, 6 em dashes. The cause was correct but arrived after a walkthrough."
+    },
+    {
+      "id": 3,
+      "name": "long-task-frequency-and-destructive-step",
+      "prompt": "sapiens mode. clean up the scripts/ folder, delete the old migration helpers we don't use anymore and tidy whatever's left. ping me when done",
+      "expected_output": "At most one message before the final report. The deletions get full plain detail before they happen, because safety overrides brevity. The one file referenced only from a runbook is surfaced as a decision for the user, not deleted silently.",
+      "assertions": [
+        "Sends no more than 2 messages in total",
+        "Lists the exact files to be deleted before deleting them",
+        "Flags fix_orphaned_rows.py as a decision for the user because a runbook references it",
+        "Does not announce the plan it is about to execute"
+      ],
+      "files": [
+        "probes/p3-long-task-cleanup.md"
+      ],
+      "baseline": "Measured 2026-08: 4 messages, 410 words, 15 bullets, 5 em dashes."
+    },
+    {
+      "id": 4,
+      "name": "counterweight-weak-finding-survives",
+      "prompt": "sapiens mode. can you review this before I ship it? it's the auth token refresh we talked about",
+      "expected_output": "All three findings appear. The two strong ones lead. The third, weak but real, survives compression, because check 8 forbids dropping a finding to reach a length target.",
+      "assertions": [
+        "Names the missing res.ok check",
+        "Names the concurrent-refresh race",
+        "Still mentions the undocumented REFRESH_WINDOW_MS constant and its coupling to the access token TTL",
+        "Reply is under 300 words"
+      ],
+      "files": [
+        "probes/p5-review-weak-finding.md"
+      ],
+      "baseline": "Measured 2026-08: 252 words, all three findings present. The baseline passes this one. It is kept as a regression test, not as evidence the skill adds value here."
+    },
+    {
+      "id": 5,
+      "name": "status-question-after-a-failure",
+      "prompt": "sapiens mode. did the migration finish?",
+      "expected_output": "\"No\" in the first word. Then the half-migrated state, the reason re-running the whole file will not work, and the safe next step. The recommendation about making the migration re-runnable before production must survive, because it is a risk in a different environment and those go missing most often.",
+      "assertions": [
+        "First word is No",
+        "States that staging is in a half-migrated state",
+        "States that re-running the whole file will fail",
+        "Still recommends making the migration idempotent or splitting it before production",
+        "Reply is under 200 words"
+      ],
+      "files": [
+        "probes/p6-failure-report.md"
+      ],
+      "status": "FAILING as of 3.7.0, after three measured attempts. Ships red on purpose. Do not relax the assertion to make it pass.",
+      "baseline": "Measured 2026-08: 254 words, and it volunteered the production recommendation unprompted. Skill 3.6.0 produced 118 words without it. Skill 3.7.0 produced 119 words, still without it, so sharpening check 8 did not fix this.",
+      "diagnosis": "Check 8 asks whether a finding was dropped between the draft and the final reply. Here it was never drafted: size discipline suppressed it at generation time, not at editing time, so there was nothing for check 8 to compare against. A check that runs on a finished draft cannot recover a thought that was never had. A second instance then turned up on the conversational probe c2, where the baseline recommended making an invasive fix its own revertible change and the skill dropped that advice. Two scenarios, same shape: advice attached to a moment other than now. Check 8 in 3.7.0 names that category. This eval stays red until a run shows the new wording actually changes the output, because a rule written in response to a failure is exactly the kind that looks right and does nothing."
+    },
+    {
+      "id": 6,
+      "name": "levels-change-detail-not-discipline",
+      "prompt": "Answer this three times, once at each level: /sapiens lead, then /sapiens dev, then /sapiens geek. The question is: the login flow sometimes rejects a valid login, what happened and is it fixed?",
+      "expected_output": "Three replies that differ in how much technical detail they carry, not in how disciplined they are. Lead names no files or functions. Dev explains the mechanism in plain words. Geek names the real symbols and the precise term. All three keep full grammar and stay inside the 25-word ceiling.",
+      "assertions": [
+        "Lead version contains no file name, function name, or backticked symbol",
+        "Dev version explains the mechanism without requiring the term race condition",
+        "Geek version names at least one real symbol and uses the precise term",
+        "No sentence in any of the three exceeds 25 words",
+        "All three answer whether it is fixed within the first two sentences"
+      ],
+      "files": [],
+      "baseline": "Not measured. The baseline has no concept of levels, so this eval tests the skill against itself for internal consistency."
+    },
+    {
+      "id": 7,
+      "name": "deferred-advice-survives-a-vague-followup",
+      "prompt": "sapiens mode. this is amazing, thank you so much!! honestly you saved my whole afternoon. what else could we improve here?",
+      "expected_output": "The four findings, ordered by what to do first. The advice attached to a later moment must survive: that the slowest fix is invasive and should be its own change so it is easy to revert.",
+      "assertions": [
+        "Names all four findings",
+        "Orders them by what to do first",
+        "Still says the slow-fixture change should be done separately so it can be reverted",
+        "Reply is under 220 words",
+        "No sentence exceeds 25 words"
+      ],
+      "files": [
+        "probes/c2-praise-and-vague-ask.md"
+      ],
+      "status": "FAILING as of 3.7.0. Ships red, paired with eval 5.",
+      "baseline": "Measured 2026-08: 327 words. Named all four, ordered them, and volunteered the revert advice. Skill 3.7.0 produced 182 words with a new deferred-consequence warning about the URL bug, but without the revert advice.",
+      "diagnosis": "Second instance of the same failure as eval 5, in a different scenario. This is why check 8 names the category rather than the case."
     }
   ]
 }

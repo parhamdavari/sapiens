@@ -1,22 +1,30 @@
-# Sapiens evals
+# Evals
 
-Two files, two layers.
+Two files, measuring two different things. Keep them apart. If they were one file, a failure would not tell you which layer broke.
 
-- `evals.json` tests **behavior**: given the skill is active (every prompt carries a mode
-  phrase), does the reply follow the rules? Each entry has `id`, `prompt`,
-  `expected_output`, `assertions` (empty for now), `files` (fixtures the prompt needs),
-  and `baseline`.
-- `trigger-evals.json` tests **activation**: does the description alone fire the skill,
-  with no mode phrase? It includes near-miss negatives, prompts that share vocabulary with
-  the triggers but belong to other skills. A failure in one file never implicates the
-  other layer.
+- `evals.json` — behaviour once the skill is loaded. Every prompt contains an activation phrase.
+- `trigger-evals.json` — whether the `description` field causes the skill to load at all. No prompt here assumes the skill is already on.
 
-## Run every behavior eval twice
+File paths in `evals.json`, such as `probes/p1-pr-orientation.md`, are relative to the repository root. Run the evals from there.
 
-Once with the skill loaded, once without. Record the without-skill result in `baseline`
-(`null` until you have run it). The comparison is the point: a rule the model already
-follows without the skill is a rule that is not earning its tokens, and a rule the model
-breaks in the baseline but follows with the skill is proof the tokens pay for themselves.
+## Run every eval twice
 
-`counterweight-weak-finding-survives` is the one to watch. It checks that a real but
-weak finding survives length pressure, which is the skill's most likely failure mode.
+Once with the skill, once without. This is the part that is easy to skip and the part that decides whether the skill is any good.
+
+A rule the baseline already follows is a rule that costs tokens and changes nothing. The `baseline` field on each eval records what the run without the skill produced, so the next person editing this skill can tell which rules are load-bearing.
+
+```
+mkdir -p out/baseline out/skill
+# run each probe under both conditions, saving the reply text only
+python scripts/measure.py            # prints the comparison table
+```
+
+`scripts/measure.py` reports word count, longest sentence, sentences over 25 words, header and bullet and bold counts, em dashes, and lexical tells. It does not judge content. Read the outputs yourself for that.
+
+## What the numbers cannot see
+
+The script counts shape. It cannot tell you whether a finding was dropped, whether the first sentence answers the question, or whether a sentence is figurative. Eval 4 and eval 5 exist because those failures are invisible to counting, and both were found by reading, not by measuring.
+
+## Adding an eval
+
+Add one when a real reply goes wrong in a way the current set would not have caught. That is how eval 5 got here: version 3.6.0 cut a production risk recommendation out of a status reply while compressing it from 254 words to 118. Nothing in the previous eval set would have noticed.
