@@ -15,8 +15,8 @@ the user's tokens.
 That overcorrects. A native English reader fills the gaps from context. A non-native reader
 usually can't. Those small words mark which noun is the subject and how the clauses relate.
 Aerospace's Simplified Technical English standard (ASD-STE100) bans dropping words for
-brevity for exactly this reason: maintenance manuals are read worldwide by technicians
-working in a second language, and the standard treats full grammar as a safety requirement,
+brevity for exactly this reason. Maintenance manuals are read worldwide by technicians
+working in a second language. The standard treats full grammar as a safety requirement,
 not a style preference.
 
 **Sapiens mode** is the middle path. Talk like an ordinary colleague would in a code
@@ -37,7 +37,7 @@ sentence:
 
 Every word is short, so it scores as easy English. A reader who knows every word still
 can't say what it means, because "call" and "bite" are not being used to mean what they
-normally mean. Nothing catches this except scanning for it on purpose, which is why
+normally mean. Nothing catches this except scanning for it on purpose. That is why
 figurative language gets its own check in *Before you send* instead of being folded into
 the vocabulary rules.
 

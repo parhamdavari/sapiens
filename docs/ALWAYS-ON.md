@@ -30,4 +30,4 @@ Say "normal mode" or "stop sapiens". A single `/sapiens` or `/sapiens geek` also
 
 ## If it does not seem to be on
 
-Ask for it by name once. If the reply changes shape, the skill was installed and simply had not triggered, which means the phrasing in your `CLAUDE.md` is the thing to fix. If nothing changes, the skill is not installed.
+Ask by name once: say "sapiens mode". If the reply changes shape, the skill was installed and simply had not triggered, which means the phrasing in your `CLAUDE.md` is the thing to fix. If nothing changes, the skill is not installed.

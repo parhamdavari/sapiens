@@ -9,9 +9,10 @@
 // scope rule leaves quotes exactly as they are.
 //
 // Every markdown file in the repo is checked on the same budget, with no per-file
-// exemptions. Everything under benchmarks/ is excluded: the transcripts are evidence and
-// the scenarios are inputs to it. Editing either one to pass a style check would be worse
-// than failing it. benchmarks/README.md is prose this project wrote, so it is checked.
+// exemptions. Everything under benchmarks/, out/, and probes/ is excluded: the
+// transcripts are evidence and the scenarios are inputs to it. Editing either one to
+// pass a style check would be worse than failing it. The README in each of those
+// directories is prose this project wrote, so it is checked.
 
 import { readFileSync, existsSync, readdirSync, statSync } from "node:fs";
 import { join } from "node:path";
@@ -30,13 +31,16 @@ const MAX_FIGURATIVE = 0; // against the Wiktionary-derived list
 const MAX_EM_DASH = 3;
 
 // Transcripts are evidence, not prose this project wrote to be read. Scoring them here
-// would mean editing evidence to pass a style check.
-const SKIP = [/^benchmarks\//, /^tasks\//, /^node_modules\//, /^dist\//, /^\.git\//];
+// would mean editing evidence to pass a style check. out/ and probes/ are the same
+// category as benchmarks/: raw outputs and the frozen inputs that produced them.
+const SKIP = [/^benchmarks\//, /^out\//, /^probes\//, /^tasks\//, /^node_modules\//, /^dist\//, /^\.git\//];
+// READMEs inside evidence directories are prose this project wrote, so they are checked.
+const CHECKED_ANYWAY = ["benchmarks/README.md", "out/README.md"];
 
 function walk(dir, out = []) {
   for (const name of readdirSync(dir)) {
     const p = join(dir, name).replace(/^\.\//, "");
-    if (SKIP.some((r) => r.test(p)) && p !== "benchmarks/README.md") continue;
+    if (SKIP.some((r) => r.test(p)) && !CHECKED_ANYWAY.includes(p)) continue;
     if (statSync(p).isDirectory()) walk(p, out);
     else if (p.endsWith(".md")) out.push(p);
   }

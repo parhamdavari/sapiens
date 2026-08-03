@@ -12,7 +12,7 @@ Format follows [Keep a Changelog](https://keepachangelog.com). Versions follow
 
 ## [3.7.0]
 
-Every change below is backed by a baseline comparison: eight scenarios, each answered twice by the same model, once with the skill and once with none. Probes, raw outputs, method and results are in `probes/`, `out/`, and `docs/HONEST-NUMBERS.md`.
+Every change below is backed by a baseline comparison. Eight scenarios were each answered twice by the same model, once with the skill and once with none. Probes, raw outputs, method and results are in `probes/`, `out/`, and `docs/HONEST-NUMBERS.md`.
 
 ### Moved out of the body, because the baseline never violated them
 
@@ -21,7 +21,7 @@ Every change below is backed by a baseline comparison: eight scenarios, each ans
 - Core rule "Don't restate the question". 0 violations.
 - Core rule "Common vocabulary, roughly IELTS Band 6". 0 violations.
 
-The first two were checked twice. Six task-shaped probes are a weak test for phrases that surface in conversation, so two conversational probes were written to bait them: one asks for an opinion, one opens with praise and a vague follow-up. Neither produced a single hit.
+The first two were checked twice. Six task-shaped probes are a weak test for phrases that surface in conversation, so two conversational probes were written to bait them. One asks for an opinion, and one opens with praise and a vague follow-up. Neither produced a single hit.
 
 Nothing was deleted from the project. `references/plain-english.md` holds all of it, and `SKILL.md` names each section so the model knows what is in there. The instruction is explicit: read it when a draft fails a check, not as a routine step.
 
@@ -57,13 +57,13 @@ Figurative language went the other way. It was the only lexical rule with any hi
 
 ### Known failure, shipped visible
 
-The baseline volunteers advice attached to a later moment: make the migration re-runnable before production, do the invasive fix as its own revertible change. The skill drops it. Not by editing it out, but by never generating it, which is why check 8 could not catch it: a check that runs on a finished draft cannot recover a thought that was never had.
+The baseline volunteers advice attached to a later moment: make the migration re-runnable before production, do the invasive fix as its own revertible change. The skill drops it. Not by editing it out, but by never generating it, which is why check 8 could not catch it. A check that runs on a finished draft cannot recover a thought that was never had.
 
 Check 8 now names the category. Measured against both probes, it produces a deferred-consequence warning where there was none, at a cost of about 50 words per reply. It still does not produce the specific item the baseline produced. Evals 5 and 7 stay red rather than having their assertions relaxed.
 
 ### Size
 
-Body 3,343 to 3,393 tokens. Slightly larger, and that is the honest result. About 600 tokens of unearned vocabulary rules came out; the restored check, the concrete check 8, the reordering and the measurement pointers put roughly the same back. The file is not shorter. It is carrying only rules that changed an output.
+Body 3,343 to 3,393 tokens. Slightly larger, and that is the honest result. About 600 tokens of unearned vocabulary rules came out. The restored check, the concrete check 8, the reordering and the measurement pointers put roughly the same back. The file is not shorter. It is carrying only rules that changed an output.
 
 ## [3.6.0]
 

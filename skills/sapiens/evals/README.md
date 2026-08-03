@@ -11,7 +11,7 @@ File paths in `evals.json`, such as `probes/p1-pr-orientation.md`, are relative 
 
 Once with the skill, once without. This is the part that is easy to skip and the part that decides whether the skill is any good.
 
-A rule the baseline already follows is a rule that costs tokens and changes nothing. The `baseline` field on each eval records what the run without the skill produced, so the next person editing this skill can tell which rules are load-bearing.
+A rule the baseline already follows is a rule that costs tokens and changes nothing. The `baseline` field on each eval records what the run without the skill produced. It shows the next person editing this skill which rules are load-bearing.
 
 ```
 mkdir -p out/baseline out/skill
@@ -27,4 +27,4 @@ The script counts shape. It cannot tell you whether a finding was dropped, wheth
 
 ## Adding an eval
 
-Add one when a real reply goes wrong in a way the current set would not have caught. That is how eval 5 got here: version 3.6.0 cut a production risk recommendation out of a status reply while compressing it from 254 words to 118. Nothing in the previous eval set would have noticed.
+Add one when a real reply goes wrong in a way the current set would not have caught. That is how eval 5 got here. Version 3.6.0 cut a production risk recommendation out of a status reply while compressing it from 254 words to 118. Nothing in the previous eval set would have noticed.

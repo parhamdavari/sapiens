@@ -1,10 +1,10 @@
 # Honest numbers
 
-Everything below comes from one run, eight probes, two conditions. It is a small sample and it is reproducible: the probes are in `probes/`, the outputs are in `out/`, and the script that produced the table is `scripts/measure.py`.
+Everything below comes from one run, eight probes, two conditions. It is a small sample and it is reproducible. The probes are in `probes/`, the outputs are in `out/`, and the script that produced the table is `scripts/measure.py`.
 
 ## Method
 
-Eight realistic scenarios, each written as a user message plus the context an assistant would already have gathered. Every probe was answered twice by the same model: once with no skill loaded and no skill consulted, and once with `SKILL.md` loaded and followed at the default level. Neither run was allowed to use tools beyond reading its own probe file, so the reply is the only variable.
+Eight realistic scenarios, each written as a user message plus the context an assistant would already have gathered. Every probe was answered twice by the same model. One run had no skill loaded and no skill consulted; the other had `SKILL.md` loaded and followed at the default level. Neither run was allowed to use tools beyond reading its own probe file, so the reply is the only variable.
 
 Six probes are task-shaped: review this, debug this, clean this up, did it finish. Two are conversational: an open-ended opinion question, and a thank-you followed by a vague "what else could we improve?". The split matters, because the two kinds of prompt pull different failures out of the default style.
 
@@ -23,7 +23,7 @@ The two runs never saw each other. Both wrote plain reply text to a file, and th
 
 The headline: **replies get 40 to 60 percent shorter, and the long sentences that break a second-language reader effectively disappear.** Every baseline reply broke the ceiling at least once, all but one broke it at least twice, and the worst sentence ran 53 words. The skill produced none, across all eight.
 
-The gap is wider on conversational prompts than on task prompts. An open-ended question gives the default style more room to expand, so there is more to cut. This is worth knowing if you are deciding when to switch the skill on: the payoff is largest exactly where a task-shaped benchmark would not look.
+The gap is wider on conversational prompts than on task prompts. An open-ended question gives the default style more room to expand, so there is more to cut. This is worth knowing if you are deciding when to switch the skill on. The payoff is largest exactly where a task-shaped benchmark would not look.
 
 The message count matters more than its size suggests. On the multi-step task, the baseline sent four messages and the skill sent two. A user does not count words, but they notice being interrupted twice instead of four times.
 
@@ -49,7 +49,7 @@ This is the honest version of "only add what the model does not already have". I
 
 ## Where the skill is still worse than the baseline
 
-On the status-report probe the baseline volunteered something the skill did not: that this migration should be made re-runnable before it reaches production, where lock contention is far more likely. That is a real recommendation and it changes what the reader does next.
+On the status-report probe the baseline volunteered something the skill did not. It said this migration should be made re-runnable before it reaches production, where lock contention is far more likely. That is a real recommendation and it changes what the reader does next.
 
 Version 3.6.0 produced 118 words without it. Version 3.7.0 sharpened check 8 and produced 119 words, still without it. The fix did not work, and the reason is worth stating plainly.
 
@@ -57,11 +57,13 @@ Check 8 asks whether a finding was dropped between the draft and the final reply
 
 Adding a content rule was rejected at first, on the grounds that one probe is not enough to justify one. Then the conversational probes turned up a second instance. Asked "what else could we improve?", the baseline recommended doing the most invasive fix as its own change, so it would be easy to revert. The skill named the same fix and dropped the revert advice.
 
-Two independent scenarios, same shape: **advice attached to a moment other than now**. A risk in another environment. A way to de-risk a change. What to do if it fails. Check 8 in 3.7.0 now names that category directly, and says to look for it rather than to check whether it survived, because it never gets written down in the first place.
+Two independent scenarios, same shape: **advice attached to a moment other than now**. A risk in another environment. A way to de-risk a change. What to do if it fails. Check 8 in 3.7.0 now names that category directly, and says to look for it rather than to check whether it survived. The advice is never written down at all, so checking whether it survived finds nothing.
+
+A third instance of the same category appeared during this release itself, outside any probe. The repository's release workflow publishes a public release the moment any version tag is pushed. That consequence sat unstated next to the tagging step until the reviewer preparing the merge looked for it. Neither the skill nor this document's author had found it.
 
 The rule was then measured, because a rule written in response to a failure is exactly the kind that looks right and does nothing. Both probes were re-run against the final file. The result is partial and worth stating exactly.
 
-On the migration probe, the reply now carries a deferred consequence that no earlier version had: staging has the new table but nothing links it to webhook deliveries yet, so any test depending on that link will give a wrong answer. On the improvements probe, it now warns that the database URL bug fails at connection time with an error that will not point at the cause, so fix it before someone rotates a password. Neither of those existed before the rule.
+On the migration probe, the reply now carries a deferred consequence that no earlier version had. Staging has the new table but nothing links it to webhook deliveries yet. Any test that depends on that link will give a wrong answer. On the improvements probe, it now warns about the database URL bug. It fails at connection time with an error that will not point at the cause, so fix it before someone rotates a password. Neither of those existed before the rule.
 
 But neither reply produced the specific item the baseline produced. The migration reply still does not say to make the file re-runnable before production. The improvements reply still does not say to do the invasive fix as its own revertible change.
 
@@ -69,7 +71,7 @@ So the category now fires and the individual item still does not. The cost was a
 
 ## What these numbers do not claim
 
-The sentence counts above are corrected. The first version of `measure.py` split on terminal punctuation alone, so a bullet list or a bolded lead-in with no period merged into one fake sentence, and two probes were totalled twice. That version reported 37 baseline sentences over the ceiling and one for the skill. The repository's own 36-run measurement, recorded in the README section "The 25-word rule does not hold", contradicted the skill-side count, and the repository's number was kept. The corrected instrument reports 23 and 0. The correction cuts the skill's compliance claim on this run both ways: the baseline looks better than first reported, and so does the skill. It does not touch the 36-run finding that the ceiling is missed in normal use.
+The sentence counts above are corrected. The first version of `measure.py` split on terminal punctuation alone, so a bullet list or a bolded lead-in with no period merged into one fake sentence. Two probes were also totalled twice. That version reported 37 baseline sentences over the ceiling and one for the skill. The repository's own 36-run measurement, recorded in the README section "The 25-word rule does not hold", contradicted the skill-side count, and the repository's number was kept. The corrected instrument reports 23 and 0. The correction cuts the skill's compliance claim on this run both ways: the baseline looks better than first reported, and so does the skill. It does not touch the 36-run finding that the ceiling is missed in normal use.
 
 They are not token savings for a session. Like any skill, sapiens adds input tokens on every turn it is loaded, and shorter output does not automatically mean a cheaper session. The point of this skill is a reply a person can read correctly on the first pass, especially in a second language. Shorter replies are a side effect of cutting filler and repetition, never of cutting grammar or findings.
 

@@ -115,9 +115,9 @@ Run these on the finished draft, cheapest first.
 7. **Is anything here already known, or said twice?** Cut what the user told you, what a visible tool call showed, and what you said earlier in this task. One fact gets one home: if a summary line, a table cell, and a detail paragraph carry the same content, keep one. Read the first line and the last line together; if the last repeats the first, delete it.
 8. **Did anything get DROPPED rather than shortened?** The counterweight to every check above, which is why it runs last. Cutting repetition is the goal; cutting a finding is not.
 
-    Do this concretely, not by feel: list every claim, risk, and recommendation you held before check 1, then confirm each is still somewhere in the reply. If one is gone, the only acceptable reason is that the reader cannot act on it. "The reply was getting long" is never a reason.
+    Do this concretely, not by feel. List every claim, risk, and recommendation you held before check 1, then confirm each is still somewhere in the reply. If one is gone, the only acceptable reason is that the reader cannot act on it. "The reply was getting long" is never a reason.
 
-    Two kinds go missing most often. A finding about weak or missing evidence. And **any advice attached to a moment other than now**: how to de-risk the change you just recommended, what will happen in a different environment, what to do if it fails. That second kind is the one measured to disappear, in two separate scenarios, and it disappears before it is ever written down, so looking for it is the only way to catch it.
+    Two kinds go missing most often. A finding about weak or missing evidence. And **any advice attached to a moment other than now**. That means how to de-risk the change you just recommended, what will happen in a different environment, and what to do if it fails. That second kind is the one measured to disappear, in two separate scenarios. It disappears before it is ever written down, so looking for it is the only way to catch it.
 
 When a check fails, fix it and continue down the list. When three or more fail, don't patch. Write the answer in one sentence and rebuild.
 

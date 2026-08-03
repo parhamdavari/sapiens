@@ -76,7 +76,7 @@ The same question: *"I have to review PR #142 tomorrow and I haven't followed it
 >
 > Tell me if you want the retry timing logic or the test coverage in more detail before the morning.
 
-Note what did not happen. Nothing was fragmented, no articles were dropped, and the two decisions that actually need a human moved to the front instead of sitting at the end.
+Note what did not happen. Nothing was fragmented, and no articles were dropped. The two decisions that actually need a human moved to the front instead of sitting at the end.
 
 ## Keep it on
 
@@ -400,9 +400,10 @@ That sweeps the markdown files this project wrote and applies four of the skill'
 No sentence over 25 words. No idiom from the derived list. A median reading grade under
 nine. At most three em dashes per file. A failure blocks the merge.
 
-The transcripts and scenarios under `benchmarks/` are excluded. They are evidence and the
-inputs to it, so editing either one to pass a style check would be worse than failing.
-`benchmarks/README.md` is prose this project wrote, so it is checked.
+The transcripts and scenarios under `benchmarks/`, `out/`, and `probes/` are excluded.
+They are evidence and the inputs to it, so editing either one to pass a style check would
+be worse than failing. The README in each of those directories is prose this project
+wrote, so it is checked.
 
 Two things it does not do. It cannot check whether the writing is clear, only whether it
 breaks countable rules. And quoted material is exempt, both blockquotes and inline quoted

@@ -45,6 +45,8 @@ def sentences_of(prose):
     # raw text on punctuation alone merged whole lists into one fake sentence.
     sentences = []
     for line in prose.splitlines():
+        if line.lstrip().startswith("|"):                   # table rows are not prose
+            continue
         line = re.sub(r"^\s*(?:[-*]|\d+\.)\s+", "", line)   # list markers
         line = re.sub(r"^#{1,6}\s+", "", line)              # heading markers
         line = re.sub(r"^\s*>\s?", "", line)                # blockquote markers
@@ -57,8 +59,11 @@ def sentences_of(prose):
 
 
 def analyse(text):
-    # Code blocks follow their own conventions and are out of scope.
-    prose = re.sub(r"```.*?```", "", text, flags=re.S)
+    # Code blocks follow their own conventions and are out of scope. YAML
+    # frontmatter is metadata: a comma-separated description field is a keyword
+    # list, not a sentence.
+    prose = re.sub(r"\A---\n.*?\n---\n", "", text, flags=re.S)
+    prose = re.sub(r"```.*?```", "", prose, flags=re.S)
     sentences = sentences_of(prose)
     lengths = [len(s.split()) for s in sentences] or [0]
     return {
