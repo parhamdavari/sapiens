@@ -42,6 +42,52 @@ them turns a terse reply into a puzzle.
 
 Sapiens takes the middle path. It cuts the padding and keeps the grammar.
 
+## What the skill actually changes
+
+Eight real scenarios, each answered twice by the same model: once with the skill, once with none. The size numbers live in [What I measured](#what-i-measured) below. This run measured three things that table does not.
+
+**Most style rules were already free.** The baseline never produced a banned opener or closer in 8 replies. It never used one of the 37 inflated-vocabulary words tested. It never restated the question, and it stayed inside IELTS Band 6 vocabulary. Those rules moved out of the skill body, because a rule the model already follows is not earning its tokens. Figurative language was the exception, with 2 baseline hits, and it is the one lexical rule that stayed.
+
+**The gap is widest where benchmarks rarely look.** Task prompts got shorter, but open-ended questions got shorter by more. An opinion question gives the default style the most room to expand, so that is where the skill pays off most.
+
+**Two known failures ship with this release.** The baseline sometimes volunteers advice attached to a later moment, such as making a migration re-runnable before production. The skill drops that advice, and evals 5 and 7 fail on purpose to keep the gap visible.
+
+Method, full results, and the corrections behind them: [`docs/HONEST-NUMBERS.md`](docs/HONEST-NUMBERS.md).
+
+## What it looks like
+
+The same question: *"I have to review PR #142 tomorrow and I haven't followed it at all. What's it about?"*
+
+**Without sapiens** (274 words, longest sentence 33 words, 8 em dashes):
+
+> PR #142 adds a retry queue for webhook delivery — a fairly self-contained feature, about +412/-87 across 9 files. Here's the shape of it:
+>
+> **The core change:** `src/queue/RetryQueue.ts` is new (180 lines) and implements exponential backoff with jitter, capped at 5 attempts. `src/webhooks/dispatch.ts` is the integration point — previously a failed send was logged and dropped, now it enqueues instead.
+>
+> **Persistence:** `src/queue/store/RedisStore.ts` is also new, backing the queue with Redis so that pending retries survive a process restart…
+>
+> *(continues through config, tests, review status, and the open design question)*
+
+**With sapiens** (163 words, longest sentence 23 words, no em dashes):
+
+> It makes webhook delivery retry instead of giving up. Today a failed send is logged and dropped. With this change, failures go into a queue and get retried up to five times, with a growing delay between attempts. The queue is stored in Redis, so pending retries survive a restart. It also adds a database table for the queued jobs and 14 new tests. Roughly 400 lines added across 9 files, so it's a real review but not a huge one.
+>
+> Two things are unresolved, and those are what's worth your attention tomorrow. The platform team asked whether the Redis storage should share the existing cache cluster or get its own, and nobody has answered yet. The team also hasn't decided what should happen when a webhook still fails after the fifth attempt: page on-call, or fail silently. One teammate has already approved it.
+>
+> Tell me if you want the retry timing logic or the test coverage in more detail before the morning.
+
+Note what did not happen. Nothing was fragmented, and no articles were dropped. The two decisions that actually need a human moved to the front instead of sitting at the end.
+
+## Keep it on
+
+A skill you have to ask for is a skill you will forget to ask for. One line in your global `CLAUDE.md`:
+
+```markdown
+Always use sapiens mode. Default level: lead.
+```
+
+Other setups: [`docs/ALWAYS-ON.md`](docs/ALWAYS-ON.md).
+
 ## Before and after
 
 Same question. Same facts. Both answers were written from one fixture,
@@ -354,9 +400,10 @@ That sweeps the markdown files this project wrote and applies four of the skill'
 No sentence over 25 words. No idiom from the derived list. A median reading grade under
 nine. At most three em dashes per file. A failure blocks the merge.
 
-The transcripts and scenarios under `benchmarks/` are excluded. They are evidence and the
-inputs to it, so editing either one to pass a style check would be worse than failing.
-`benchmarks/README.md` is prose this project wrote, so it is checked.
+The transcripts and scenarios under `benchmarks/`, `out/`, and `probes/` are excluded.
+They are evidence and the inputs to it, so editing either one to pass a style check would
+be worse than failing. The README in each of those directories is prose this project
+wrote, so it is checked.
 
 Two things it does not do. It cannot check whether the writing is clear, only whether it
 breaks countable rules. And quoted material is exempt, both blockquotes and inline quoted

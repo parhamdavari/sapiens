@@ -113,6 +113,11 @@ licence or the source of a vendored word list.
 the derivation script and re-run it instead. No network access at measure time. No
 invented or rounded figure.
 
+**Release tags publish.** Pushing any `v*` tag triggers `release.yml`, which packages
+the skill and publishes a public GitHub release immediately. The tag is the publish
+button, not a label. Tag only after the release pull request is merged and green, from
+the merged commit on the default branch.
+
 ## Known gap
 
 No scenario asks the same question early and late in a long conversation. Consistency
